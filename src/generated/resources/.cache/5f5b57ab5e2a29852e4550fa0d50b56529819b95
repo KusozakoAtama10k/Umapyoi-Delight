@@ -1,0 +1,13 @@
+// 1.20.1	2025-04-17T00:16:06.4272012	Tags for minecraft:block mod id umapyoidelight
+f1976849ef3b94e9a6df91524f1c24e42040569f data/farmersdelight/tags/blocks/mineable/knife.json
+5732bc2b22a77e42ce97c02dfb2a353db7f7c496 data/forge/tags/blocks/storage_blocks/chilipepper.json
+38c32fcd46883629fae32771481257fe22079a22 data/forge/tags/blocks/storage_blocks/garlic.json
+da0d6934eabdb3acd06d9f7491f75608e9f0641f data/forge/tags/blocks/storage_blocks/strawberry.json
+f84897a4867a8218f34243fe5553b2ceaba22e2a data/minecraft/tags/blocks/climbable.json
+12cd1d412115c893d11ab77cbea0c29cc01228b8 data/minecraft/tags/blocks/crops.json
+a006b6180b8f0195f7d4723c8e1abf9518dad042 data/minecraft/tags/blocks/mineable/axe.json
+feeef2258fe3c39c83ab4e8614965cb43ac40376 data/sereneseasons/tags/blocks/autumn_crops.json
+7cada041f867004c60f553d04bd35935ac2e04c2 data/sereneseasons/tags/blocks/spring_crops.json
+feeef2258fe3c39c83ab4e8614965cb43ac40376 data/sereneseasons/tags/blocks/summer_crops.json
+031e84d838a559c2482e94b21e3897884518ee02 data/sereneseasons/tags/blocks/unbreakable_infertile_crops.json
+7cada041f867004c60f553d04bd35935ac2e04c2 data/sereneseasons/tags/blocks/winter_crops.json

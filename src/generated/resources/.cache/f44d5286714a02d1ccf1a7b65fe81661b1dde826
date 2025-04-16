@@ -1,0 +1,19 @@
+// 1.20.1	2025-04-14T01:40:32.5816915	Tags for minecraft:item mod id umapyoidelight
+2feaf13609e2fb828eece0c8d7ca4d9426e4434d data/forge/tags/items/berries.json
+2feaf13609e2fb828eece0c8d7ca4d9426e4434d data/forge/tags/items/berries/strawberry.json
+d98d50fec3c17cd11367373f499f627c04d71d38 data/forge/tags/items/crops.json
+e44703aa2b313a9aea04a1c48942799905b57943 data/forge/tags/items/crops/chilipepper.json
+1b883c1d3da8a1c618c19c3d44371370454924b9 data/forge/tags/items/crops/garlic.json
+2feaf13609e2fb828eece0c8d7ca4d9426e4434d data/forge/tags/items/crops/strawberry.json
+155a711c975c9da807571f437858342af4584429 data/forge/tags/items/fruits.json
+2feaf13609e2fb828eece0c8d7ca4d9426e4434d data/forge/tags/items/fruits/strawberry.json
+7ad087b6d1770b2275be639710be1afd7257fe98 data/forge/tags/items/storage_blocks/chilipepper.json
+0ddc7e07f00c6de273c8523b9bcc973465e76b11 data/forge/tags/items/storage_blocks/garlic.json
+479d04af86b87307e9f3e2699a328fe624d73bf9 data/forge/tags/items/vegetables.json
+e44703aa2b313a9aea04a1c48942799905b57943 data/forge/tags/items/vegetables/chilipepper.json
+1b883c1d3da8a1c618c19c3d44371370454924b9 data/forge/tags/items/vegetables/garlic.json
+bfec91e308b96a6a06000f427580c4dc888b1f35 data/minecraft/tags/items/villager_plantable_seeds.json
+31cd640ae675468ec1bc93b2cdd83523e6a7cd63 data/sereneseasons/tags/items/autumn_crops.json
+2feaf13609e2fb828eece0c8d7ca4d9426e4434d data/sereneseasons/tags/items/spring_crops.json
+31cd640ae675468ec1bc93b2cdd83523e6a7cd63 data/sereneseasons/tags/items/summer_crops.json
+2feaf13609e2fb828eece0c8d7ca4d9426e4434d data/sereneseasons/tags/items/winter_crops.json

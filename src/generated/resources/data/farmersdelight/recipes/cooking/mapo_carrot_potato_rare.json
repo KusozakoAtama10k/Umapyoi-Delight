@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 2.0,
+  "ingredients": [
+    {
+      "tag": "forge:vegetables/carrot"
+    },
+    {
+      "tag": "forge:vegetables/potato"
+    },
+    {
+      "tag": "forge:vegetables/chilipepper"
+    },
+    {
+      "tag": "forge:raw_pork"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "umapyoidelight:mapo_carrot_potato_rare"
+  }
+}

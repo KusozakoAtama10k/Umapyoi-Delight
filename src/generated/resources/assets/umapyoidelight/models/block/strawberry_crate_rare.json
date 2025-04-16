@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "farmersdelight:block/crate_bottom",
+    "side": "umapyoidelight:block/strawberry_crate_rare_side",
+    "top": "umapyoidelight:block/strawberry_crate_top"
+  }
+}
