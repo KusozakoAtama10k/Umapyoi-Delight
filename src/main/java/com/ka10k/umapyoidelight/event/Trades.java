@@ -1,0 +1,74 @@
+package com.ka10k.umapyoidelight.event;
+
+import com.ka10k.umapyoidelight.Umapyoidelight;
+import com.ka10k.umapyoidelight.item.ItemRegistration;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.BasicItemListing;
+import net.minecraftforge.event.village.VillagerTradesEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.tracen.umapyoi.item.ItemRegistry;
+import net.tracen.umapyoi.villager.VillageRegistry;
+
+import java.util.List;
+
+
+
+@Mod.EventBusSubscriber(modid = Umapyoidelight.MOD_ID)
+public class Trades {
+
+    public static BasicItemListing Item2Emerald(ItemLike item, int count, int maxTrades, int xp) {
+        return new BasicItemListing(new ItemStack(item, count), new ItemStack(Items.EMERALD), maxTrades, xp, 0.05F);
+    }
+
+    public static BasicItemListing Item2Jewel(ItemLike item, int count, int maxTrades, int xp) {
+        return new BasicItemListing(new ItemStack(item, count), new ItemStack(ItemRegistry.JEWEL.get()), maxTrades, xp, 0.05F);
+    }
+
+    public static BasicItemListing Emerald2Item(ItemLike item, int maxTrades, int xp) {
+        return new BasicItemListing(1, new ItemStack(item), maxTrades, xp, 0.05F);
+    }
+
+    public static BasicItemListing Jewel2Item(ItemLike item, int count, int maxTrades, int xp) {
+        return new BasicItemListing(new ItemStack(ItemRegistry.JEWEL.get()), new ItemStack(item, count), maxTrades, xp, 0.05F);
+    }
+
+    @SubscribeEvent
+    public static void addVillagerTrades(VillagerTradesEvent event) {
+
+        if(event.getType() == VillagerProfession.FARMER) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            //Novice(Stone)
+            trades.get(1).add(Item2Emerald(ItemRegistration.CHILI_ITEM.get(),26,16,2));
+            trades.get(1).add(Item2Emerald(ItemRegistration.GARLIC_ITEM.get(),26,16,2));
+            trades.get(1).add(Item2Emerald(ItemRegistration.STRAWBERRY_ITEM.get(),26,16,2));
+            //Apprentice(Iron)
+            //Journeyman(Gold)
+            //Expert(Emerald)
+            trades.get(4).add(Item2Jewel(ItemRegistration.CHILI_ITEM_RARE.get(),2,4,15));
+            trades.get(4).add(Item2Jewel(ItemRegistration.GARLIC_ITEM_RARE.get(),2,4,15));
+            trades.get(4).add(Item2Jewel(ItemRegistration.STRAWBERRY_ITEM_RARE.get(),2,4,15));
+            trades.get(4).add(Item2Jewel(ItemRegistration.CARROT_ITEM_RARE.get(),2,4,15));
+            trades.get(4).add(Item2Jewel(ItemRegistration.POTATO_ITEM_RARE.get(),2,4,15));
+            //Master(Diamond)
+
+        }
+
+
+        /*if(event.getType() == VillageRegistry.TRAINER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            //Novice(Stone)
+            //Apprentice(Iron)
+            //Journeyman(Gold)
+            //Expert(Emerald)
+            //Master(Diamond)
+
+        }*/
+    }
+
+}

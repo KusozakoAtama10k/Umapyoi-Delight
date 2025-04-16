@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 2.0,
+  "ingredients": [
+    {
+      "tag": "forge:vegetables/carrot"
+    },
+    {
+      "tag": "forge:vegetables/potato"
+    },
+    {
+      "tag": "forge:salad_ingredients"
+    },
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "umapyoidelight:carrot_rare"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "umapyoidelight:carrot_potato_potaufeu_rare"
+  }
+}

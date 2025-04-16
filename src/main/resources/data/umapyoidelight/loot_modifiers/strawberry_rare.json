@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:add_item",
+  "conditions": [
+    {
+      "block": "umapyoidelight:strawberry_crop",
+      "condition": "minecraft:block_state_property",
+      "properties": {
+        "age": "7"
+      }
+    },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.05
+    }
+  ],
+  "item": "umapyoidelight:strawberry_rare"
+}

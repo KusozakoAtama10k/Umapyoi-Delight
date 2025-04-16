@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "umapyoidelight:chili_pepper_rare"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "umapyoidelight:chili_pepper_crate_rare"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,45 @@
+package com.ka10k.umapyoidelight.block.crop;
+
+import com.ka10k.umapyoidelight.block.BlockRegistration;
+import com.ka10k.umapyoidelight.item.ItemRegistration;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+public class ChiliCrop extends CropBlock
+{
+    private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D),
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D),
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D),
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D),
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D),
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D),
+            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D)
+    };
+
+    public ChiliCrop(Properties properties) {
+        super(properties);
+    }
+
+    @Override
+    public BlockState getPlant(BlockGetter level, BlockPos pos) {
+        return BlockRegistration.CHILI_CROP.get().defaultBlockState();
+    }
+
+    @Override
+    protected ItemLike getBaseSeedId() {
+        return ItemRegistration.CHILI_ITEM.get();
+    }
+
+    @Override
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        return SHAPE_BY_AGE[state.getValue(this.getAgeProperty())];
+    }
+}

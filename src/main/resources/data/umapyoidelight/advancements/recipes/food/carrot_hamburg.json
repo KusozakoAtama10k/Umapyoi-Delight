@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hamburg": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:hamburg"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "umapyoidelight:carrot_hamburg"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_hamburg",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "umapyoidelight:carrot_hamburg"
+    ]
+  },
+  "sends_telemetry_event": false
+}

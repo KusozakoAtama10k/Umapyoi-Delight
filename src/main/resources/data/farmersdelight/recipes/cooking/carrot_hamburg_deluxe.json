@@ -1,0 +1,34 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 2.0,
+  "ingredients": [
+    {
+      "item": "umapyoidelight:carrot_rare"
+    },
+    {
+      "item": "farmersdelight:mixed_salad"
+    },
+    [
+      {
+        "item": "farmersdelight:pasta_with_meatballs"
+      },
+      {
+        "item": "farmersdelight:pasta_with_mutton_chop"
+      }
+    ],
+    {
+      "item": "umapyoidelight:hamburg"
+    },
+    {
+      "item": "umapyoidelight:hamburg"
+    },
+    {
+      "item": "umapyoidelight:hamburg"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "umapyoidelight:carrot_hamburg_deluxe"
+  }
+}
