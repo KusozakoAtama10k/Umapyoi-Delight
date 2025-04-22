@@ -2,6 +2,7 @@ package com.ka10k.umapyoidelight;
 
 import com.ka10k.umapyoidelight.block.BlockRegistration;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
+import com.ka10k.umapyoidelight.loot.LootModifiers;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,8 +28,9 @@ public class Umapyoidelight {
         ItemRegistration.ITEMS.register(modEventBus);
         CreativeTab.CREATIVE_MODE_TABS.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
+        LootModifiers.LOOT_MODIFIERS.register(modEventBus);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, UDConfig.COMMON_CONFIG);
     }
 }

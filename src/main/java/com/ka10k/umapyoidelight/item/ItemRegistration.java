@@ -78,6 +78,15 @@ public class ItemRegistration {
     public static final RegistryObject<Item> POTATO_CRATE_RARE = registerWithTab("potato_crate_rare",
             () -> new BlockItem(BlockRegistration.POTATO_CRATE_RARE.get(),basicItem()));
 
+    public static final RegistryObject<Item> WILD_CHILIS = registerWithTab("wild_chili_peppers",
+            () -> new BlockItem(BlockRegistration.WILD_CHILIS.get(),basicItem()));
+
+    public static final RegistryObject<Item> WILD_GARLIC = registerWithTab("wild_garlic",
+            () -> new BlockItem(BlockRegistration.WILD_GARLIC.get(),basicItem()));
+
+    public static final RegistryObject<Item> WILD_STRAWBERRIES = registerWithTab("wild_strawberries",
+            () -> new BlockItem(BlockRegistration.WILD_STRAWBERRIES.get(),basicItem()));
+
     //placeable meals
 
     public static final RegistryObject<Item> POTATO_GARLIC_PIZZA = registerWithTab("potato_garlic_pizza",

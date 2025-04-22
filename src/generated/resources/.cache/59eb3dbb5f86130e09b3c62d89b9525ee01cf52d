@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-17T00:16:06.4302058	Loot Tables
+// 1.20.1	2025-04-21T23:36:03.8929828	Loot Tables
 625db3751611662d6c3d5800b364542d580cdcf8 data/umapyoidelight/loot_tables/blocks/carrot_crate_rare.json
 2fa831cf35df29d1e734ba0b0672f4d40437c1bb data/umapyoidelight/loot_tables/blocks/chili_pepper_crate.json
 ada7bfdfd2c5b2dac8103004d693dc9c43f01f9c data/umapyoidelight/loot_tables/blocks/chili_pepper_crate_rare.json
@@ -12,3 +12,6 @@ cfa894cc946823a3587d4f85333afadeabce936d data/umapyoidelight/loot_tables/blocks/
 565610c6c810c8be5f1f41cc9af3947a39f55806 data/umapyoidelight/loot_tables/blocks/strawberry_crate.json
 5aa1741ff9480bc124115af192363ede989d68bc data/umapyoidelight/loot_tables/blocks/strawberry_crate_rare.json
 9f7ea2fb8c94f2160f59587c2a14ef114041f5fd data/umapyoidelight/loot_tables/blocks/strawberry_crop.json
+fe67b0907b86070abcc88195732508be07ac38aa data/umapyoidelight/loot_tables/blocks/wild_chili_peppers.json
+1695dcd39a62de655addc87f70ef2acba02d44f5 data/umapyoidelight/loot_tables/blocks/wild_garlic.json
+b2ce5c2313ffa6da8aa7990353b33ef2e7abdf2f data/umapyoidelight/loot_tables/blocks/wild_strawberries.json

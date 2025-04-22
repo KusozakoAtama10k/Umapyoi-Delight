@@ -8,7 +8,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
-import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.tag.CompatibilityTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
@@ -25,6 +24,7 @@ public class BlockTagsProv extends BlockTagsProvider {
         this.registerBlockMineables();
         this.registerMinecraftTags();
         this.registerForgeTags();
+        this.registerModTags();
         this.registerCompatibilityTags();
 
     }
@@ -49,27 +49,29 @@ public class BlockTagsProv extends BlockTagsProvider {
     }
 
     protected void registerMinecraftTags() {
-        tag(net.minecraft.tags.BlockTags.CLIMBABLE).add(
-                ModBlocks.ROPE.get(),
-                ModBlocks.TOMATO_CROP.get());
         tag(net.minecraft.tags.BlockTags.CROPS).add(
                 BlockRegistration.CHILI_CROP.get(),
                 BlockRegistration.GARLIC_CROP.get(),
-                BlockRegistration.STRAWBERRY_CROP.get()
-        /*tag(net.minecraft.tags.BlockTags.SMALL_FLOWERS).add(
-                ModBlocks.WILD_CARROTS.get(),
-                ModBlocks.WILD_POTATOES.get(),
-                ModBlocks.WILD_BEETROOTS.get(),
-                ModBlocks.WILD_CABBAGES.get(),
-                ModBlocks.WILD_TOMATOES.get(),
-                ModBlocks.WILD_ONIONS.get()*/
+                BlockRegistration.STRAWBERRY_CROP.get());
+        tag(net.minecraft.tags.BlockTags.SMALL_FLOWERS).add(
+                BlockRegistration.WILD_CHILIS.get(),
+                BlockRegistration.WILD_GARLIC.get(),
+                BlockRegistration.WILD_STRAWBERRIES.get()
         );
     }
 
     protected void registerForgeTags() {
-        tag(ForgeTagsUD.STORAGE_BLOCKS_CHILI).add(ModBlocks.CARROT_CRATE.get());
-        tag(ForgeTagsUD.STORAGE_BLOCKS_GARLIC).add(ModBlocks.POTATO_CRATE.get());
-        tag(ForgeTagsUD.STORAGE_BLOCKS_STRAWBERRY).add(ModBlocks.BEETROOT_CRATE.get());
+        tag(ForgeTagsUD.STORAGE_BLOCKS_CHILI).add(BlockRegistration.CHILI_CRATE.get());
+        tag(ForgeTagsUD.STORAGE_BLOCKS_GARLIC).add(BlockRegistration.GARLIC_CRATE.get());
+        tag(ForgeTagsUD.STORAGE_BLOCKS_STRAWBERRY).add(BlockRegistration.STRAWBERRY_CRATE.get());
+    }
+
+    private void registerModTags() {
+        tag(ModTags.WILD_CROPS).add(
+                BlockRegistration.WILD_CHILIS.get(),
+                BlockRegistration.WILD_GARLIC.get(),
+                BlockRegistration.WILD_STRAWBERRIES.get()
+        );
     }
 
     private void registerCompatibilityTags() {

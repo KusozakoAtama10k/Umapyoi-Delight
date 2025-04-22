@@ -1,4 +1,5 @@
-// 1.20.1	2025-04-14T01:40:32.5816915	Tags for minecraft:item mod id umapyoidelight
+// 1.20.1	2025-04-21T23:36:03.8929828	Tags for minecraft:item mod id umapyoidelight
+f2cf3812a0fc7826c172d179dae250aeb6d61caa data/farmersdelight/tags/items/wild_crops.json
 2feaf13609e2fb828eece0c8d7ca4d9426e4434d data/forge/tags/items/berries.json
 2feaf13609e2fb828eece0c8d7ca4d9426e4434d data/forge/tags/items/berries/strawberry.json
 d98d50fec3c17cd11367373f499f627c04d71d38 data/forge/tags/items/crops.json
@@ -8,7 +9,8 @@ e44703aa2b313a9aea04a1c48942799905b57943 data/forge/tags/items/crops/chilipepper
 155a711c975c9da807571f437858342af4584429 data/forge/tags/items/fruits.json
 2feaf13609e2fb828eece0c8d7ca4d9426e4434d data/forge/tags/items/fruits/strawberry.json
 7ad087b6d1770b2275be639710be1afd7257fe98 data/forge/tags/items/storage_blocks/chilipepper.json
-0ddc7e07f00c6de273c8523b9bcc973465e76b11 data/forge/tags/items/storage_blocks/garlic.json
+3bf1d5f424070b929dd4a52586c646153e03272f data/forge/tags/items/storage_blocks/garlic.json
+59333c6249213a6933be8e956135a0d1650eb8bb data/forge/tags/items/storage_blocks/strawberry.json
 479d04af86b87307e9f3e2699a328fe624d73bf9 data/forge/tags/items/vegetables.json
 e44703aa2b313a9aea04a1c48942799905b57943 data/forge/tags/items/vegetables/chilipepper.json
 1b883c1d3da8a1c618c19c3d44371370454924b9 data/forge/tags/items/vegetables/garlic.json

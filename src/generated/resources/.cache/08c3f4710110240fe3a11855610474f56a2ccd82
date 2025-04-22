@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-17T00:16:06.4302058	Item Models: umapyoidelight
+// 1.20.1	2025-04-21T23:36:03.8929828	Item Models: umapyoidelight
 40917699908b69fba7b67726a3a711a52a033f56 assets/umapyoidelight/models/item/carrot_hamburg.json
 094a18c705d973050424017bfa09d914b20984c1 assets/umapyoidelight/models/item/carrot_hamburg_deluxe.json
 ad58be30f35123b222abc28313b39c80f001420d assets/umapyoidelight/models/item/carrot_rare.json
@@ -15,3 +15,6 @@ dafd7aaa27cd9fc83afe70f756b569398227ed9e assets/umapyoidelight/models/item/potat
 66bd736de5eb8dd583bc6644314d8c1bdeea7977 assets/umapyoidelight/models/item/raw_hamburg.json
 0dfd247fe50d8fb944ca6ceb81109cc80d181ee7 assets/umapyoidelight/models/item/strawberry.json
 681ba4b8a9f1470cf0d095b74107319eedcfe18a assets/umapyoidelight/models/item/strawberry_rare.json
+e0ff8528e53612079858d6f4177cb5336deaaef9 assets/umapyoidelight/models/item/wild_chili_peppers.json
+4a0568d4e0f1c20149ee9835276e2e9432960124 assets/umapyoidelight/models/item/wild_garlic.json
+1c64311aa990e94ccefe221b6554478d7c7216b8 assets/umapyoidelight/models/item/wild_strawberries.json

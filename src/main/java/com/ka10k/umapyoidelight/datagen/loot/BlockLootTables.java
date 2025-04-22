@@ -14,12 +14,10 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
-import net.minecraft.world.level.storage.loot.entries.AlternativesEntry;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
@@ -53,6 +51,11 @@ public class BlockLootTables extends BlockLootSubProvider {
         LootItemCondition.Builder Pizza_Rare_Full = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PotatoGarlicPizzaBlock.SERVINGS, 6));
         this.add(BlockRegistration.POTATO_GARLIC_PIZZA.get(), this.applyExplosionDecay(BlockRegistration.POTATO_GARLIC_PIZZA.get(), LootTable.lootTable().withPool(LootPool.lootPool().when(Pizza_Full).add(LootItem.lootTableItem(BlockRegistration.POTATO_GARLIC_PIZZA.get()))).withPool(LootPool.lootPool().when(Pizza_Full.invert()).add(LootItem.lootTableItem(Items.BOWL)))));
         this.add(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get(), this.applyExplosionDecay(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get(), LootTable.lootTable().withPool(LootPool.lootPool().when(Pizza_Rare_Full).add(LootItem.lootTableItem(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get()))).withPool(LootPool.lootPool().when(Pizza_Full.invert()).add(LootItem.lootTableItem(Items.BOWL)))));
+
+        //For error avoidance. DO NOT USE
+        this.dropSelf(BlockRegistration.WILD_CHILIS.get());
+        this.dropSelf(BlockRegistration.WILD_GARLIC.get());
+        this.dropSelf(BlockRegistration.WILD_STRAWBERRIES.get());
 
     }
 

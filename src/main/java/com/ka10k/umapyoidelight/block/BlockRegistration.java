@@ -4,7 +4,7 @@ import com.ka10k.umapyoidelight.Umapyoidelight;
 import com.ka10k.umapyoidelight.block.crop.ChiliCrop;
 import com.ka10k.umapyoidelight.block.crop.GarlicCrop;
 import com.ka10k.umapyoidelight.block.crop.StrawberryCrop;
-import com.ka10k.umapyoidelight.item.ItemRegistration;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.common.block.PieBlock;
+import vectorwing.farmersdelight.common.block.WildCropBlock;
 
 
 public class BlockRegistration {
@@ -27,6 +27,15 @@ public class BlockRegistration {
 
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCrop(Block.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> WILD_CHILIS = BLOCKS.register("wild_chili_peppers",
+            () -> new WildCropBlock(MobEffects.JUMP, 6, Block.Properties.copy(Blocks.TALL_GRASS)));
+
+    public static final RegistryObject<Block> WILD_GARLIC = BLOCKS.register("wild_garlic",
+            () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 6, Block.Properties.copy(Blocks.TALL_GRASS)));
+
+    public static final RegistryObject<Block> WILD_STRAWBERRIES = BLOCKS.register("wild_strawberries",
+            () -> new WildCropBlock(MobEffects.REGENERATION, 6, Block.Properties.copy(Blocks.TALL_GRASS)));
 
     public static final RegistryObject<Block> CHILI_CRATE = BLOCKS.register("chili_pepper_crate",
             () -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));

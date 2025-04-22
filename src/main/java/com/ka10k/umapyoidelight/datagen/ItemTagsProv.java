@@ -11,6 +11,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.tag.CompatibilityTags;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
+import vectorwing.farmersdelight.common.tag.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -23,6 +24,7 @@ public class ItemTagsProv extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         this.registerMinecraftTags();
         this.registerForgeTags();
+        this.registerModTags();
         this.registerCompatibilityTags();
     }
 
@@ -47,11 +49,19 @@ public class ItemTagsProv extends ItemTagsProvider {
 
         tag(ForgeTagsUD.STORAGE_BLOCKS_ITEM_CHILI).add(ItemRegistration.CHILI_CRATE.get());
         tag(ForgeTagsUD.STORAGE_BLOCKS_ITEM_GARLIC).add(ItemRegistration.GARLIC_CRATE.get());
-        tag(ForgeTagsUD.STORAGE_BLOCKS_ITEM_GARLIC).add(ItemRegistration.STRAWBERRY_CRATE.get());
+        tag(ForgeTagsUD.STORAGE_BLOCKS_ITEM_STRAWBERRY).add(ItemRegistration.STRAWBERRY_CRATE.get());
 
         tag(ForgeTags.VEGETABLES).addTags(ForgeTagsUD.VEGETABLES_CHILI, ForgeTagsUD.VEGETABLES_GARLIC);
         tag(ForgeTagsUD.VEGETABLES_CHILI).add(ItemRegistration.CHILI_ITEM.get());
         tag(ForgeTagsUD.VEGETABLES_GARLIC).add(ItemRegistration.GARLIC_ITEM.get());
+    }
+
+    private void registerModTags() {
+        tag(ModTags.WILD_CROPS_ITEM).add(
+                ItemRegistration.WILD_CHILIS.get(),
+                ItemRegistration.WILD_GARLIC.get(),
+                ItemRegistration.WILD_STRAWBERRIES.get()
+        );
     }
 
     public void registerCompatibilityTags() {

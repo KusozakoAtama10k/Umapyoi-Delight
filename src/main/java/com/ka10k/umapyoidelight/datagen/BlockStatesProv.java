@@ -85,6 +85,15 @@ public class BlockStatesProv extends BlockStateProvider {
                 });
     }
 
+    public void wildCropBlock(Block block, boolean isBushCrop) {
+        if (isBushCrop) {
+            this.simpleBlock(block, models().singleTexture(blockName(block), resourceBlock("bush_crop"), "crop", resourceBlock(blockName(block))).renderType("cutout"));
+        } else {
+            this.simpleBlock(block, models().cross(blockName(block), resourceBlock(blockName(block))).renderType("cutout"));
+        }
+    }
+
+
     @Override
     protected void registerStatesAndModels() {
         CrateBlock(BlockRegistration.CHILI_CRATE.get(),"chili_pepper");
@@ -100,5 +109,8 @@ public class BlockStatesProv extends BlockStateProvider {
         customStageBlock(BlockRegistration.STRAWBERRY_CROP.get(), mcLoc("crop"), "crop", StrawberryCrop.AGE, Arrays.asList(0, 1, 1, 1, 2, 2, 3, 4));
         feastBlock((FeastBlock) BlockRegistration.POTATO_GARLIC_PIZZA.get());
         feastBlock((FeastBlock) BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get());
+        wildCropBlock(BlockRegistration.WILD_CHILIS.get(), false);
+        wildCropBlock(BlockRegistration.WILD_GARLIC.get(), false);
+        wildCropBlock(BlockRegistration.WILD_STRAWBERRIES.get(), false);
     }
 }

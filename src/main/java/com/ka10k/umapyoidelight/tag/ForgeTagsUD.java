@@ -29,12 +29,6 @@ public class ForgeTagsUD
 	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_CHILI = forgeItemTag("storage_blocks/chilipepper");
 	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_GARLIC = forgeItemTag("storage_blocks/garlic");
 	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_STRAWBERRY = forgeItemTag("storage_blocks/strawberry");
-	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_CABBAGE = forgeItemTag("storage_blocks/cabbage");
-	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_TOMATO = forgeItemTag("storage_blocks/tomato");
-	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_ONION = forgeItemTag("storage_blocks/onion");
-	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_RICE = forgeItemTag("storage_blocks/rice");
-	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_RICE_PANICLE = forgeItemTag("storage_blocks/rice_panicle");
-	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_STRAW = forgeItemTag("storage_blocks/straw");
 
 	private static TagKey<Block> forgeBlockTag(String path) {
 		return BlockTags.create(new ResourceLocation("forge", path));

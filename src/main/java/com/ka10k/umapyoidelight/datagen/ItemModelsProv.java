@@ -21,6 +21,12 @@ public class ItemModelsProv extends ItemModelProvider {
                 new ResourceLocation(Umapyoidelight.MOD_ID, "item/" + item.getId().getPath()));
     }
 
+    private ItemModelBuilder flatBlockItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Umapyoidelight.MOD_ID, "block/" + item.getId().getPath()));
+    }
+
     @Override
     protected void registerModels() {
         simpleItem(ItemRegistration.CHILI_ITEM);
@@ -39,6 +45,8 @@ public class ItemModelsProv extends ItemModelProvider {
         simpleItem(ItemRegistration.POTATO_GARLIC_PIZZA_RARE);
         simpleItem(ItemRegistration.POTATO_GARLIC_PIZZA_SLICE);
         simpleItem(ItemRegistration.POTATO_GARLIC_PIZZA_SLICE_RARE);
-
+        flatBlockItem(ItemRegistration.WILD_CHILIS);
+        flatBlockItem(ItemRegistration.WILD_GARLIC);
+        flatBlockItem(ItemRegistration.WILD_STRAWBERRIES);
     }
 }
