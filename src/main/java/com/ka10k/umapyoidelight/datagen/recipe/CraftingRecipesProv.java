@@ -143,5 +143,45 @@ public class CraftingRecipesProv {
                 .requires(Items.SNOWBALL)
                 .unlockedBy("has_strawberry_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_ITEM_RARE.get()))
                 .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CHOICE_VEGETABLES.get(), 1)
+                .requires(ItemRegistration.CARROT_ITEM_RARE.get())
+                .requires(ItemRegistration.GARLIC_ITEM_RARE.get())
+                .requires(ItemRegistration.POTATO_ITEM_RARE.get())
+                .requires(ItemRegistration.CHILI_ITEM_RARE.get())
+                .requires(ItemRegistration.STRAWBERRY_ITEM_RARE.get())
+                .unlockedBy("has_carrot_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_ITEM_RARE.get()))
+                .unlockedBy("has_garlic_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GARLIC_ITEM_RARE.get()))
+                .unlockedBy("has_potato_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_ITEM_RARE.get()))
+                .unlockedBy("has_chili_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CHILI_ITEM_RARE.get()))
+                .unlockedBy("has_strawberry_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_ITEM_RARE.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ItemRegistration.RAW_POTATO_GARLIC_PIZZA.get(), 1)
+                .pattern(" M ")
+                .pattern("PGP")
+                .pattern("DBD")
+                .define('D', Ingredient.of(ForgeTags.DOUGH))
+                .define('B', Items.BOWL)
+                .define('P', Ingredient.of(ForgeTags.VEGETABLES_POTATO))
+                .define('G', Ingredient.of(ForgeTagsUD.VEGETABLES_GARLIC))
+                .define('M', Ingredient.of(ForgeTags.MILK))
+                .unlockedBy("has_potato", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POTATO))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ItemRegistration.RAW_POTATO_GARLIC_PIZZA_RARE.get(), 1)
+                .pattern(" M ")
+                .pattern("RGP")
+                .pattern("DBD")
+                .define('D', Ingredient.of(ForgeTags.DOUGH))
+                .define('B', Items.BOWL)
+                .define('P', Ingredient.of(ForgeTags.VEGETABLES_POTATO))
+                .define('R', ItemRegistration.POTATO_ITEM_RARE.get())
+                .define('G', Ingredient.of(ForgeTagsUD.VEGETABLES_GARLIC))
+                .define('M', Ingredient.of(ForgeTags.MILK))
+                .unlockedBy("has_potato_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_ITEM_RARE.get()))
+                .save(consumer);
+
+
     }
 }

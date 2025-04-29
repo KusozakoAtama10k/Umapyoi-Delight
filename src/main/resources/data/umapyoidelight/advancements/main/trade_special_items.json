@@ -1,0 +1,38 @@
+{
+  "parent": "umapyoidelight:main/get_crops",
+  "criteria": {
+    "manhattan_cafe_coffee": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:manhattan_cafe_coffee"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "umapyoidelight.advancement.trade_special_items.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "umapyoidelight:manhattan_cafe_coffee"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "umapyoidelight.advancement.trade_special_items"
+    }
+  },
+  "requirements": [
+    [
+      "manhattan_cafe_coffee"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

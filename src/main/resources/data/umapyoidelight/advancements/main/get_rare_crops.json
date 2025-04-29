@@ -1,0 +1,64 @@
+{
+  "parent": "umapyoidelight:main/get_crops",
+  "criteria": {
+    "chili_pepper_rare": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:chili_pepper_rare"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "garlic_rare": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:garlic_rare"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "strawberry_rare": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:strawberry_rare"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "umapyoidelight.advancement.get_rare_crops.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "umapyoidelight:carrot_rare"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "umapyoidelight.advancement.get_rare_crops"
+    }
+  },
+  "requirements": [
+    [
+      "garlic_rare",
+      "chili_pepper_rare",
+      "strawberry_rare"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

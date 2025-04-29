@@ -1,5 +1,6 @@
 package com.ka10k.umapyoidelight.event;
 
+import com.ka10k.umapyoidelight.UDConfig;
 import com.ka10k.umapyoidelight.Umapyoidelight;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -14,6 +15,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.tracen.umapyoi.item.ItemRegistry;
 import net.tracen.umapyoi.villager.VillageRegistry;
+import vectorwing.farmersdelight.common.Configuration;
 
 import java.util.List;
 
@@ -42,6 +44,7 @@ public class Trades {
     public static void addVillagerTrades(VillagerTradesEvent event) {
 
         if(event.getType() == VillagerProfession.FARMER) {
+            if(!UDConfig.FARMERS_TRADE_UD_CROPS.get() || !Configuration.FARMERS_BUY_FD_CROPS.get()) return;
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             //Novice(Stone)
             trades.get(1).add(Item2Emerald(ItemRegistration.CHILI_ITEM.get(),26,16,2));
@@ -50,25 +53,41 @@ public class Trades {
             //Apprentice(Iron)
             //Journeyman(Gold)
             //Expert(Emerald)
-            trades.get(4).add(Item2Jewel(ItemRegistration.CHILI_ITEM_RARE.get(),2,4,15));
-            trades.get(4).add(Item2Jewel(ItemRegistration.GARLIC_ITEM_RARE.get(),2,4,15));
-            trades.get(4).add(Item2Jewel(ItemRegistration.STRAWBERRY_ITEM_RARE.get(),2,4,15));
-            trades.get(4).add(Item2Jewel(ItemRegistration.CARROT_ITEM_RARE.get(),2,4,15));
-            trades.get(4).add(Item2Jewel(ItemRegistration.POTATO_ITEM_RARE.get(),2,4,15));
+            if(UDConfig.FARMERS_TRADE_RARE_CROPS.get()) {
+                trades.get(4).add(Item2Jewel(ItemRegistration.CHILI_ITEM_RARE.get(), 2, 4, 15));
+                trades.get(4).add(Item2Jewel(ItemRegistration.GARLIC_ITEM_RARE.get(), 2, 4, 15));
+                trades.get(4).add(Item2Jewel(ItemRegistration.STRAWBERRY_ITEM_RARE.get(), 2, 4, 15));
+                trades.get(4).add(Item2Jewel(ItemRegistration.CARROT_ITEM_RARE.get(), 2, 4, 15));
+                trades.get(4).add(Item2Jewel(ItemRegistration.POTATO_ITEM_RARE.get(), 2, 4, 15));
+            }
             //Master(Diamond)
 
         }
 
-
-        /*if(event.getType() == VillageRegistry.TRAINER.get()) {
+        if(event.getType() == VillagerProfession.BUTCHER) {
+            if(!UDConfig.VILLAGERS_TRADE_OTHER_ITEMS.get()) return;
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             //Novice(Stone)
             //Apprentice(Iron)
             //Journeyman(Gold)
             //Expert(Emerald)
+            trades.get(4).add(Jewel2Item(ItemRegistration.CARROT_HAMBURG.get(), 1, 2, 20));
+            //Master(Diamond)
+            trades.get(5).add(Jewel2Item(ItemRegistration.CARROT_HAMBURG_DELUXE.get(), 1, 1, 30));
+
+        }
+
+        if(event.getType() == VillageRegistry.TRAINER.get()) {
+            if(!UDConfig.TRAINERS_TRADE_ITEMS.get()) return;
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            //Novice(Stone)
+            //Apprentice(Iron)
+            //Journeyman(Gold)
+            //Expert(Emerald)
+            trades.get(4).add(Jewel2Item(ItemRegistration.COFFEE.get(), 6, 2, 20));
             //Master(Diamond)
 
-        }*/
+        }
     }
 
 }

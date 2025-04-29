@@ -8,6 +8,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import vectorwing.farmersdelight.data.Advancements;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -25,6 +26,8 @@ public class DataGenerators {
         BlockTagsProv blockTags = new BlockTagsProv(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(), new ItemTagsProv(packOutput, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
+        generator.addProvider(event.includeServer(), new AdvancementProv(packOutput, lookupProvider, existingFileHelper));
+
 
         generator.addProvider(event.includeClient(), new BlockStatesProv(packOutput,existingFileHelper));
         generator.addProvider(event.includeClient(), new ItemModelsProv(packOutput,existingFileHelper));

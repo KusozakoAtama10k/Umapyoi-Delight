@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bowl"
+    },
+    "D": {
+      "tag": "forge:dough"
+    },
+    "G": {
+      "tag": "forge:vegetables/garlic"
+    },
+    "M": {
+      "tag": "forge:milk"
+    },
+    "P": {
+      "tag": "forge:vegetables/potato"
+    },
+    "R": {
+      "item": "umapyoidelight:potato_rare"
+    }
+  },
+  "pattern": [
+    " M ",
+    "RGP",
+    "DBD"
+  ],
+  "result": {
+    "item": "umapyoidelight:raw_potato_garlic_pizza_rare"
+  },
+  "show_notification": true
+}

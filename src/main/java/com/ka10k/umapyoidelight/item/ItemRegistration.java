@@ -16,6 +16,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tracen.umapyoi.item.food.EnergyDrinkMethods;
+import net.tracen.umapyoi.item.food.UmaDrinkItem;
 import net.tracen.umapyoi.item.food.UmaFoodItem;
 import net.tracen.umapyoi.utils.UmaSoulUtils;
 import net.tracen.umapyoi.utils.UmaStatusUtils;
@@ -133,6 +134,7 @@ public class ItemRegistration {
     public static final RegistryObject<Item> RAW_HAMBURG =
             registerWithTab("raw_hamburg", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(3, 0.3F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.HUNGER, 600, 0), 0.3F)
                     .build()));
 
     public static final RegistryObject<Item> HAMBURG =
@@ -142,6 +144,13 @@ public class ItemRegistration {
 
     public static final RegistryObject<Item> CHOICE_VEGETABLES =
             registerWithTab("choice_vegetables", () -> new Item(basicItem()));
+
+    public static final RegistryObject<Item> RAW_POTATO_GARLIC_PIZZA = registerWithTab("raw_potato_garlic_pizza",
+            () -> new Item(basicItem().stacksTo(1)));
+
+    public static final RegistryObject<Item> RAW_POTATO_GARLIC_PIZZA_RARE = registerWithTab("raw_potato_garlic_pizza_rare",
+            () -> new Item(basicItem().stacksTo(1)));
+
 
     //meals
     public static final RegistryObject<Item> CARROT_HAMBURG =
@@ -250,7 +259,16 @@ public class ItemRegistration {
                             .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, FoodValues.LONG_DURATION, 3), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, FoodValues.LONG_DURATION, 2), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.LUCK, FoodValues.LONG_DURATION, 1), 1.0F)
-
-
                             .build()));
+
+    //misc
+    public static final RegistryObject<Item> COFFEE =
+            registerWithTab("manhattan_cafe_coffee", () -> new UmaDrinkItem(status -> {
+                APRecover(status, 0.5F);UmaStatusUtils.addMotivation(status);},
+                    FoodInfo.builder().alwaysEat()
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, FoodValues.LONG_DURATION, 0), 1.0F)
+                            .build()));
+
 }

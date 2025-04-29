@@ -9,6 +9,8 @@ public class UDConfig {
     public static ForgeConfigSpec.BooleanValue GENERATE_UD_LOOT;
     public static ForgeConfigSpec.BooleanValue FARMERS_TRADE_UD_CROPS;
     public static ForgeConfigSpec.BooleanValue FARMERS_TRADE_RARE_CROPS;
+    public static ForgeConfigSpec.BooleanValue VILLAGERS_TRADE_OTHER_ITEMS;
+    public static ForgeConfigSpec.BooleanValue TRAINERS_TRADE_ITEMS;
     public static ForgeConfigSpec.BooleanValue WANDERING_TRADER_TRADE_UD_CROPS;
 
     static{
@@ -28,8 +30,16 @@ public class UDConfig {
                 .comment("Should Farmers buy this mod's rare crops? (May reduce chances of other trades appearing)")
                 .comment("If you disable vegetable trades, the trades will be disabled regardless of this field")
                 .define("farmersTradeRareCrops", true);
+        VILLAGERS_TRADE_OTHER_ITEMS = COMMON_BUILDER
+                .translation("config.umapyoidelight.tradeotheritems")
+                .comment("Should Villagers trade some of this mod's items? (May reduce chances of other trades appearing)")
+                .define("villagersTradeOtherItems", true);
+        TRAINERS_TRADE_ITEMS = COMMON_BUILDER
+                .translation("config.umapyoidelight.trainerstradeitems")
+                .comment("Should Trainers trade some of this mod's items? (May reduce chances of other trades appearing)")
+                .define("trainersTradeItems", true);
         WANDERING_TRADER_TRADE_UD_CROPS = COMMON_BUILDER
-                .translation("config.umapyoidelight.traderarecrops")
+                .translation("config.umapyoidelight.wandererstradeudcrops")
                 .comment("Should Farmers buy this mod's rare crops? (May reduce chances of other trades appearing)")
                 .comment("If you disable vegetable trades, the trades will be disabled regardless of this field")
                 .define("wanderersTradeUDCrops", true);

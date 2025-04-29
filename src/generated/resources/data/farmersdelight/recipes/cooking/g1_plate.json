@@ -13,7 +13,13 @@
       "item": "umapyoidelight:choice_vegetables"
     },
     {
-      "tag": "forge:grain/rice"
+      "tag": "forge:pasta"
+    },
+    {
+      "item": "umapyoidelight:raw_hamburg"
+    },
+    {
+      "tag": "forge:grain/wheat"
     }
   ],
   "recipe_book_tab": "meals",

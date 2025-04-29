@@ -94,6 +94,7 @@ public class CookingRecipesProv {
                 .addIngredient(ForgeTags.VEGETABLES_CARROT)
                 .addIngredient(ForgeTags.VEGETABLES_POTATO)
                 .addIngredient(ForgeTagsUD.VEGETABLES_CHILI)
+                .addIngredient(ItemRegistration.CHILI_ITEM_RARE.get())
                 .addIngredient(ForgeTags.RAW_PORK)
                 .unlockedByAnyIngredient(ItemRegistration.CHILI_ITEM_RARE.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
@@ -101,7 +102,9 @@ public class CookingRecipesProv {
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.GI_PLATE.get(), 1, SLOW_COOKING, LARGE_EXP)
                 .addIngredient(ItemRegistration.CHOICE_VEGETABLES.get(),3)
-                .addIngredient(ForgeTags.GRAIN_RICE)
+                .addIngredient(ForgeTags.PASTA)
+                .addIngredient(ItemRegistration.RAW_HAMBURG.get())
+                .addIngredient(ForgeTags.GRAIN_WHEAT)
                 .unlockedByAnyIngredient(ItemRegistration.CHOICE_VEGETABLES.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(consumer);
