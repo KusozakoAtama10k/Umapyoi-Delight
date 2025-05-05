@@ -3,7 +3,6 @@ package com.ka10k.umapyoidelight.datagen.recipe;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
 import com.ka10k.umapyoidelight.tag.ForgeTagsUD;
 import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;

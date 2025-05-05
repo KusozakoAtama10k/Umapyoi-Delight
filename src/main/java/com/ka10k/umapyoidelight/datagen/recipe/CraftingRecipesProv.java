@@ -1,6 +1,5 @@
 package com.ka10k.umapyoidelight.datagen.recipe;
 
-import com.ka10k.umapyoidelight.Umapyoidelight;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
 import com.ka10k.umapyoidelight.tag.ForgeTagsUD;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
