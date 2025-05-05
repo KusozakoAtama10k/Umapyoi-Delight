@@ -3,6 +3,7 @@ package com.ka10k.umapyoidelight.datagen.recipe;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
 import com.ka10k.umapyoidelight.tag.ForgeTagsUD;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -108,6 +109,13 @@ public class CookingRecipesProv {
                 .unlockedByAnyIngredient(ItemRegistration.CHOICE_VEGETABLES.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(consumer);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.STRAWBERRY_JAM.get(), 2, FAST_COOKING, SMALL_EXP)
+                .addIngredient(Ingredient.of(ForgeTagsUD.CROPS_STRAWBERRY),2)
+                .addIngredient(Items.SUGAR,3)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(consumer);
+
     }
 
 }

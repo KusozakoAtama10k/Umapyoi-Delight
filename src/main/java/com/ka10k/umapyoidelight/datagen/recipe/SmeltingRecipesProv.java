@@ -27,5 +27,7 @@ public class SmeltingRecipesProv {
         foodSmeltingRecipes("hamburg", ItemRegistration.RAW_HAMBURG.get(), ItemRegistration.HAMBURG.get(),0.35F, consumer);
         foodSmeltingRecipes("potato_garlic_pizza", ItemRegistration.RAW_POTATO_GARLIC_PIZZA.get(), ItemRegistration.POTATO_GARLIC_PIZZA.get(),0.35F, consumer);
         foodSmeltingRecipes("potato_garlic_pizza_rare", ItemRegistration.RAW_POTATO_GARLIC_PIZZA_RARE.get(), ItemRegistration.POTATO_GARLIC_PIZZA_RARE.get(),0.35F, consumer);
+        foodSmeltingRecipes("toast", ItemRegistration.WHITE_BREAD.get(), ItemRegistration.TOAST.get(),0.35F, consumer);
+
     }
 }

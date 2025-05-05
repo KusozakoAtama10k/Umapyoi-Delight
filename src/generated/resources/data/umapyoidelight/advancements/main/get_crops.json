@@ -39,7 +39,7 @@
     }
   },
   "display": {
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "description": {
       "translate": "umapyoidelight.advancement.get_crops.desc"
     },

@@ -1,6 +1,7 @@
 package com.ka10k.umapyoidelight;
 
 import com.ka10k.umapyoidelight.block.BlockRegistration;
+import com.ka10k.umapyoidelight.item.ComposterRegistration;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
 import com.ka10k.umapyoidelight.loot.LootModifiers;
 import com.mojang.logging.LogUtils;
@@ -9,6 +10,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
@@ -24,6 +26,7 @@ public class Umapyoidelight {
 
     public Umapyoidelight() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(this::setup);
         BlockRegistration.BLOCKS.register(modEventBus);
         ItemRegistration.ITEMS.register(modEventBus);
         CreativeTab.CREATIVE_MODE_TABS.register(modEventBus);
@@ -33,4 +36,9 @@ public class Umapyoidelight {
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, UDConfig.COMMON_CONFIG);
     }
+
+    private void setup(final FMLCommonSetupEvent event){
+        event.enqueueWork(ComposterRegistration::registerCompost);
+    }
+
 }

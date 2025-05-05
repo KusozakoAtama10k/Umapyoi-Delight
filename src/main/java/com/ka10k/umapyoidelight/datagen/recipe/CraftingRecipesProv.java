@@ -1,11 +1,13 @@
 package com.ka10k.umapyoidelight.datagen.recipe;
 
+import com.ka10k.umapyoidelight.Umapyoidelight;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
 import com.ka10k.umapyoidelight.tag.ForgeTagsUD;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 
 import java.util.function.Consumer;
@@ -182,6 +184,44 @@ public class CraftingRecipesProv {
                 .unlockedBy("has_potato_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_ITEM_RARE.get()))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.POTATO_GARLIC_PIZZA.get(), 1)
+                .requires(ItemRegistration.POTATO_GARLIC_PIZZA_SLICE.get(), 6)
+                .requires(Items.BOWL)
+                .unlockedBy("has_pizza_slice", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_GARLIC_PIZZA_SLICE.get()))
+                .save(consumer,"umapyoidelight:potato_garlic_pizza_from_slice");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.POTATO_GARLIC_PIZZA_RARE.get(), 1)
+                .requires(ItemRegistration.POTATO_GARLIC_PIZZA_SLICE_RARE.get(), 6)
+                .requires(Items.BOWL)
+                .unlockedBy("has_pizza_slice_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_GARLIC_PIZZA_SLICE_RARE.get()))
+                .save(consumer,"umapyoidelight:potato_garlic_pizza_rare_from_slice");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_JUICE.get(), 1)
+                .requires(Ingredient.of(ForgeTags.VEGETABLES_CARROT), 2)
+                .requires(Ingredient.of(Items.GLASS_BOTTLE))
+                .unlockedBy("has_carrot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.CARROT))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_JUICE.get(), 4)
+                .requires(Ingredient.of(ItemRegistration.CARROT_ITEM_RARE.get()))
+                .requires(Ingredient.of(Items.GLASS_BOTTLE),4)
+                .unlockedBy("has_carrot_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_ITEM_RARE.get()))
+                .save(consumer, "umapyoidelight:carrot_juice_rare_carrot");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.TOAST_STRAWBERRY_JAM.get(), 1)
+                .requires(Ingredient.of(ItemRegistration.TOAST.get()))
+                .requires(Ingredient.of(ItemRegistration.STRAWBERRY_JAM.get()))
+                .unlockedBy("has_strawberry_jam", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_JAM.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_BURGER.get())
+                .requires(ForgeTags.BREAD)
+                .requires(ModItems.BEEF_PATTY.get())
+                .requires(ForgeTags.SALAD_INGREDIENTS)
+                .requires(ForgeTags.VEGETABLES_CARROT)
+                .requires(ForgeTags.CROPS_ONION)
+                .unlockedBy("has_beef_patty", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.BEEF_PATTY.get()))
+                .save(consumer);
 
     }
 }

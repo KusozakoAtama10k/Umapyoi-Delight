@@ -1,10 +1,10 @@
-// 1.20.1	2025-04-29T15:43:47.593681	Advancements
+// 1.20.1	2025-05-05T02:59:38.3748172	Advancements
 0924f5184bfeecfa7e5eaa92cf2e3d529b1cf9da data/umapyoidelight/advancements/main/cook_g1_plate.json
-c431a8af86b04b3479596890d81f7a4302e19596 data/umapyoidelight/advancements/main/cook_good_meal.json
-8ae378fd7b9921097450b34c8933ce74d93a7d1c data/umapyoidelight/advancements/main/cook_normal_meal.json
+707b9c0aec412847145faff555f444822d82ef51 data/umapyoidelight/advancements/main/cook_good_meal.json
+ecdad8db01f22eeb8742eea91a5f8da25f4fcf37 data/umapyoidelight/advancements/main/cook_normal_meal.json
 edcf7522da60343a1cf1be33484cd9db1e001490 data/umapyoidelight/advancements/main/craft_choice_vegetables.json
-6c04a0b6474cdb0a0dab98282c3779536d322f05 data/umapyoidelight/advancements/main/eat_all_meals.json
-23462eaad53f4086c84942bf85ca0eabee661188 data/umapyoidelight/advancements/main/get_crops.json
+95ab184652d9e0eec3e00ce7cf0f753e1599c121 data/umapyoidelight/advancements/main/eat_all_cookable_foods.json
+60479ab3d2c4984dcf148e966c93a43f0df234fa data/umapyoidelight/advancements/main/get_crops.json
 3d5c63d85570d56220832222d1c720bf8ea1ae97 data/umapyoidelight/advancements/main/get_rare_crops.json
 1583d3e15f9fd7b0818167ec9a409e93fd56d32e data/umapyoidelight/advancements/main/root.json
 322d62900d762d4ad250365e004d1ae23fa7982f data/umapyoidelight/advancements/main/trade_special_items.json
