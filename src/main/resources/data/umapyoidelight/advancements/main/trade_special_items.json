@@ -43,9 +43,7 @@
   },
   "requirements": [
     [
-      "manhattan_cafe_coffee"
-    ],
-    [
+      "manhattan_cafe_coffee",
       "gold_ship_yakisoba"
     ]
   ],

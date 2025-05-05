@@ -109,6 +109,7 @@ public class AdvancementGen implements ForgeAdvancementProvider.AdvancementGener
 		Advancement tradeSpecialItems = getAdvancement(getCrops, ItemRegistration.COFFEE.get(), "trade_special_items", FrameType.TASK, true, true, false)
 				.addCriterion("manhattan_cafe_coffee", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.COFFEE.get()))
 				.addCriterion("gold_ship_yakisoba", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.YAKISOBA.get()))
+				.requirements(RequirementsStrategy.OR)
 				.save(consumer, getNameId("main/trade_special_items"));
 
 	}
