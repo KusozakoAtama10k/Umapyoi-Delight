@@ -84,7 +84,7 @@ public class AdvancementGen implements ForgeAdvancementProvider.AdvancementGener
 				.addCriterion("choice_vegetables", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CHOICE_VEGETABLES.get()))
 				.save(consumer, getNameId("main/craft_choice_vegetables"));
 
-		Advancement eatAllMeals = getAdvancement(cookGIPlate, ItemRegistration.GI_PLATE.get(), "eat_all_cookable_foods", FrameType.CHALLENGE, true, true, false)
+		Advancement eatAllMeals = getAdvancement(cookGIPlate, ItemRegistration.GI_PLATE.get(), "consume_all_cookable_foods", FrameType.CHALLENGE, true, true, false)
 				.addCriterion("eat_hamburg", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.HAMBURG.get()))
 				.addCriterion("eat_carrot_hamburg", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_HAMBURG.get()))
 				.addCriterion("eat_carrot_hamburg_deluxe", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_HAMBURG_DELUXE.get()))
@@ -102,11 +102,13 @@ public class AdvancementGen implements ForgeAdvancementProvider.AdvancementGener
 				.addCriterion("eat_white_bread", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.WHITE_BREAD.get()))
 				.addCriterion("eat_toast", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.TOAST.get()))
 				.addCriterion("eat_toast_strawberry_jam", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.TOAST_STRAWBERRY_JAM.get()))
+				.addCriterion("drink_carrot_juice", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_JUICE.get()))
 				.rewards(AdvancementRewards.Builder.experience(150))
-				.save(consumer, getNameId("main/eat_all_cookable_foods"));
+				.save(consumer, getNameId("main/consume_all_cookable_foods"));
 
 		Advancement tradeSpecialItems = getAdvancement(getCrops, ItemRegistration.COFFEE.get(), "trade_special_items", FrameType.TASK, true, true, false)
 				.addCriterion("manhattan_cafe_coffee", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.COFFEE.get()))
+				.addCriterion("gold_ship_yakisoba", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.YAKISOBA.get()))
 				.save(consumer, getNameId("main/trade_special_items"));
 
 	}

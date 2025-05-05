@@ -1,6 +1,16 @@
 {
   "parent": "umapyoidelight:main/cook_g1_plate",
   "criteria": {
+    "drink_carrot_juice": {
+      "conditions": {
+        "item": {
+          "items": [
+            "umapyoidelight:carrot_juice"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
     "eat_carrot_hamburg": {
       "conditions": {
         "item": {
@@ -175,7 +185,7 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "umapyoidelight.advancement.eat_all_cookable_foods.desc"
+      "translate": "umapyoidelight.advancement.consume_all_cookable_foods.desc"
     },
     "frame": "challenge",
     "hidden": false,
@@ -184,7 +194,7 @@
     },
     "show_toast": true,
     "title": {
-      "translate": "umapyoidelight.advancement.eat_all_cookable_foods"
+      "translate": "umapyoidelight.advancement.consume_all_cookable_foods"
     }
   },
   "requirements": [
@@ -238,6 +248,9 @@
     ],
     [
       "eat_toast_strawberry_jam"
+    ],
+    [
+      "drink_carrot_juice"
     ]
   ],
   "rewards": {
