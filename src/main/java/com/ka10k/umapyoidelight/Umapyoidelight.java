@@ -33,4 +33,9 @@ public class Umapyoidelight {
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, UDConfig.COMMON_CONFIG);
     }
+
+
+	public static Logger getLogger() {
+		return LOGGER;
+	}
 }
