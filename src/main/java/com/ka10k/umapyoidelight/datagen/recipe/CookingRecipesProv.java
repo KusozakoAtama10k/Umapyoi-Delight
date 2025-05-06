@@ -108,6 +108,13 @@ public class CookingRecipesProv {
                 .unlockedByAnyIngredient(ItemRegistration.CHOICE_VEGETABLES.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(consumer);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.STRAWBERRY_JAM.get(), 2, FAST_COOKING, SMALL_EXP)
+                .addIngredient(Ingredient.of(ForgeTagsUD.CROPS_STRAWBERRY),2)
+                .addIngredient(Items.SUGAR,3)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(consumer);
+
     }
 
 }

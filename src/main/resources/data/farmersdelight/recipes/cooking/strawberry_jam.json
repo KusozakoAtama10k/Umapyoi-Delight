@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "forge:crops/strawberry"
+    },
+    {
+      "tag": "forge:crops/strawberry"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 2,
+    "item": "umapyoidelight:strawberry_jam"
+  }
+}

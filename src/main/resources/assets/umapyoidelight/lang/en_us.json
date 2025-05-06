@@ -9,8 +9,8 @@
   "umapyoidelight.advancement.cook_normal_meal.desc":"Cook any meal added at Umapyoi Delight",
   "umapyoidelight.advancement.craft_choice_vegetables":"Bumper Crop",
   "umapyoidelight.advancement.craft_choice_vegetables.desc":"Craft choice vegetables",
-  "umapyoidelight.advancement.eat_all_meals":"A Big Gratitude to Lord Great Feast",
-  "umapyoidelight.advancement.eat_all_meals.desc":"Eat all cookable meals as umamusume.\n§oGochisou-sama deshita!§r",
+  "umapyoidelight.advancement.consume_all_cookable_foods":"A Big Gratitude to Lord Great Feast",
+  "umapyoidelight.advancement.consume_all_cookable_foods.desc":"Eat all foods added by this mod as umamusume.\n§oGochisou-sama deshita!§r",
   "umapyoidelight.advancement.root":"Umapyoi Delight",
   "umapyoidelight.advancement.root.desc":"Train well, learn well, run well - and eat well!",
   "umapyoidelight.advancement.get_crops":"Beginning of the Great Agrarian Era",
@@ -41,6 +41,23 @@
   "config.umapyoidelight.trainerstradeitems": "Trainers Trade Items",
   "config.umapyoidelight.wandererstradeudcrops": "Wandering Trader Trade UD Crops",
 
+  "config.umapyoidelight.ap_recover_potaufeu": "Pot-au-feu of Carrot and Potato",
+  "config.umapyoidelight.ap_recover_potaufeu_rare": "Secret Hot Spring: Paradise Pot-au-feu",
+  "config.umapyoidelight.ap_recover_ramen": "Garlic Ramen",
+  "config.umapyoidelight.ap_recover_ramen_rare": "Mt.Garlic Ramen",
+  "config.umapyoidelight.ap_recover_pizza_slice": "Potato Garlic Pizza",
+  "config.umapyoidelight.ap_recover_pizza_slice_rare": "Beyond the 2400m Dream",
+  "config.umapyoidelight.ap_recover_mapo": "Mapo Potato and Carrot",
+  "config.umapyoidelight.ap_recover_mapo_rare": "Onigashima Mapo Tofu",
+  "config.umapyoidelight.ap_recover_icecream": "Strawberry Ice Cream with Carrot Flavor",
+  "config.umapyoidelight.ap_recover_icecream_rare": "Ice Cream on a Carrot",
+  "config.umapyoidelight.ap_recover_g1_plate": "GI Plate",
+  "config.umapyoidelight.ap_recover_carrot_burger": "Carrot Hamburger",
+  "config.umapyoidelight.ap_recover_carrot_juice": "Carrot Juice",
+  "config.umapyoidelight.ap_recover_coffee": "Manhattan Cafe's Special Blend Coffee",
+  "config.umapyoidelight.ap_recover_yakisoba": "Golshi-chan's Yakisoba",
+
+
   "item.umapyoidelight.carrot_hamburg": "Carrot Hamburg Steak",
   "item.umapyoidelight.carrot_hamburg_deluxe": "Carrot Hamburg Steak Deluxe",
   "item.umapyoidelight.carrot_rare": "Human-shaped Carrot",
@@ -67,5 +84,12 @@
   "item.umapyoidelight.carrot_strawberry_icecream": "Strawberry Ice Cream with Carrot Flavor",
   "item.umapyoidelight.carrot_strawberry_icecream_rare": "Ice Cream on a Carrot",
   "item.umapyoidelight.g1_plate": "GI Plate",
-  "item.umapyoidelight.manhattan_cafe_coffee": "Manhattan Cafe's Special Blend Coffee"
+  "item.umapyoidelight.manhattan_cafe_coffee": "Manhattan Cafe's Special Blend Coffee",
+  "item.umapyoidelight.gold_ship_yakisoba": "Golshi-chan's Yakisoba",
+  "item.umapyoidelight.carrot_burger": "Carrot Hamburger",
+  "item.umapyoidelight.carrot_juice": "Carrot Juice",
+  "item.umapyoidelight.white_bread": "Sliced Bread",
+  "item.umapyoidelight.toast": "Toast",
+  "item.umapyoidelight.toast_strawberry_jam": "Toast with Strawberry Jam",
+  "item.umapyoidelight.strawberry_jam": "Strawberry Jam"
 }

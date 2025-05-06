@@ -1,6 +1,7 @@
-// 1.20.1	2025-04-28T17:39:24.4331837	Item Models: umapyoidelight
+// 1.20.1	2025-05-03T02:39:56.3888398	Item Models: umapyoidelight
 40917699908b69fba7b67726a3a711a52a033f56 assets/umapyoidelight/models/item/carrot_hamburg.json
 094a18c705d973050424017bfa09d914b20984c1 assets/umapyoidelight/models/item/carrot_hamburg_deluxe.json
+5e361f57d69297a4f5ac70cbcb5a65d688c116c3 assets/umapyoidelight/models/item/carrot_juice.json
 83bf9b980f27237353228c10b747ea5a1152b9e9 assets/umapyoidelight/models/item/carrot_potato_potaufeu.json
 b11d23b618bb820f9b5573a382d9b7cdb905949e assets/umapyoidelight/models/item/carrot_potato_potaufeu_rare.json
 ad58be30f35123b222abc28313b39c80f001420d assets/umapyoidelight/models/item/carrot_rare.json
@@ -26,7 +27,11 @@ dafd7aaa27cd9fc83afe70f756b569398227ed9e assets/umapyoidelight/models/item/potat
 343cba6e9f90ca17b5bc0e2d50a5dc13e00a6c23 assets/umapyoidelight/models/item/raw_potato_garlic_pizza.json
 38fb6093915da86ae916cf3bfc4460bbeb174814 assets/umapyoidelight/models/item/raw_potato_garlic_pizza_rare.json
 0dfd247fe50d8fb944ca6ceb81109cc80d181ee7 assets/umapyoidelight/models/item/strawberry.json
+0bce007476dc98b75dbac9ed82cf461fdbde5278 assets/umapyoidelight/models/item/strawberry_jam.json
 681ba4b8a9f1470cf0d095b74107319eedcfe18a assets/umapyoidelight/models/item/strawberry_rare.json
+40fa6102c9b31739892d63006214e133455194a1 assets/umapyoidelight/models/item/toast.json
+b7948a321adb3a55b990afd0b77ae507df1b8aae assets/umapyoidelight/models/item/toast_strawberry_jam.json
+0d074f88a6219e9bfb232fb5788911f2b933f1be assets/umapyoidelight/models/item/white_bread.json
 e0ff8528e53612079858d6f4177cb5336deaaef9 assets/umapyoidelight/models/item/wild_chili_peppers.json
 4a0568d4e0f1c20149ee9835276e2e9432960124 assets/umapyoidelight/models/item/wild_garlic.json
 1c64311aa990e94ccefe221b6554478d7c7216b8 assets/umapyoidelight/models/item/wild_strawberries.json

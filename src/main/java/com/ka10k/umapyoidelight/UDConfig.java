@@ -13,6 +13,25 @@ public class UDConfig {
     public static ForgeConfigSpec.BooleanValue TRAINERS_TRADE_ITEMS;
     public static ForgeConfigSpec.BooleanValue WANDERING_TRADER_TRADE_UD_CROPS;
 
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_POTAUFEU;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_POTAUFEU_RARE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_RAMEN;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_RAMEN_RARE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_PIZZASLICE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_PIZZASLICE_RARE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_MAPO;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_MAPO_RARE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_ICECREAM;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_ICECREAM_RARE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_GI_PLATE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_CARROT_BURGER;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_COFFEE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_CARROT_JUICE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_YAKISOBA;
+
+
+
+
     static{
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
         COMMON_BUILDER.comment("General settings").push("general");
@@ -43,6 +62,56 @@ public class UDConfig {
                 .comment("Should Farmers buy this mod's rare crops? (May reduce chances of other trades appearing)")
                 .comment("If you disable vegetable trades, the trades will be disabled regardless of this field")
                 .define("wanderersTradeUDCrops", true);
+        COMMON_BUILDER.pop();
+        COMMON_BUILDER.comment("Foods").push("foods");
+        AP_RECOVER_POTAUFEU = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_potaufeu")
+                .comment("How much action points do meals recover?")
+                .defineInRange("potaufeu",0.1,0.0,1.0);
+        AP_RECOVER_POTAUFEU_RARE = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_potaufeu_rare")
+                .defineInRange("rarePotaufeu",0.2,0.0,1.0);
+        AP_RECOVER_RAMEN = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_ramen")
+                .defineInRange("ramen",0.1,0.0,1.0);
+        AP_RECOVER_RAMEN_RARE = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_ramen_rare")
+                .defineInRange("rareRamen",0.2,0.0,1.0);
+        AP_RECOVER_PIZZASLICE = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_pizza_slice")
+                .defineInRange("pizzaSlice",0.04,0.0,1.0);
+        AP_RECOVER_PIZZASLICE_RARE = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_pizza_slice_rare")
+                .defineInRange("rarePizzaSlice",0.08,0.0,1.0);
+        AP_RECOVER_MAPO = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_mapo")
+                .defineInRange("mapo",0.1,0.0,1.0);
+        AP_RECOVER_MAPO_RARE = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_mapo_rare")
+                .defineInRange("rareMapo",0.2,0.0,1.0);
+        AP_RECOVER_ICECREAM = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_icecream")
+                .defineInRange("iceCream",0.2,0.0,1.0);
+        AP_RECOVER_ICECREAM_RARE = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_icecream_rare")
+                .defineInRange("rareIceCream",0.35,0.0,1.0);
+        AP_RECOVER_GI_PLATE = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_g1_plate")
+                .defineInRange("GIPlate",0.65,0.0,1.0);
+
+        AP_RECOVER_CARROT_BURGER = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_carrot_burger")
+                .defineInRange("carrotBurger",0.075,0.0,1.0);
+        AP_RECOVER_CARROT_JUICE = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_carrot_juice")
+                .defineInRange("carrotJuice",0.05,0.0,1.0);
+        AP_RECOVER_COFFEE = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_coffee")
+                .defineInRange("coffee",0.5,0.0,1.0);
+        AP_RECOVER_YAKISOBA = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_yakisoba")
+                .defineInRange("yakisoba",0.3,0.0,1.0);
+
         COMMON_BUILDER.pop();
         COMMON_CONFIG = COMMON_BUILDER.build();
     }

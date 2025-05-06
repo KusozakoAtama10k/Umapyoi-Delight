@@ -54,6 +54,9 @@ public class ItemTagsProv extends ItemTagsProvider {
         tag(ForgeTags.VEGETABLES).addTags(ForgeTagsUD.VEGETABLES_CHILI, ForgeTagsUD.VEGETABLES_GARLIC);
         tag(ForgeTagsUD.VEGETABLES_CHILI).add(ItemRegistration.CHILI_ITEM.get());
         tag(ForgeTagsUD.VEGETABLES_GARLIC).add(ItemRegistration.GARLIC_ITEM.get());
+
+        tag(ForgeTags.BREAD).add(ItemRegistration.WHITE_BREAD.get());
+        tag(ForgeTags.BREAD_WHEAT).add(ItemRegistration.WHITE_BREAD.get());
     }
 
     private void registerModTags() {
@@ -65,8 +68,6 @@ public class ItemTagsProv extends ItemTagsProvider {
     }
 
     public void registerCompatibilityTags() {
-        /*tag(CompatibilityTags.CREATE_UPRIGHT_ON_BELT)
-                .add(ModItems.MILK_BOTTLE.get());*/
 
         tag(CompatibilityTags.SERENE_SEASONS_AUTUMN_CROPS).add(
                 ItemRegistration.CHILI_ITEM.get(),

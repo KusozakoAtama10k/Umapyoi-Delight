@@ -61,6 +61,11 @@ public class ItemModelsProv extends ItemModelProvider {
         simpleItem(ItemRegistration.RAW_POTATO_GARLIC_PIZZA);
         simpleItem(ItemRegistration.RAW_POTATO_GARLIC_PIZZA_RARE);
         simpleItem(ItemRegistration.CHOICE_VEGETABLES);
+        simpleItem(ItemRegistration.CARROT_JUICE);
+        simpleItem(ItemRegistration.STRAWBERRY_JAM);
+        simpleItem(ItemRegistration.WHITE_BREAD);
+        simpleItem(ItemRegistration.TOAST);
+        simpleItem(ItemRegistration.TOAST_STRAWBERRY_JAM);
 
         handheldItem(ItemRegistration.CARROT_STRAWBERRY_ICECREAM);
         handheldItem(ItemRegistration.CARROT_STRAWBERRY_ICECREAM_RARE);

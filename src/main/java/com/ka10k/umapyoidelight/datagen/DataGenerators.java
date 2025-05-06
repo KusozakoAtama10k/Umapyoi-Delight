@@ -28,7 +28,7 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new AdvancementProv(packOutput, lookupProvider, existingFileHelper));
 
 
-        generator.addProvider(event.includeClient(), new BlockStatesProv(packOutput,existingFileHelper));
+        //generator.addProvider(event.includeClient(), new BlockStatesProv(packOutput,existingFileHelper));
         generator.addProvider(event.includeClient(), new ItemModelsProv(packOutput,existingFileHelper));
 
     }

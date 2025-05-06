@@ -34,24 +34,30 @@ public class AdvancementGen implements ForgeAdvancementProvider.AdvancementGener
 				.save(consumer, getNameId("main/root"));
 
 		// Main Branch
-		Advancement getCrops = getAdvancement(root, Items.GOLDEN_HOE, "get_crops", FrameType.TASK, true, false, false)
+		Advancement getCrops = getAdvancement(root, Items.GOLDEN_HOE, "get_crops", FrameType.TASK, true, true, false)
 				.addCriterion("garlic", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GARLIC_ITEM.get()))
 				.addCriterion("chili_pepper", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CHILI_ITEM.get()))
 				.addCriterion("strawberry", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_ITEM.get()))
 				.requirements(RequirementsStrategy.OR)
 				.save(consumer, getNameId("main/get_crops"));
 
-		Advancement cookNormalMeal = getAdvancement(getCrops, ItemRegistration.CARROT_HAMBURG.get(), "cook_normal_meal", FrameType.TASK, true, false, false)
+		Advancement cookNormalMeal = getAdvancement(getCrops, ItemRegistration.CARROT_HAMBURG.get(), "cook_normal_meal", FrameType.TASK, true, true, false)
 				.addCriterion("carrot_hamburg", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_HAMBURG.get()))
 				.addCriterion("carrot_potato_potaufeu", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_POTATO_POTAUFEU.get()))
 				.addCriterion("garlic_ramen", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GARLIC_RAMEN.get()))
 				.addCriterion("potato_garlic_pizza", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_GARLIC_PIZZA.get()))
 				.addCriterion("mapo_carrot_potato", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.MAPO_CARROT_POTATO.get()))
 				.addCriterion("carrot_strawberry_icecream", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_STRAWBERRY_ICECREAM.get()))
+				.addCriterion("carrot_hamburg_deluxe", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_HAMBURG_DELUXE.get()))
+				.addCriterion("carrot_potato_potaufeu_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_POTATO_POTAUFEU_RARE.get()))
+				.addCriterion("garlic_ramen_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GARLIC_RAMEN_RARE.get()))
+				.addCriterion("potato_garlic_pizza_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_GARLIC_PIZZA_RARE.get()))
+				.addCriterion("mapo_carrot_potato_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.MAPO_CARROT_POTATO_RARE.get()))
+				.addCriterion("carrot_strawberry_icecream_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_STRAWBERRY_ICECREAM_RARE.get()))
 				.requirements(RequirementsStrategy.OR)
 				.save(consumer, getNameId("main/cook_normal_meal"));
 
-		Advancement cookGoodMeal = getAdvancement(cookNormalMeal, ItemRegistration.CARROT_HAMBURG_DELUXE.get(), "cook_good_meal", FrameType.TASK, true, false, false)
+		Advancement cookGoodMeal = getAdvancement(cookNormalMeal, ItemRegistration.CARROT_HAMBURG_DELUXE.get(), "cook_good_meal", FrameType.TASK, true, true, false)
 				.addCriterion("carrot_hamburg_deluxe", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_HAMBURG_DELUXE.get()))
 				.addCriterion("carrot_potato_potaufeu_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_POTATO_POTAUFEU_RARE.get()))
 				.addCriterion("garlic_ramen_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GARLIC_RAMEN_RARE.get()))
@@ -78,7 +84,8 @@ public class AdvancementGen implements ForgeAdvancementProvider.AdvancementGener
 				.addCriterion("choice_vegetables", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CHOICE_VEGETABLES.get()))
 				.save(consumer, getNameId("main/craft_choice_vegetables"));
 
-		Advancement eatAllMeals = getAdvancement(cookGIPlate, ItemRegistration.GI_PLATE.get(), "eat_all_meals", FrameType.CHALLENGE, true, true, false)
+		Advancement eatAllMeals = getAdvancement(cookGIPlate, ItemRegistration.GI_PLATE.get(), "consume_all_cookable_foods", FrameType.CHALLENGE, true, true, false)
+				.addCriterion("eat_hamburg", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.HAMBURG.get()))
 				.addCriterion("eat_carrot_hamburg", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_HAMBURG.get()))
 				.addCriterion("eat_carrot_hamburg_deluxe", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_HAMBURG_DELUXE.get()))
 				.addCriterion("eat_carrot_potato_potaufeu", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_POTATO_POTAUFEU.get()))
@@ -92,11 +99,17 @@ public class AdvancementGen implements ForgeAdvancementProvider.AdvancementGener
 				.addCriterion("eat_carrot_strawberry_icecream", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_STRAWBERRY_ICECREAM.get()))
 				.addCriterion("eat_carrot_strawberry_icecream_rare", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_STRAWBERRY_ICECREAM_RARE.get()))
 				.addCriterion("eat_g1_plate", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.GI_PLATE.get()))
+				.addCriterion("eat_white_bread", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.WHITE_BREAD.get()))
+				.addCriterion("eat_toast", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.TOAST.get()))
+				.addCriterion("eat_toast_strawberry_jam", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.TOAST_STRAWBERRY_JAM.get()))
+				.addCriterion("drink_carrot_juice", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_JUICE.get()))
 				.rewards(AdvancementRewards.Builder.experience(150))
-				.save(consumer, getNameId("main/eat_all_meals"));
+				.save(consumer, getNameId("main/consume_all_cookable_foods"));
 
 		Advancement tradeSpecialItems = getAdvancement(getCrops, ItemRegistration.COFFEE.get(), "trade_special_items", FrameType.TASK, true, true, false)
 				.addCriterion("manhattan_cafe_coffee", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.COFFEE.get()))
+				.addCriterion("gold_ship_yakisoba", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.YAKISOBA.get()))
+				.requirements(RequirementsStrategy.OR)
 				.save(consumer, getNameId("main/trade_special_items"));
 
 	}
