@@ -37,6 +37,10 @@ public class Umapyoidelight {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, UDConfig.COMMON_CONFIG);
     }
 
+	public static Logger getLogger() {
+		return LOGGER;
+	}
+
     private void setup(final FMLCommonSetupEvent event){
         event.enqueueWork(ComposterRegistration::registerCompost);
     }
