@@ -103,14 +103,25 @@ public class AdvancementGen implements ForgeAdvancementProvider.AdvancementGener
 				.addCriterion("eat_toast", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.TOAST.get()))
 				.addCriterion("eat_toast_strawberry_jam", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.TOAST_STRAWBERRY_JAM.get()))
 				.addCriterion("drink_carrot_juice", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_JUICE.get()))
+				.addCriterion("eat_triangular_bread", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.TRIANGLE_BREAD.get()))
+				.addCriterion("eat_carrot_burger", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_BURGER.get()))
+				.addCriterion("eat_strawberry_sandwich", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.STRAWBERRY_SANDWICH.get()))
+				.addCriterion("eat_vegetable_sandwich", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.VEGETABLE_SANDWICH.get()))
 				.rewards(AdvancementRewards.Builder.experience(150))
 				.save(consumer, getNameId("main/consume_all_cookable_foods"));
 
 		Advancement tradeSpecialItems = getAdvancement(getCrops, ItemRegistration.COFFEE.get(), "trade_special_items", FrameType.TASK, true, true, false)
 				.addCriterion("manhattan_cafe_coffee", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.COFFEE.get()))
 				.addCriterion("gold_ship_yakisoba", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.YAKISOBA.get()))
+				.addCriterion("victory_club_rice_cake", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.SAKURAMOCHI.get()))
+				.addCriterion("tachyon_potion", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTION.get()))
 				.requirements(RequirementsStrategy.OR)
 				.save(consumer, getNameId("main/trade_special_items"));
+
+		Advancement drinkTachyonPotion = getAdvancement(tradeSpecialItems, ItemRegistration.POTION.get(), "drink_tachyon_potion", FrameType.TASK, true, true, false)
+				.addCriterion("drink_tachyon_potion", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.POTION.get()))
+				.save(consumer, getNameId("main/drink_tachyon_potion"));
+
 
 	}
 

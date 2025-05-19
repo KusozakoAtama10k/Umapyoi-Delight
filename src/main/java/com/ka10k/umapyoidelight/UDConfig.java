@@ -28,8 +28,7 @@ public class UDConfig {
     public static ForgeConfigSpec.DoubleValue AP_RECOVER_COFFEE;
     public static ForgeConfigSpec.DoubleValue AP_RECOVER_CARROT_JUICE;
     public static ForgeConfigSpec.DoubleValue AP_RECOVER_YAKISOBA;
-
-
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_SAKURAMOCHI;
 
 
     static{
@@ -108,6 +107,9 @@ public class UDConfig {
         AP_RECOVER_COFFEE = COMMON_BUILDER
                 .translation("config.umapyoidelight.ap_recover_coffee")
                 .defineInRange("coffee",0.5,0.0,1.0);
+        AP_RECOVER_SAKURAMOCHI = COMMON_BUILDER
+                .translation("config.umapyoidelight.ap_recover_rice_cake")
+                .defineInRange("sakuraMochi",0.5,0.0,1.0);
         AP_RECOVER_YAKISOBA = COMMON_BUILDER
                 .translation("config.umapyoidelight.ap_recover_yakisoba")
                 .defineInRange("yakisoba",0.3,0.0,1.0);

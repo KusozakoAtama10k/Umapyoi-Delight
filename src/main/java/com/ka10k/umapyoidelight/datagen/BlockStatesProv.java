@@ -31,6 +31,10 @@ public class BlockStatesProv extends BlockStateProvider {
         return ForgeRegistries.BLOCKS.getKey(block).getPath();
     }
 
+    public String blockTextureName(String path) {
+        return Umapyoidelight.MOD_ID + "block/" + path;
+    }
+
     public ResourceLocation resourceBlock(String path) {
         return new ResourceLocation(Umapyoidelight.MOD_ID, "block/" + path);
     }
@@ -112,5 +116,6 @@ public class BlockStatesProv extends BlockStateProvider {
         wildCropBlock(BlockRegistration.WILD_CHILIS.get(), false);
         wildCropBlock(BlockRegistration.WILD_GARLIC.get(), false);
         wildCropBlock(BlockRegistration.WILD_STRAWBERRIES.get(), false);
+        simpleBlockWithItem(BlockRegistration.WOODCHIP_BLOCK.get(),models().cubeAll("woodchip_block",resourceBlock("woodchip")));
     }
 }

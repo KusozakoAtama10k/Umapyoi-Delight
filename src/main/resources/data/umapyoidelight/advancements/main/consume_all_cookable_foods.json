@@ -11,6 +11,16 @@
       },
       "trigger": "minecraft:consume_item"
     },
+    "eat_carrot_burger": {
+      "conditions": {
+        "item": {
+          "items": [
+            "umapyoidelight:carrot_burger"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
     "eat_carrot_hamburg": {
       "conditions": {
         "item": {
@@ -151,6 +161,16 @@
       },
       "trigger": "minecraft:consume_item"
     },
+    "eat_strawberry_sandwich": {
+      "conditions": {
+        "item": {
+          "items": [
+            "umapyoidelight:strawberry_sandwich"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
     "eat_toast": {
       "conditions": {
         "item": {
@@ -166,6 +186,26 @@
         "item": {
           "items": [
             "umapyoidelight:toast_strawberry_jam"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "eat_triangular_bread": {
+      "conditions": {
+        "item": {
+          "items": [
+            "umapyoidelight:triangular_bread"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "eat_vegetable_sandwich": {
+      "conditions": {
+        "item": {
+          "items": [
+            "umapyoidelight:vegetable_sandwich"
           ]
         }
       },
@@ -251,6 +291,18 @@
     ],
     [
       "drink_carrot_juice"
+    ],
+    [
+      "eat_triangular_bread"
+    ],
+    [
+      "eat_carrot_burger"
+    ],
+    [
+      "eat_strawberry_sandwich"
+    ],
+    [
+      "eat_vegetable_sandwich"
     ]
   ],
   "rewards": {

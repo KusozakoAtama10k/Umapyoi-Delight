@@ -127,3 +127,4 @@ runs/
 !gradle-wrapper.jar
 /src/main/resources/assets/farmersdelight/
 /run-data/
+/src/generated/resources/.cache/

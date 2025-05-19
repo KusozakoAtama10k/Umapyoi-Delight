@@ -18,8 +18,8 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraftforge.registries.RegistryObject;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class BlockLootTables extends BlockLootSubProvider {
@@ -38,6 +38,7 @@ public class BlockLootTables extends BlockLootSubProvider {
         this.dropSelf(BlockRegistration.STRAWBERRY_CRATE_RARE.get());
         this.dropSelf(BlockRegistration.CARROT_CRATE_RARE.get());
         this.dropSelf(BlockRegistration.POTATO_CRATE_RARE.get());
+        this.dropSelf(BlockRegistration.WOODCHIP_BLOCK.get());
 
 
         LootItemCondition.Builder Chili_Mature = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BlockRegistration.CHILI_CROP.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ChiliCrop.AGE, 7));
@@ -51,16 +52,17 @@ public class BlockLootTables extends BlockLootSubProvider {
         LootItemCondition.Builder Pizza_Rare_Full = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PotatoGarlicPizzaBlock.SERVINGS, 6));
         this.add(BlockRegistration.POTATO_GARLIC_PIZZA.get(), this.applyExplosionDecay(BlockRegistration.POTATO_GARLIC_PIZZA.get(), LootTable.lootTable().withPool(LootPool.lootPool().when(Pizza_Full).add(LootItem.lootTableItem(BlockRegistration.POTATO_GARLIC_PIZZA.get()))).withPool(LootPool.lootPool().when(Pizza_Full.invert()).add(LootItem.lootTableItem(Items.BOWL)))));
         this.add(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get(), this.applyExplosionDecay(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get(), LootTable.lootTable().withPool(LootPool.lootPool().when(Pizza_Rare_Full).add(LootItem.lootTableItem(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get()))).withPool(LootPool.lootPool().when(Pizza_Full.invert()).add(LootItem.lootTableItem(Items.BOWL)))));
+    }
 
-        //For error avoidance. DO NOT USE
-        this.dropSelf(BlockRegistration.WILD_CHILIS.get());
-        this.dropSelf(BlockRegistration.WILD_GARLIC.get());
-        this.dropSelf(BlockRegistration.WILD_STRAWBERRIES.get());
-
+    @Override
+    protected void add(Block block, LootTable.Builder builder) {
+        this.generatedLootTables.add(block);
+        this.map.put(block.getLootTable(), builder);
     }
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return BlockRegistration.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+        return generatedLootTables;
     }
+    private final Set<Block> generatedLootTables = new HashSet<>();
 }

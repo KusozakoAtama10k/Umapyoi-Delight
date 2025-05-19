@@ -19,6 +19,8 @@
   "umapyoidelight.advancement.get_rare_crops.desc":"Obtain any rare crop",
   "umapyoidelight.advancement.trade_special_items":"Top Secret",
   "umapyoidelight.advancement.trade_special_items.desc":"Trade a special item related to famous Umamusume from a trainer",
+  "umapyoidelight.advancement.drink_tachyon_potion":"Guinea Pig Applicant",
+  "umapyoidelight.advancement.drink_tachyon_potion.desc":"Drink Agnes Tachyon's Suspicious Potion",
 
   "block.umapyoidelight.carrot_crate_rare": "Human-shaped Carrot Crate",
   "block.umapyoidelight.potato_crate_rare": "Giant Potato Crate",
@@ -33,6 +35,9 @@
   "block.umapyoidelight.wild_chili_peppers": "Wild Chili Peppers",
   "block.umapyoidelight.wild_garlic": "Wild Garlic",
   "block.umapyoidelight.wild_strawberries": "Wild Strawberries",
+  "block.umapyoidelight.woodchip_block": "Woodchip Block",
+  "block.umapyoidelight.woodchip_road": "Woodchip Road",
+
 
   "config.umapyoidelight.generateudloot": "Generate Chest Loot",
   "config.umapyoidelight.tradeudcrops": "Farmers Trade UD Crops",
@@ -56,6 +61,8 @@
   "config.umapyoidelight.ap_recover_carrot_juice": "Carrot Juice",
   "config.umapyoidelight.ap_recover_coffee": "Manhattan Cafe's Special Blend Coffee",
   "config.umapyoidelight.ap_recover_yakisoba": "Golshi-chan's Yakisoba",
+  "config.umapyoidelight.ap_recover_rice_cake": "Victory Club's Sakuramochi",
+
 
 
   "item.umapyoidelight.carrot_hamburg": "Carrot Hamburg Steak",
@@ -91,5 +98,9 @@
   "item.umapyoidelight.white_bread": "Sliced Bread",
   "item.umapyoidelight.toast": "Toast",
   "item.umapyoidelight.toast_strawberry_jam": "Toast with Strawberry Jam",
-  "item.umapyoidelight.strawberry_jam": "Strawberry Jam"
+  "item.umapyoidelight.strawberry_jam": "Strawberry Jam",
+  "item.umapyoidelight.strawberry_sandwich": "Strawberry Sandwich",
+  "item.umapyoidelight.vegetable_sandwich": "Vegetable Sandwich",
+  "item.umapyoidelight.agnes_tachyon_potion": "Agnes Tachyon's Suspicious Potion",
+  "item.umapyoidelight.victory_club_rice_cake": "Victory Club's Sakuramochi"
 }

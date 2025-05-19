@@ -11,6 +11,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.BasicItemListing;
 import net.minecraftforge.event.village.VillagerTradesEvent;
+import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.tracen.umapyoi.item.ItemRegistry;
@@ -86,9 +87,18 @@ public class Trades {
             //Expert(Emerald)
             trades.get(4).add(Jewel2Item(ItemRegistration.COFFEE.get(), 6, 2, 20));
             trades.get(4).add(Jewel2Item(ItemRegistration.YAKISOBA.get(), 4, 2, 20));
+            trades.get(4).add(Jewel2Item(ItemRegistration.POTION.get(), 1, 1, 20));
+            trades.get(4).add(Jewel2Item(ItemRegistration.SAKURAMOCHI.get(), 8, 1, 20));
             //Master(Diamond)
 
         }
     }
-
+    @SubscribeEvent
+    public static void addWandererTrades(WandererTradesEvent event) {
+        if(!UDConfig.WANDERING_TRADER_TRADE_UD_CROPS.get()) return;
+        List<VillagerTrades.ItemListing> trades = event.getGenericTrades();
+        trades.add(Emerald2Item(ItemRegistration.CHILI_ITEM.get(), 1, 12));
+        trades.add(Emerald2Item(ItemRegistration.GARLIC_ITEM.get(), 1, 12));
+        trades.add(Emerald2Item(ItemRegistration.STRAWBERRY_ITEM.get(), 1, 12));
+    }
 }

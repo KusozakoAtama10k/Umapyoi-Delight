@@ -24,6 +24,30 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "tachyon_potion": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:agnes_tachyon_potion"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "victory_club_rice_cake": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:victory_club_rice_cake"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -44,7 +68,9 @@
   "requirements": [
     [
       "manhattan_cafe_coffee",
-      "gold_ship_yakisoba"
+      "gold_ship_yakisoba",
+      "victory_club_rice_cake",
+      "tachyon_potion"
     ]
   ],
   "sends_telemetry_event": true

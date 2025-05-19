@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.tracen.umapyoi.data.tag.UmapyoiBlockTags;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.tag.CompatibilityTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
@@ -40,12 +41,13 @@ public class BlockTagsProv extends BlockTagsProvider {
                 BlockRegistration.STRAWBERRY_CRATE.get(),
                 BlockRegistration.STRAWBERRY_CRATE_RARE.get()
         );
-        /*tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_HOE).add(
-                BlockRegistration.WOODCHIP_ROAD.get()
-        );*/
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_HOE).add(
+                BlockRegistration.WOODCHIP_ROAD.get(),
+                BlockRegistration.WOODCHIP_BLOCK.get()
+        );
         tag(ModTags.MINEABLE_WITH_KNIFE).add(
-                        BlockRegistration.POTATO_GARLIC_PIZZA.get(),
-                        BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get());
+                BlockRegistration.POTATO_GARLIC_PIZZA.get(),
+                BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get());
     }
 
     protected void registerMinecraftTags() {
@@ -71,6 +73,18 @@ public class BlockTagsProv extends BlockTagsProvider {
                 BlockRegistration.WILD_CHILIS.get(),
                 BlockRegistration.WILD_GARLIC.get(),
                 BlockRegistration.WILD_STRAWBERRIES.get()
+        );
+        tag(UmapyoiBlockTags.TRACK_DIRT).add(
+                BlockRegistration.WOODCHIP_ROAD.get(),
+                BlockRegistration.WOODCHIP_BLOCK.get()
+                );
+        tag(UmapyoiBlockTags.TRACK_TURF).add(
+                BlockRegistration.WOODCHIP_ROAD.get(),
+                BlockRegistration.WOODCHIP_BLOCK.get()
+        );
+        tag(UmapyoiBlockTags.TRACK_SNOW).add(
+                BlockRegistration.WOODCHIP_ROAD.get(),
+                BlockRegistration.WOODCHIP_BLOCK.get()
         );
     }
 

@@ -31,5 +31,11 @@ public class CuttingRecipesProv {
                 .addResultWithChance(Items.LIME_DYE, 0.1F)
                 .build(consumer);
 
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(ItemRegistration.WHITE_BREAD.get()),
+                        Ingredient.of(ForgeTags.TOOLS_KNIVES), ItemRegistration.TRIANGLE_BREAD.get(), 2)
+                .addResult(ItemRegistration.BREAD_CRUST.get())
+                .addResultWithChance(ItemRegistration.BREAD_CRUST.get(), 0.5F)
+                .build(consumer);
+
     }
 }

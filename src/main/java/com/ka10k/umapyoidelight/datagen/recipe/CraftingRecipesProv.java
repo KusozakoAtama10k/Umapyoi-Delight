@@ -4,8 +4,10 @@ import com.ka10k.umapyoidelight.item.ItemRegistration;
 import com.ka10k.umapyoidelight.tag.ForgeTagsUD;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.Tags;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 
@@ -221,6 +223,36 @@ public class CraftingRecipesProv {
                 .requires(ForgeTags.CROPS_ONION)
                 .unlockedBy("has_beef_patty", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.BEEF_PATTY.get()))
                 .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.STRAWBERRY_SANDWICH.get())
+                .requires(ItemRegistration.TRIANGLE_BREAD.get(),2)
+                .requires(ForgeTags.MILK)
+                .requires(ForgeTagsUD.CROPS_STRAWBERRY)
+                .unlockedBy("has_triangular_bread", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.TRIANGLE_BREAD.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.VEGETABLE_SANDWICH.get())
+                .requires(ItemRegistration.TRIANGLE_BREAD.get(),2)
+                .requires(ForgeTags.SALAD_INGREDIENTS)
+                .requires(ForgeTags.VEGETABLES_CARROT)
+                .unlockedBy("has_triangular_bread", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.TRIANGLE_BREAD.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemRegistration.WOODCHIP_BLOCK.get(),4)
+                .requires(ModItems.TREE_BARK.get(),3)
+                .requires(ItemTags.DIRT)
+                .unlockedBy("has_tree_bark", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.TREE_BARK.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemRegistration.WOODCHIP_ROAD.get(),8)
+                .requires(ItemRegistration.WOODCHIP_BLOCK.get())
+                .unlockedBy("has_woodchip_block", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.WOODCHIP_BLOCK.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemRegistration.WOODCHIP_BLOCK.get())
+                .requires(ItemRegistration.WOODCHIP_ROAD.get(),8)
+                .unlockedBy("has_woodchip_road", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.WOODCHIP_ROAD.get()))
+                .save(consumer, "umapyoidelight:woodchip_block_from_road");
 
     }
 }

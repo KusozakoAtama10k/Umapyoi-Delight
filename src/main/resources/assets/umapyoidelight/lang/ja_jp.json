@@ -16,6 +16,8 @@
   "umapyoidelight.advancement.get_rare_crops.desc":"珍しい作物を入手する",
   "umapyoidelight.advancement.trade_special_items":"秘蔵の一品",
   "umapyoidelight.advancement.trade_special_items.desc":"トレーナーから著名なウマ娘ゆかりの一品を譲り受ける",
+  "umapyoidelight.advancement.drink_tachyon_potion":"モルモット志願者",
+  "umapyoidelight.advancement.drink_tachyon_potion.desc":"アグネスタキオンの怪しいポーションを飲む",
 
   "block.umapyoidelight.carrot_crate_rare": "人型ニンジン入り木箱",
   "block.umapyoidelight.potato_crate_rare": "特大ジャガイモ入り木箱",
@@ -30,6 +32,8 @@
   "block.umapyoidelight.wild_chili_peppers": "野生のトウガラシ",
   "block.umapyoidelight.wild_garlic": "野生のニンニク",
   "block.umapyoidelight.wild_strawberries": "野イチゴ",
+  "block.umapyoidelight.woodchip_block": "ウッドチップブロック",
+  "block.umapyoidelight.woodchip_road": "ウッドチップの道",
 
   "config.umapyoidelight.generateudloot": "チェストへの戦利品生成",
   "config.umapyoidelight.tradeudcrops": "農民との作物の取引",
@@ -52,6 +56,7 @@
   "config.umapyoidelight.ap_recover_carrot_juice": "にんじんジュース",
   "config.umapyoidelight.ap_recover_coffee": "マンハッタンカフェ特製ブレンドコーヒー",
   "config.umapyoidelight.ap_recover_yakisoba": "ゴルシちゃん印のソース焼きそば",
+  "config.umapyoidelight.ap_recover_rice_cake": "ヴィクトリー倶楽部の桜餅",
 
 
   "item.umapyoidelight.carrot_hamburg": "にんじんハンバーグ",
@@ -87,5 +92,9 @@
   "item.umapyoidelight.white_bread": "食パン",
   "item.umapyoidelight.toast": "トースト",
   "item.umapyoidelight.toast_strawberry_jam": "イチゴジャムトースト",
-  "item.umapyoidelight.strawberry_jam": "イチゴジャム"
+  "item.umapyoidelight.strawberry_jam": "イチゴジャム",
+  "item.umapyoidelight.strawberry_sandwich": "イチゴサンド",
+  "item.umapyoidelight.vegetable_sandwich": "野菜サンドイッチ",
+  "item.umapyoidelight.agnes_tachyon_potion": "アグネスタキオンの怪しいポーション",
+  "item.umapyoidelight.victory_club_rice_cake": "ヴィクトリー倶楽部の桜餅"
 }

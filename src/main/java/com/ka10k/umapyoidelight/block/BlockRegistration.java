@@ -7,6 +7,7 @@ import com.ka10k.umapyoidelight.block.crop.StrawberryCrop;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SnowLayerBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
@@ -66,4 +67,11 @@ public class BlockRegistration {
 
     public static final RegistryObject<Block> POTATO_GARLIC_PIZZA_RARE = BLOCKS.register("potato_garlic_pizza_rare",
             () -> new PotatoGarlicPizzaBlockRare(BlockBehaviour.Properties.copy(Blocks.CAKE)));
+
+    public static final RegistryObject<Block> WOODCHIP_BLOCK = BLOCKS.register("woodchip_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(0.5F, 0.5F).sound(SoundType.AZALEA)));
+
+    public static final RegistryObject<Block> WOODCHIP_ROAD = BLOCKS.register("woodchip_road",
+            () -> new SnowLayerBlock(BlockBehaviour.Properties.copy(WOODCHIP_BLOCK.get())));
+
 }

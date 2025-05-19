@@ -7,6 +7,7 @@ import java.util.function.Supplier;
 
 public class ComposterRegistration {
     public static void registerCompost() {
+        register(ItemRegistration.WOODCHIP_BLOCK, 0.3F);
         register(ItemRegistration.GARLIC_ITEM, 0.65F);
         register(ItemRegistration.CHILI_ITEM, 0.65F);
         register(ItemRegistration.STRAWBERRY_ITEM, 0.65F);

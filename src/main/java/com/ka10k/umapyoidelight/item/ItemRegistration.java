@@ -1,5 +1,6 @@
 package com.ka10k.umapyoidelight.item;
 
+import cn.mcmod_mmf.mmlib.item.ItemDrinkBase;
 import cn.mcmod_mmf.mmlib.item.ItemFoodBase;
 import cn.mcmod_mmf.mmlib.item.ItemFoodSeeds;
 import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
@@ -15,6 +16,7 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.tracen.umapyoi.effect.MobEffectRegistry;
 import net.tracen.umapyoi.item.food.UmaDrinkItem;
 import net.tracen.umapyoi.item.food.UmaFoodItem;
 import net.tracen.umapyoi.utils.UmaSoulUtils;
@@ -79,6 +81,13 @@ public class ItemRegistration {
 
     public static final RegistryObject<Item> POTATO_CRATE_RARE = registerWithTab("potato_crate_rare",
             () -> new BlockItem(BlockRegistration.POTATO_CRATE_RARE.get(),basicItem()));
+
+    public static final RegistryObject<Item> WOODCHIP_BLOCK = registerWithTab("woodchip_block",
+            () -> new BlockItem(BlockRegistration.WOODCHIP_BLOCK.get(),basicItem()));
+
+
+    public static final RegistryObject<Item> WOODCHIP_ROAD = registerWithTab("woodchip_road",
+            () -> new BlockItem(BlockRegistration.WOODCHIP_ROAD.get(),basicItem()));
 
     public static final RegistryObject<Item> WILD_CHILIS = registerWithTab("wild_chili_peppers",
             () -> new BlockItem(BlockRegistration.WILD_CHILIS.get(),basicItem()));
@@ -163,6 +172,13 @@ public class ItemRegistration {
             registerWithTab("strawberry_jam", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(3, 0.3F).build()));
 
+    public static final RegistryObject<Item> TRIANGLE_BREAD =
+            registerWithTab("triangular_bread", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
+                    .amountAndCalories(2, 0.55F).build()));
+
+    public static final RegistryObject<Item> BREAD_CRUST =
+            registerWithTab("bread_crust", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
+                    .amountAndCalories(1, 0.5F).eatTime(16).build()));
 
     //meals
     public static final RegistryObject<Item> CARROT_HAMBURG =
@@ -178,6 +194,18 @@ public class ItemRegistration {
                     FoodInfo.builder().amountAndCalories(18, 0.5F).alwaysEat()
                             .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .build()));
+
+    public static final RegistryObject<Item> VEGETABLE_SANDWICH =
+            registerWithTab("vegetable_sandwich", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
+                    .amountAndCalories(7, 0.75F)
+                    .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
+                    .build()));
+
+    public static final RegistryObject<Item> STRAWBERRY_SANDWICH =
+            registerWithTab("strawberry_sandwich", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
+                    .amountAndCalories(7, 0.75F)
+                    .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
+                    .build()));
 
     public static final RegistryObject<Item> CARROT_POTATO_POTAUFEU =
             registerWithTab("carrot_potato_potaufeu", () -> new BowlUmaFood(status -> {
@@ -304,6 +332,16 @@ public class ItemRegistration {
                             .addEffect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, FoodValues.LONG_DURATION, 0), 1.0F)
                             .build()));
 
+    public static final RegistryObject<Item> SAKURAMOCHI =
+            registerWithTab("victory_club_rice_cake", () -> new UmaFoodItem(status -> {
+                APRecover(status, AP_RECOVER_SAKURAMOCHI.get());UmaStatusUtils.addMotivation(status);},
+                    FoodInfo.builder().alwaysEat()
+                            .amountAndCalories(6, 1.4F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(MobEffects.REGENERATION, FoodValues.LONG_DURATION, 0), 1.0F)
+                            .build()));
+
     public static final RegistryObject<Item> YAKISOBA =
             registerWithTab("gold_ship_yakisoba", () -> new UmaDrinkItem(status -> {
                 APRecover(status, AP_RECOVER_YAKISOBA.get());UmaStatusUtils.addMotivation(status);},
@@ -314,4 +352,21 @@ public class ItemRegistration {
                             .addEffect(() -> new MobEffectInstance(MobEffects.JUMP, FoodValues.LONG_DURATION, 0), 1.0F)
                             .build()));
 
+    public static final RegistryObject<Item> POTION =
+            registerWithTab("agnes_tachyon_potion", () -> new EnchantedItemDrinkBase(basicItem(),FoodInfo.builder()
+                    .addEffect(() -> new MobEffectInstance(MobEffects.GLOWING, FoodValues.LONG_DURATION, 0), 1.0F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, FoodValues.LONG_DURATION, 4), 0.5F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.JUMP, FoodValues.LONG_DURATION, 4), 0.5F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.ABSORPTION, FoodValues.LONG_DURATION, 4), 0.25F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.SATURATION, FoodValues.LONG_DURATION, 4), 0.1F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.HEAL, FoodValues.LONG_DURATION, 4), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, FoodValues.LONG_DURATION, 4), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, FoodValues.LONG_DURATION, 0), 0.35F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.LEVITATION, 600, 0), 0.1F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.HUNGER, FoodValues.LONG_DURATION, 1), 0.1F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.POISON, FoodValues.LONG_DURATION, 1), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.CONFUSION, FoodValues.SHORT_DURATION, 1), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, FoodValues.LONG_DURATION, 3), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.PANICKING.get(), FoodValues.LONG_DURATION, 0), 0.05F)
+                    .build()));
 }
