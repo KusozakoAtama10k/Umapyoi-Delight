@@ -1,6 +1,5 @@
 package com.ka10k.umapyoidelight.item;
 
-import cn.mcmod_mmf.mmlib.item.ItemDrinkBase;
 import cn.mcmod_mmf.mmlib.item.ItemFoodBase;
 import cn.mcmod_mmf.mmlib.item.ItemFoodSeeds;
 import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
@@ -365,7 +364,7 @@ public class ItemRegistration {
                     .addEffect(() -> new MobEffectInstance(MobEffects.LEVITATION, 600, 0), 0.1F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.HUNGER, FoodValues.LONG_DURATION, 1), 0.1F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.POISON, FoodValues.LONG_DURATION, 1), 0.05F)
-                    .addEffect(() -> new MobEffectInstance(MobEffects.CONFUSION, FoodValues.SHORT_DURATION, 1), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.CONFUSION, FoodValues.SHORT_DURATION, 0), 0.05F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, FoodValues.LONG_DURATION, 3), 0.05F)
                     .addEffect(() -> new MobEffectInstance(MobEffectRegistry.PANICKING.get(), FoodValues.LONG_DURATION, 0), 0.05F)
                     .build()));
