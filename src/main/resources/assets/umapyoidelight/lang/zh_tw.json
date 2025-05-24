@@ -88,5 +88,13 @@
   "item.umapyoidelight.white_bread": "白麪包片",
   "item.umapyoidelight.toast": "吐司",
   "item.umapyoidelight.toast_strawberry_jam": "草莓醬吐司",
-  "item.umapyoidelight.strawberry_jam": "草莓醬"
+  "item.umapyoidelight.strawberry_jam": "草莓醬",
+
+  "item.umapyoidelight.strawberry_sandwich": "草莓三明治",
+  "item.umapyoidelight.vegetable_sandwich": "蔬菜三明治",
+  "item.umapyoidelight.agnes_tachyon_potion": "愛麗速子的詭異藥水",
+  "item.umapyoidelight.victory_club_rice_cake": "勝利俱樂部制櫻餅",
+
+  "item.umapyoidelight.triangular_bread": "三角麪包片",
+  "item.umapyoidelight.bread_crust": "麪包邊"
 }
