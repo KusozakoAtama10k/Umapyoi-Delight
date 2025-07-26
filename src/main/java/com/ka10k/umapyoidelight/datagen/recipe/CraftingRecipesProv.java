@@ -5,12 +5,14 @@ import com.ka10k.umapyoidelight.tag.ForgeTagsUD;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 
 import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 public class CraftingRecipesProv {
     public static void register(Consumer<FinishedRecipe> consumer) {
@@ -129,7 +131,8 @@ public class CraftingRecipesProv {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_STRAWBERRY_ICECREAM.get(), 1)
                 .requires(Ingredient.of(ForgeTagsUD.FRUITS_STRAWBERRY))
                 .requires(Ingredient.of(ForgeTagsUD.FRUITS_STRAWBERRY))
-                .requires(Ingredient.of(ForgeTags.VEGETABLES_CARROT))
+                .requires(Ingredient.fromValues(Stream.of(new Ingredient.ItemValue(new ItemStack(ItemRegistration.GRATED_CARROT.get())),
+                        new Ingredient.TagValue(ForgeTags.VEGETABLES_CARROT))))
                 .requires(Ingredient.of(ForgeTags.MILK))
                 .requires(Ingredient.of(ForgeTags.GRAIN_WHEAT))
                 .requires(Items.SNOWBALL)
@@ -139,7 +142,8 @@ public class CraftingRecipesProv {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_STRAWBERRY_ICECREAM_RARE.get(), 1)
                 .requires(Ingredient.of(ItemRegistration.STRAWBERRY_ITEM_RARE.get()))
                 .requires(Ingredient.of(ForgeTagsUD.FRUITS_STRAWBERRY))
-                .requires(Ingredient.of(ForgeTags.VEGETABLES_CARROT))
+                .requires(Ingredient.fromValues(Stream.of(new Ingredient.ItemValue(new ItemStack(ItemRegistration.GRATED_CARROT.get())),
+                        new Ingredient.TagValue(ForgeTags.VEGETABLES_CARROT))))
                 .requires(Ingredient.of(ForgeTags.MILK))
                 .requires(Ingredient.of(ForgeTags.VEGETABLES_CARROT))
                 .requires(Items.SNOWBALL)
@@ -215,7 +219,8 @@ public class CraftingRecipesProv {
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_BURGER.get())
-                .requires(ForgeTags.BREAD)
+                .requires(Ingredient.fromValues(Stream.of(new Ingredient.TagValue(ForgeTags.BREAD),
+                        new Ingredient.ItemValue(new ItemStack(ItemRegistration.CARROT_BREAD.get())))))
                 .requires(ModItems.BEEF_PATTY.get())
                 .requires(ForgeTags.SALAD_INGREDIENTS)
                 .requires(ForgeTags.VEGETABLES_CARROT)
@@ -233,7 +238,8 @@ public class CraftingRecipesProv {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.VEGETABLE_SANDWICH.get())
                 .requires(ItemRegistration.TRIANGLE_BREAD.get(),2)
                 .requires(ForgeTags.SALAD_INGREDIENTS)
-                .requires(ForgeTags.VEGETABLES_CARROT)
+                .requires(Ingredient.fromValues(Stream.of(new Ingredient.ItemValue(new ItemStack(ItemRegistration.CUT_CARROT.get())),
+                        new Ingredient.TagValue(ForgeTags.VEGETABLES_CARROT))))
                 .unlockedBy("has_triangular_bread", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.TRIANGLE_BREAD.get()))
                 .save(consumer);
 
@@ -260,7 +266,8 @@ public class CraftingRecipesProv {
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_DOUGH.get(),3)
-                .requires(Items.WATER_BUCKET)
+                .requires(Ingredient.fromValues(Stream.of(new Ingredient.ItemValue(new ItemStack(Items.WATER_BUCKET)),
+                        new Ingredient.TagValue(ForgeTags.EGGS))))
                 .requires(Ingredient.of(ForgeTags.GRAIN_WHEAT),2)
                 .requires(Ingredient.of(ItemRegistration.GRATED_CARROT.get()),2)
                 .unlockedBy("has_grated_carrot", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GRATED_CARROT.get()))

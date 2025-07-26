@@ -11,9 +11,14 @@
     {
       "tag": "forge:salad_ingredients"
     },
-    {
-      "tag": "forge:vegetables/carrot"
-    }
+    [
+      {
+        "item": "umapyoidelight:cut_carrot"
+      },
+      {
+        "tag": "forge:vegetables/carrot"
+      }
+    ]
   ],
   "result": {
     "item": "umapyoidelight:vegetable_sandwich"

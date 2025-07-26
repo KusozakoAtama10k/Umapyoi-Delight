@@ -8,9 +8,14 @@
     {
       "tag": "forge:fruits/strawberry"
     },
-    {
-      "tag": "forge:vegetables/carrot"
-    },
+    [
+      {
+        "item": "umapyoidelight:grated_carrot"
+      },
+      {
+        "tag": "forge:vegetables/carrot"
+      }
+    ],
     {
       "tag": "forge:milk"
     },
