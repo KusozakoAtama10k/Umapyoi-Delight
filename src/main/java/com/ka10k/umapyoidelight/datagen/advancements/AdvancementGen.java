@@ -99,7 +99,6 @@ public class AdvancementGen implements ForgeAdvancementProvider.AdvancementGener
 				.addCriterion("eat_carrot_strawberry_icecream", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_STRAWBERRY_ICECREAM.get()))
 				.addCriterion("eat_carrot_strawberry_icecream_rare", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_STRAWBERRY_ICECREAM_RARE.get()))
 				.addCriterion("eat_g1_plate", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.GI_PLATE.get()))
-				.addCriterion("eat_white_bread", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.WHITE_BREAD.get()))
 				.addCriterion("eat_toast", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.TOAST.get()))
 				.addCriterion("eat_toast_strawberry_jam", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.TOAST_STRAWBERRY_JAM.get()))
 				.addCriterion("drink_carrot_juice", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_JUICE.get()))
@@ -107,6 +106,12 @@ public class AdvancementGen implements ForgeAdvancementProvider.AdvancementGener
 				.addCriterion("eat_carrot_burger", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_BURGER.get()))
 				.addCriterion("eat_strawberry_sandwich", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.STRAWBERRY_SANDWICH.get()))
 				.addCriterion("eat_vegetable_sandwich", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.VEGETABLE_SANDWICH.get()))
+				.addCriterion("eat_raw_stick_carrot", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.RAW_STICK_CARROT.get()))
+				.addCriterion("eat_grilled_stick_carrot", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.GRILLED_STICK_CARROT.get()))
+				.addCriterion("eat_chocolate_stick_carrot", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CHOCOLATE_STICK_CARROT.get()))
+				.addCriterion("eat_carrot_pudding", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_PUDDING.get()))
+				.addCriterion("eat_carrot_cake", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_CAKE_SLICE.get()))
+
 				.rewards(AdvancementRewards.Builder.experience(150))
 				.save(consumer, getNameId("main/consume_all_cookable_foods"));
 

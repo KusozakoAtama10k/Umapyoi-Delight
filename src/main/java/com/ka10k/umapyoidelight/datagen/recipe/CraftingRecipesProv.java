@@ -253,5 +253,41 @@ public class CraftingRecipesProv {
                 .unlockedBy("has_woodchip_road", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.WOODCHIP_ROAD.get()))
                 .save(consumer, "umapyoidelight:woodchip_block_from_road");
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.RAW_STICK_CARROT.get())
+                .requires(Items.STICK)
+                .requires(ForgeTags.VEGETABLES_CARROT)
+                .unlockedBy("has_carrot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.CARROT))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_DOUGH.get(),3)
+                .requires(Items.WATER_BUCKET)
+                .requires(Ingredient.of(ForgeTags.GRAIN_WHEAT),2)
+                .requires(Ingredient.of(ItemRegistration.GRATED_CARROT.get()),2)
+                .unlockedBy("has_grated_carrot", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GRATED_CARROT.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_BATTER.get(),3)
+                .requires(ForgeTags.MILK)
+                .requires(ForgeTags.EGGS)
+                .requires(Ingredient.of(ForgeTags.GRAIN_WHEAT),2)
+                .requires(Ingredient.of(ItemRegistration.GRATED_CARROT.get()),2)
+                .requires(Items.SUGAR,2)
+                .unlockedBy("has_grated_carrot", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GRATED_CARROT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ItemRegistration.CARROT_CAKE.get(), 1)
+                .pattern(" C ")
+                .pattern("MMM")
+                .pattern("BBB")
+                .define('C', ItemRegistration.CUT_CARROT.get())
+                .define('B', ItemRegistration.CARROT_BATTER.get())
+                .define('M', Ingredient.of(ForgeTags.MILK))
+                .unlockedBy("has_carrot_batter", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_BATTER.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_CAKE.get())
+                .requires(Ingredient.of(ItemRegistration.CARROT_CAKE_SLICE.get()),7)
+                .unlockedBy("has_carrot_cake_slice", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_CAKE_SLICE.get()))
+                .save(consumer,"umapyoidelight:carrot_cake_from_slice");
     }
 }

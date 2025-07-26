@@ -52,6 +52,7 @@ public class BlockLootTables extends BlockLootSubProvider {
         LootItemCondition.Builder Pizza_Rare_Full = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PotatoGarlicPizzaBlock.SERVINGS, 6));
         this.add(BlockRegistration.POTATO_GARLIC_PIZZA.get(), this.applyExplosionDecay(BlockRegistration.POTATO_GARLIC_PIZZA.get(), LootTable.lootTable().withPool(LootPool.lootPool().when(Pizza_Full).add(LootItem.lootTableItem(BlockRegistration.POTATO_GARLIC_PIZZA.get()))).withPool(LootPool.lootPool().when(Pizza_Full.invert()).add(LootItem.lootTableItem(Items.BOWL)))));
         this.add(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get(), this.applyExplosionDecay(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get(), LootTable.lootTable().withPool(LootPool.lootPool().when(Pizza_Rare_Full).add(LootItem.lootTableItem(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get()))).withPool(LootPool.lootPool().when(Pizza_Full.invert()).add(LootItem.lootTableItem(Items.BOWL)))));
+
     }
 
     @Override

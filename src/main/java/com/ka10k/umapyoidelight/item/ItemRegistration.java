@@ -48,6 +48,10 @@ public class ItemRegistration {
         return new Item.Properties().craftRemainder(Items.BOWL).stacksTo(16);
     }
 
+    public static Item.Properties bottleFood() {
+        return new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16);
+    }
+
     public static Item.Properties bottleDrink() {
         return new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16);
     }
@@ -110,6 +114,8 @@ public class ItemRegistration {
     public static final RegistryObject<Item> POTATO_GARLIC_PIZZA_RARE = registerWithTab("potato_garlic_pizza_rare",
             () -> new BlockItem(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get(),basicItem().stacksTo(1)));
 
+    public static final RegistryObject<Item> CARROT_CAKE = registerWithTab("carrot_cake",
+            () -> new BlockItem(BlockRegistration.CARROT_CAKE.get(),basicItem().stacksTo(1)));
 
     //crops
     public static final RegistryObject<Item> CHILI_ITEM =
@@ -143,21 +149,95 @@ public class ItemRegistration {
     public static final RegistryObject<Item> POTATO_ITEM_RARE =
             registerWithTab("potato_rare", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(4, 0.5F).build()));
+
     //ingredients
+    public static final RegistryObject<Item> CHOICE_VEGETABLES =
+            registerWithTab("choice_vegetables", () -> new Item(basicItem()));
+
+    //meals
+
+    public static final RegistryObject<Item> CUT_CARROT =
+            registerWithTab("cut_carrot", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
+                    .amountAndCalories(1, 0.6F)
+                    .build()));
+
+    public static final RegistryObject<Item> GRATED_CARROT =
+            registerWithTab("grated_carrot", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
+                    .amountAndCalories(1, 0.3F)
+                    .build()));
+
+    public static final RegistryObject<Item> CARROT_BATTER =
+            registerWithTab("carrot_batter", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
+                    .amountAndCalories(2, 0.3F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.HUNGER, 600, 0), 0.3F)
+                    .build()));
+
+    public static final RegistryObject<Item> CARROT_DOUGH =
+            registerWithTab("carrot_dough", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
+                    .amountAndCalories(2, 0.3F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.HUNGER, 600, 0), 0.3F)
+                    .build()));
+
+    public static final RegistryObject<Item> CARROT_BREAD =
+            registerWithTab("carrot_bread", () -> new UmaFoodItem(status -> {},
+                    FoodInfo.builder().amountAndCalories(4, 0.6F)
+                            .addEffect(() -> new MobEffectInstance(MobEffects.SATURATION, 2, 0), 1.0F)
+                            .build()));
+
+    public static final RegistryObject<Item> CARROT_CAKE_SLICE =
+            registerWithTab("carrot_cake_slice", () -> new UmaFoodItem(UmaStatusUtils::addMotivation,
+                    FoodInfo.builder().amountAndCalories(3, 0.3F).eatTime(16)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.BRIEF_DURATION, 0), 1.0F)
+                            .build()));
+
+    public static final RegistryObject<Item> RAW_STICK_CARROT =
+            registerWithTab("raw_stick_carrot", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
+                    .amountAndCalories(3, 0.6F)
+                    .build()));
+
+    public static final RegistryObject<Item> GRILLED_STICK_CARROT =
+            registerWithTab("grilled_stick_carrot", () -> new UmaFoodItem(status -> {},
+                    FoodInfo.builder().amountAndCalories(4, 0.75F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.SHORT_DURATION, 0), 1.0F)
+                            .build()));
+
+    public static final RegistryObject<Item> CHOCOLATE_STICK_CARROT =
+            registerWithTab("chocolate_stick_carrot", () -> new UmaFoodItem(UmaStatusUtils::addMotivation,
+                    FoodInfo.builder().amountAndCalories(5, 0.6F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
+                            .build()));
+
+    public static final RegistryObject<Item> CARROT_BURGER =
+            registerWithTab("carrot_burger", () -> new UmaFoodItem(status -> {
+                APRecover(status, AP_RECOVER_CARROT_BURGER.get());},
+                    FoodInfo.builder().amountAndCalories(11, 0.8F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.SHORT_DURATION, 0), 1.0F)
+                            .build()));
+
+    public static final RegistryObject<Item> CARROT_JUICE =
+            registerWithTab("carrot_juice", () -> new BottleUmaDrink(status -> {
+                APRecover(status, AP_RECOVER_CARROT_JUICE.get());},
+                    FoodInfo.builder().alwaysEat()
+                            .addEffect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, FoodValues.SHORT_DURATION, 0), 1.0F)
+                            .build()));
+
+    public static final RegistryObject<Item> CARROT_PUDDING =
+            registerWithTab("carrot_pudding", () -> new BottleUmaFood(status -> {
+                UmaStatusUtils.addMotivation(status);APRecover(status, AP_RECOVER_CARROT_PUDDING.get());},
+                    FoodInfo.builder().amountAndCalories(7, 0.4F).alwaysEat()
+                            .addEffect(() -> new MobEffectInstance(MobEffects.LUCK, FoodValues.SHORT_DURATION, 0), 1.0F)
+                            .build()));
 
     public static final RegistryObject<Item> RAW_HAMBURG =
             registerWithTab("raw_hamburg", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(3, 0.3F)
-                    .addEffect(() -> new MobEffectInstance(MobEffects.HUNGER, 600, 0), 0.3F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.HUNGER, FoodValues.BRIEF_DURATION, 0), 0.3F)
                     .build()));
 
     public static final RegistryObject<Item> HAMBURG =
             registerWithTab("hamburg", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(7, 0.8F)
                     .build()));
-
-    public static final RegistryObject<Item> CHOICE_VEGETABLES =
-            registerWithTab("choice_vegetables", () -> new Item(basicItem()));
 
     public static final RegistryObject<Item> WHITE_BREAD =
             registerWithTab("white_bread", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
@@ -166,6 +246,12 @@ public class ItemRegistration {
     public static final RegistryObject<Item> TOAST =
             registerWithTab("toast", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(6, 0.55F).build()));
+
+    public static final RegistryObject<Item> TOAST_STRAWBERRY_JAM =
+            registerWithTab("toast_strawberry_jam", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
+                    .amountAndCalories(7, 0.75F)
+                    .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
+                    .build()));
 
     public static final RegistryObject<Item> STRAWBERRY_JAM =
             registerWithTab("strawberry_jam", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
@@ -179,10 +265,8 @@ public class ItemRegistration {
             registerWithTab("bread_crust", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(1, 0.5F).eatTime(16).build()));
 
-    //meals
     public static final RegistryObject<Item> CARROT_HAMBURG =
-            registerWithTab("carrot_hamburg", () -> new BowlUmaFood(status -> {
-                UmaStatusUtils.addMotivation(status);},
+            registerWithTab("carrot_hamburg", () -> new BowlUmaFood(UmaStatusUtils::addMotivation,
                     FoodInfo.builder().amountAndCalories(10, 0.4F)
                             .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
                             .build()));
@@ -300,26 +384,6 @@ public class ItemRegistration {
                             .addEffect(() -> new MobEffectInstance(MobEffects.LUCK, FoodValues.LONG_DURATION, 1), 1.0F)
                             .build()));
 
-    public static final RegistryObject<Item> CARROT_BURGER =
-            registerWithTab("carrot_burger", () -> new UmaFoodItem(status -> {
-                APRecover(status, AP_RECOVER_CARROT_BURGER.get());},
-                    FoodInfo.builder().amountAndCalories(11, 0.8F)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.SHORT_DURATION, 0), 1.0F)
-                            .build()));
-
-    public static final RegistryObject<Item> CARROT_JUICE =
-            registerWithTab("carrot_juice", () -> new BottleUmaDrink(status -> {
-                APRecover(status, AP_RECOVER_CARROT_JUICE.get());},
-                    FoodInfo.builder().alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, FoodValues.SHORT_DURATION, 0), 1.0F)
-                            .build()));
-
-    public static final RegistryObject<Item> TOAST_STRAWBERRY_JAM =
-            registerWithTab("toast_strawberry_jam", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
-                    .amountAndCalories(7, 0.75F)
-                    .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
-                    .build()));
-
 
     //misc
     public static final RegistryObject<Item> COFFEE =
@@ -361,7 +425,7 @@ public class ItemRegistration {
                     .addEffect(() -> new MobEffectInstance(MobEffects.HEAL, FoodValues.LONG_DURATION, 4), 0.05F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, FoodValues.LONG_DURATION, 4), 0.05F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.SLOW_FALLING, FoodValues.LONG_DURATION, 0), 0.35F)
-                    .addEffect(() -> new MobEffectInstance(MobEffects.LEVITATION, 600, 0), 0.1F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.LEVITATION, FoodValues.BRIEF_DURATION, 0), 0.1F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.HUNGER, FoodValues.LONG_DURATION, 1), 0.1F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.POISON, FoodValues.LONG_DURATION, 1), 0.05F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.CONFUSION, FoodValues.SHORT_DURATION, 0), 0.05F)

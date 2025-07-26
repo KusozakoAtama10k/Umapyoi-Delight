@@ -6,6 +6,8 @@ import com.ka10k.umapyoidelight.tag.ForgeTagsUD;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -39,10 +41,11 @@ public class ItemTagsProv extends ItemTagsProvider {
         tag(ForgeTags.BERRIES).add(ItemRegistration.STRAWBERRY_ITEM.get());
         tag(ForgeTagsUD.BERRIES_STRAWBERRY).add(ItemRegistration.STRAWBERRY_ITEM.get());
 
-        tag(ForgeTags.CROPS).addTags(ForgeTagsUD.CROPS_CHILI, ForgeTagsUD.CROPS_GARLIC, ForgeTagsUD.CROPS_STRAWBERRY);
+        tag(ForgeTags.CROPS).addTags(ForgeTagsUD.CROPS_CHILI, ForgeTagsUD.CROPS_GARLIC, ForgeTagsUD.CROPS_STRAWBERRY,ForgeTagsUD.CROPS_COCOA_BEANS);
         tag(ForgeTagsUD.CROPS_CHILI).add(ItemRegistration.CHILI_ITEM.get());
         tag(ForgeTagsUD.CROPS_GARLIC).add(ItemRegistration.GARLIC_ITEM.get());
         tag(ForgeTagsUD.CROPS_STRAWBERRY).add(ItemRegistration.STRAWBERRY_ITEM.get());
+        tag(ForgeTagsUD.CROPS_COCOA_BEANS).add(Items.COCOA_BEANS);
 
         tag(ForgeTagsUD.FRUITS).addTag(ForgeTagsUD.FRUITS_STRAWBERRY);
         tag(ForgeTagsUD.FRUITS_STRAWBERRY).add(ItemRegistration.STRAWBERRY_ITEM.get());
@@ -57,6 +60,19 @@ public class ItemTagsProv extends ItemTagsProvider {
 
         tag(ForgeTags.BREAD).add(ItemRegistration.WHITE_BREAD.get());
         tag(ForgeTags.BREAD_WHEAT).add(ItemRegistration.WHITE_BREAD.get());
+        tag(ForgeTags.DOUGH).add(ItemRegistration.CARROT_DOUGH.get());
+
+        tag(ItemTags.FLOWERS).add(
+                ItemRegistration.WILD_CHILIS.get(),
+                ItemRegistration.WILD_GARLIC.get(),
+                ItemRegistration.WILD_STRAWBERRIES.get()
+        );
+
+        tag(ItemTags.SMALL_FLOWERS).add(
+                ItemRegistration.WILD_CHILIS.get(),
+                ItemRegistration.WILD_GARLIC.get(),
+                ItemRegistration.WILD_STRAWBERRIES.get()
+        );
     }
 
     private void registerModTags() {

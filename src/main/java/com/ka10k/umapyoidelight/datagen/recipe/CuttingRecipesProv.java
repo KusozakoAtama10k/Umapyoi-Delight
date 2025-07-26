@@ -37,5 +37,18 @@ public class CuttingRecipesProv {
                 .addResultWithChance(ItemRegistration.BREAD_CRUST.get(), 0.5F)
                 .build(consumer);
 
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(ForgeTags.VEGETABLES_CARROT),
+                        Ingredient.of(ForgeTags.TOOLS_KNIVES), ItemRegistration.CUT_CARROT.get(), 2)
+                .addResultWithChance(ItemRegistration.CUT_CARROT.get(), 0.2F)
+                .build(consumer,"farmersdelight:cutting/carrot");
+
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(ItemRegistration.CUT_CARROT.get()),
+                        Ingredient.of(ForgeTags.TOOLS_KNIVES), ItemRegistration.GRATED_CARROT.get(), 1)
+                .addResultWithChance(ItemRegistration.GRATED_CARROT.get(), 0.1F)
+                .build(consumer);
+
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(ItemRegistration.CARROT_CAKE.get()),
+                        Ingredient.of(ForgeTags.TOOLS_KNIVES), ItemRegistration.CARROT_CAKE_SLICE.get(), 7)
+                .build(consumer);
     }
 }

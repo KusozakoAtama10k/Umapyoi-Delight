@@ -19,12 +19,15 @@ public class ForgeTagsUD
 	public static final TagKey<Item> CROPS_CHILI = forgeItemTag("crops/chilipepper");
 	public static final TagKey<Item> CROPS_GARLIC = forgeItemTag("crops/garlic");
 	public static final TagKey<Item> CROPS_STRAWBERRY = forgeItemTag("crops/strawberry");
+	public static final TagKey<Item> CROPS_COCOA_BEANS = forgeItemTag("crops/cocoabeans");
 
 	public static final TagKey<Item> VEGETABLES_CHILI = forgeItemTag("vegetables/chilipepper");
 	public static final TagKey<Item> VEGETABLES_GARLIC = forgeItemTag("vegetables/garlic");
 
 	public static final TagKey<Item> FRUITS = forgeItemTag("fruits");
 	public static final TagKey<Item> FRUITS_STRAWBERRY = forgeItemTag("fruits/strawberry");
+
+	public static final TagKey<Item> CHOCOLATES = forgeItemTag("chocolates");
 
 	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_CHILI = forgeItemTag("storage_blocks/chilipepper");
 	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_GARLIC = forgeItemTag("storage_blocks/garlic");

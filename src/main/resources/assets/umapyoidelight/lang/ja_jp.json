@@ -34,6 +34,7 @@
   "block.umapyoidelight.wild_strawberries": "野イチゴ",
   "block.umapyoidelight.woodchip_block": "ウッドチップブロック",
   "block.umapyoidelight.woodchip_road": "ウッドチップの道",
+  "block.umapyoidelight.carrot_cake": "にんじんケーキ",
 
   "config.umapyoidelight.generateudloot": "チェストへの戦利品生成",
   "config.umapyoidelight.tradeudcrops": "農民との作物の取引",
@@ -93,11 +94,20 @@
   "item.umapyoidelight.toast": "トースト",
   "item.umapyoidelight.toast_strawberry_jam": "イチゴジャムトースト",
   "item.umapyoidelight.strawberry_jam": "イチゴジャム",
+  "item.umapyoidelight.triangular_bread": "三角形のパン",
+  "item.umapyoidelight.bread_crust": "パンの耳",
   "item.umapyoidelight.strawberry_sandwich": "イチゴサンド",
   "item.umapyoidelight.vegetable_sandwich": "野菜サンドイッチ",
   "item.umapyoidelight.agnes_tachyon_potion": "アグネスタキオンの怪しいポーション",
   "item.umapyoidelight.victory_club_rice_cake": "ヴィクトリー倶楽部の桜餅",
-
-  "item.umapyoidelight.triangular_bread": "三角形のパン",
-  "item.umapyoidelight.bread_crust": "パンの耳"
+  "item.umapyoidelight.raw_stick_carrot": "ニンジン付きの棒",
+  "item.umapyoidelight.grilled_stick_carrot": "焼きニンジン付きの棒",
+  "item.umapyoidelight.chocolate_stick_carrot": "チョコニンジン",
+  "item.umapyoidelight.carrot_pudding": "にんじんぷりん",
+  "item.umapyoidelight.carrot_bread": "にんじんパン",
+  "item.umapyoidelight.cut_carrot": "切ったニンジン",
+  "item.umapyoidelight.grated_carrot": "ニンジンのみじん切り",
+  "item.umapyoidelight.carrot_batter": "ニンジンバッター",
+  "item.umapyoidelight.carrot_dough": "ニンジン生地",
+  "item.umapyoidelight.carrot_cake_slice": "にんじんショートケーキ"
 }

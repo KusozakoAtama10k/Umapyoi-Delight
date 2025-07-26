@@ -5,6 +5,7 @@ import com.ka10k.umapyoidelight.block.BlockRegistration;
 import com.ka10k.umapyoidelight.tag.ForgeTagsUD;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.tracen.umapyoi.data.tag.UmapyoiBlockTags;
@@ -47,15 +48,16 @@ public class BlockTagsProv extends BlockTagsProvider {
         );
         tag(ModTags.MINEABLE_WITH_KNIFE).add(
                 BlockRegistration.POTATO_GARLIC_PIZZA.get(),
-                BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get());
+                BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get(),
+                BlockRegistration.CARROT_CAKE.get());
     }
 
     protected void registerMinecraftTags() {
-        tag(net.minecraft.tags.BlockTags.CROPS).add(
+        tag(BlockTags.CROPS).add(
                 BlockRegistration.CHILI_CROP.get(),
                 BlockRegistration.GARLIC_CROP.get(),
                 BlockRegistration.STRAWBERRY_CROP.get());
-        tag(net.minecraft.tags.BlockTags.SMALL_FLOWERS).add(
+        tag(BlockTags.SMALL_FLOWERS).add(
                 BlockRegistration.WILD_CHILIS.get(),
                 BlockRegistration.WILD_GARLIC.get(),
                 BlockRegistration.WILD_STRAWBERRIES.get()

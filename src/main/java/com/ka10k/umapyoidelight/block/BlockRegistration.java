@@ -4,6 +4,7 @@ import com.ka10k.umapyoidelight.Umapyoidelight;
 import com.ka10k.umapyoidelight.block.crop.ChiliCrop;
 import com.ka10k.umapyoidelight.block.crop.GarlicCrop;
 import com.ka10k.umapyoidelight.block.crop.StrawberryCrop;
+import com.ka10k.umapyoidelight.item.ItemRegistration;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -36,7 +37,7 @@ public class BlockRegistration {
             () -> new WildCropBlock(MobEffects.FIRE_RESISTANCE, 6, Block.Properties.copy(Blocks.TALL_GRASS)));
 
     public static final RegistryObject<Block> WILD_STRAWBERRIES = BLOCKS.register("wild_strawberries",
-            () -> new WildCropBlock(MobEffects.REGENERATION, 6, Block.Properties.copy(Blocks.TALL_GRASS)));
+            () -> new WildCropBlock(MobEffects.REGENERATION, 8, Block.Properties.copy(Blocks.TALL_GRASS)));
 
     public static final RegistryObject<Block> CHILI_CRATE = BLOCKS.register("chili_pepper_crate",
             () -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
@@ -67,6 +68,9 @@ public class BlockRegistration {
 
     public static final RegistryObject<Block> POTATO_GARLIC_PIZZA_RARE = BLOCKS.register("potato_garlic_pizza_rare",
             () -> new PotatoGarlicPizzaBlockRare(BlockBehaviour.Properties.copy(Blocks.CAKE)));
+
+    public static final RegistryObject<Block> CARROT_CAKE = BLOCKS.register("carrot_cake",
+            () -> new CarrotCakeBlock(BlockBehaviour.Properties.copy(Blocks.CAKE), ItemRegistration.CARROT_CAKE_SLICE));
 
     public static final RegistryObject<Block> WOODCHIP_BLOCK = BLOCKS.register("woodchip_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(0.5F, 0.5F).sound(SoundType.AZALEA)));

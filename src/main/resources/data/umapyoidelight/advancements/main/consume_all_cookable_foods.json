@@ -21,6 +21,16 @@
       },
       "trigger": "minecraft:consume_item"
     },
+    "eat_carrot_cake": {
+      "conditions": {
+        "item": {
+          "items": [
+            "umapyoidelight:carrot_cake_slice"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
     "eat_carrot_hamburg": {
       "conditions": {
         "item": {
@@ -61,6 +71,16 @@
       },
       "trigger": "minecraft:consume_item"
     },
+    "eat_carrot_pudding": {
+      "conditions": {
+        "item": {
+          "items": [
+            "umapyoidelight:carrot_pudding"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
     "eat_carrot_strawberry_icecream": {
       "conditions": {
         "item": {
@@ -76,6 +96,16 @@
         "item": {
           "items": [
             "umapyoidelight:carrot_strawberry_icecream_rare"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "eat_chocolate_stick_carrot": {
+      "conditions": {
+        "item": {
+          "items": [
+            "umapyoidelight:chocolate_stick_carrot"
           ]
         }
       },
@@ -106,6 +136,16 @@
         "item": {
           "items": [
             "umapyoidelight:garlic_ramen_rare"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "eat_grilled_stick_carrot": {
+      "conditions": {
+        "item": {
+          "items": [
+            "umapyoidelight:grilled_stick_carrot"
           ]
         }
       },
@@ -161,6 +201,16 @@
       },
       "trigger": "minecraft:consume_item"
     },
+    "eat_raw_stick_carrot": {
+      "conditions": {
+        "item": {
+          "items": [
+            "umapyoidelight:raw_stick_carrot"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
     "eat_strawberry_sandwich": {
       "conditions": {
         "item": {
@@ -206,16 +256,6 @@
         "item": {
           "items": [
             "umapyoidelight:vegetable_sandwich"
-          ]
-        }
-      },
-      "trigger": "minecraft:consume_item"
-    },
-    "eat_white_bread": {
-      "conditions": {
-        "item": {
-          "items": [
-            "umapyoidelight:white_bread"
           ]
         }
       },
@@ -281,9 +321,6 @@
       "eat_g1_plate"
     ],
     [
-      "eat_white_bread"
-    ],
-    [
       "eat_toast"
     ],
     [
@@ -303,6 +340,21 @@
     ],
     [
       "eat_vegetable_sandwich"
+    ],
+    [
+      "eat_raw_stick_carrot"
+    ],
+    [
+      "eat_grilled_stick_carrot"
+    ],
+    [
+      "eat_chocolate_stick_carrot"
+    ],
+    [
+      "eat_carrot_pudding"
+    ],
+    [
+      "eat_carrot_cake"
     ]
   ],
   "rewards": {

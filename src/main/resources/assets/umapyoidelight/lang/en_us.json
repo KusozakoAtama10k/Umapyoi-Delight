@@ -37,6 +37,7 @@
   "block.umapyoidelight.wild_strawberries": "Wild Strawberries",
   "block.umapyoidelight.woodchip_block": "Woodchip Block",
   "block.umapyoidelight.woodchip_road": "Woodchip Road",
+  "block.umapyoidelight.carrot_cake": "Carrot Cake",
 
 
   "config.umapyoidelight.generateudloot": "Generate Chest Loot",
@@ -65,8 +66,8 @@
 
 
 
-  "item.umapyoidelight.carrot_hamburg": "Carrot Hamburg Steak",
-  "item.umapyoidelight.carrot_hamburg_deluxe": "Carrot Hamburg Steak Deluxe",
+  "item.umapyoidelight.carrot_hamburg": "Carrot Hamburger Steak",
+  "item.umapyoidelight.carrot_hamburg_deluxe": "Deluxe Carrot Hamburger Steak",
   "item.umapyoidelight.carrot_rare": "Human-shaped Carrot",
   "item.umapyoidelight.choice_vegetables": "Choice Vegetables",
   "item.umapyoidelight.potato_rare": "Giant Potato",
@@ -99,11 +100,20 @@
   "item.umapyoidelight.toast": "Toast",
   "item.umapyoidelight.toast_strawberry_jam": "Toast with Strawberry Jam",
   "item.umapyoidelight.strawberry_jam": "Strawberry Jam",
+  "item.umapyoidelight.triangular_bread": "Triangular Bread",
+  "item.umapyoidelight.bread_crust": "Bread Crust",
   "item.umapyoidelight.strawberry_sandwich": "Strawberry Sandwich",
   "item.umapyoidelight.vegetable_sandwich": "Vegetable Sandwich",
   "item.umapyoidelight.agnes_tachyon_potion": "Agnes Tachyon's Suspicious Potion",
   "item.umapyoidelight.victory_club_rice_cake": "Victory Club's Sakuramochi",
-
-  "item.umapyoidelight.triangular_bread": "Triangular Bread",
-  "item.umapyoidelight.bread_crust": "Bread Crust"
+  "item.umapyoidelight.raw_stick_carrot": "Carrot on a Stick",
+  "item.umapyoidelight.grilled_stick_carrot": "Grilled Carrot on a Stick",
+  "item.umapyoidelight.chocolate_stick_carrot": "Chocolate-Coated Carrot",
+  "item.umapyoidelight.carrot_pudding": "Carrot Pudding",
+  "item.umapyoidelight.carrot_bread": "Carrot Bread",
+  "item.umapyoidelight.cut_carrot": "Cut Carrot",
+  "item.umapyoidelight.grated_carrot": "Grated Carrot",
+  "item.umapyoidelight.carrot_batter": "Carrot Batter",
+  "item.umapyoidelight.carrot_dough": "Carrot Dough",
+  "item.umapyoidelight.carrot_cake_slice": "Slice of Carrot Cake"
 }

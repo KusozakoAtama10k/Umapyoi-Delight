@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "tag": "forge:grain/wheat"
+    },
+    {
+      "tag": "forge:grain/wheat"
+    },
+    {
+      "item": "umapyoidelight:grated_carrot"
+    },
+    {
+      "item": "umapyoidelight:grated_carrot"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "umapyoidelight:carrot_dough"
+  }
+}
