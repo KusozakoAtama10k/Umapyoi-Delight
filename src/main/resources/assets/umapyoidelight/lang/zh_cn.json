@@ -30,6 +30,9 @@
   "block.umapyoidelight.wild_chili_peppers": "野生辣椒",
   "block.umapyoidelight.wild_garlic": "野蒜",
   "block.umapyoidelight.wild_strawberries": "野草莓",
+  "block.umapyoidelight.woodchip_block": "木屑块",
+  "block.umapyoidelight.woodchip_road": "木屑路",
+  "block.umapyoidelight.carrot_cake": "胡萝卜蛋糕",
 
   "config.umapyoidelight.generateudloot": "生成箱子内战利品内容",
   "config.umapyoidelight.tradeudcrops": "农民作物交易",
@@ -96,5 +99,15 @@
   "item.umapyoidelight.victory_club_rice_cake": "胜利俱乐部制樱饼",
 
   "item.umapyoidelight.triangular_bread": "三角面包片",
-  "item.umapyoidelight.bread_crust": "面包边"
+  "item.umapyoidelight.bread_crust": "面包边",
+  "item.umapyoidelight.raw_stick_carrot": "胡萝卜串",
+  "item.umapyoidelight.grilled_stick_carrot": "烤胡萝卜串",
+  "item.umapyoidelight.chocolate_stick_carrot": "巧克力胡萝卜",
+  "item.umapyoidelight.carrot_pudding": "胡萝卜布丁",
+  "item.umapyoidelight.carrot_bread": "胡萝卜面包",
+  "item.umapyoidelight.cut_carrot": "胡萝卜片",
+  "item.umapyoidelight.grated_carrot": "胡萝卜碎",
+  "item.umapyoidelight.carrot_batter": "胡萝卜泥",
+  "item.umapyoidelight.carrot_dough": "胡萝卜面团",
+  "item.umapyoidelight.carrot_cake_slice": "一片胡萝卜蛋糕"
 }

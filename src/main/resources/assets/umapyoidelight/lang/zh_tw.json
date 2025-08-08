@@ -8,7 +8,7 @@
   "umapyoidelight.advancement.craft_choice_vegetables":"令人驚歎的大豐收",
   "umapyoidelight.advancement.craft_choice_vegetables.desc":"合成精選蔬菜",
   "umapyoidelight.advancement.consume_all_cookable_foods":"今天也多感謝招待！",
-  "umapyoidelight.advancement.consume_all_cookable_foods.desc":"吃遍所有可以調整馬娘狀態的食物。\n§o感謝招待§r",
+  "umapyoidelight.advancement.consume_all_cookable_foods.desc":"吃遍所有可以調整馬娘狀態的食品。\n§o感謝招待§r",
   "umapyoidelight.advancement.root.desc":"刻苦鍛鍊，勤奮學習，努力跑步——\n還有好好吃飯！",
   "umapyoidelight.advancement.get_crops":"開幕！大農耕時代！",
   "umapyoidelight.advancement.get_crops.desc":"得到大蒜、辣椒和草莓。",
@@ -30,6 +30,9 @@
   "block.umapyoidelight.wild_chili_peppers": "野生辣椒",
   "block.umapyoidelight.wild_garlic": "野蒜",
   "block.umapyoidelight.wild_strawberries": "野草莓",
+  "block.umapyoidelight.woodchip_block": "木屑塊",
+  "block.umapyoidelight.woodchip_road": "木屑路",
+  "block.umapyoidelight.carrot_cake": "胡蘿蔔蛋糕",
 
   "config.umapyoidelight.generateudloot": "生成箱子內戰利品內容",
   "config.umapyoidelight.tradeudcrops": "農民作物交易",
@@ -89,12 +92,22 @@
   "item.umapyoidelight.toast": "吐司",
   "item.umapyoidelight.toast_strawberry_jam": "草莓醬吐司",
   "item.umapyoidelight.strawberry_jam": "草莓醬",
-
+ 
   "item.umapyoidelight.strawberry_sandwich": "草莓三明治",
   "item.umapyoidelight.vegetable_sandwich": "蔬菜三明治",
   "item.umapyoidelight.agnes_tachyon_potion": "愛麗速子的詭異藥水",
   "item.umapyoidelight.victory_club_rice_cake": "勝利俱樂部制櫻餅",
 
   "item.umapyoidelight.triangular_bread": "三角麪包片",
-  "item.umapyoidelight.bread_crust": "麪包邊"
+  "item.umapyoidelight.bread_crust": "麪包邊",
+  "item.umapyoidelight.raw_stick_carrot": "胡蘿蔔串",
+  "item.umapyoidelight.grilled_stick_carrot": "烤胡蘿蔔串",
+  "item.umapyoidelight.chocolate_stick_carrot": "巧克力胡蘿蔔",
+  "item.umapyoidelight.carrot_pudding": "胡蘿蔔布丁",
+  "item.umapyoidelight.carrot_bread": "胡蘿蔔麪包",
+  "item.umapyoidelight.cut_carrot": "胡蘿蔔片",
+  "item.umapyoidelight.grated_carrot": "胡蘿蔔碎",
+  "item.umapyoidelight.carrot_batter": "胡蘿蔔泥",
+  "item.umapyoidelight.carrot_dough": "胡蘿蔔麪糰",
+  "item.umapyoidelight.carrot_cake_slice": "一片胡蘿蔔蛋糕"
 }
