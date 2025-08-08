@@ -1,5 +1,7 @@
 package com.ka10k.umapyoidelight.tag;
 
+import com.ka10k.umapyoidelight.Umapyoidelight;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -32,7 +34,14 @@ public class ForgeTagsUD
 	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_CHILI = forgeItemTag("storage_blocks/chilipepper");
 	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_GARLIC = forgeItemTag("storage_blocks/garlic");
 	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_STRAWBERRY = forgeItemTag("storage_blocks/strawberry");
+	
+	// Add original tag for other mod's compatibility, like Sakura.
+	public static final TagKey<Item> BURGER_MEAT = externalItemTag(Umapyoidelight.MOD_ID, "burger_meat");
 
+	private static TagKey<Item> externalItemTag(String modId, String path) {
+		return ItemTags.create(new ResourceLocation(modId, path));
+	}
+	
 	private static TagKey<Block> forgeBlockTag(String path) {
 		return BlockTags.create(new ResourceLocation("forge", path));
 	}

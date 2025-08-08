@@ -6,6 +6,7 @@ import com.ka10k.umapyoidelight.tag.ForgeTagsUD;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
@@ -99,6 +100,10 @@ public class ItemTagsProv extends ItemTagsProvider {
         tag(CompatibilityTags.SERENE_SEASONS_WINTER_CROPS).add(
                 ItemRegistration.STRAWBERRY_ITEM.get()
         );
+        
+        tag(ForgeTagsUD.BURGER_MEAT).add(
+                ItemRegistration.HAMBURG.get()
+        ).addOptional(new ResourceLocation("sakura", "burger"));
     }
 }
 

@@ -22,7 +22,7 @@ public class CookingRecipesProv {
                 .addIngredient(ForgeTags.VEGETABLES_CARROT)
                 .addIngredient(ForgeTags.SALAD_INGREDIENTS)
                 .addIngredient(ModItems.TOMATO_SAUCE.get())
-                .addIngredient(ItemRegistration.HAMBURG.get())
+                .addIngredient(ForgeTagsUD.BURGER_MEAT)
                 .addIngredient(ForgeTags.CROPS_TOMATO)
                 .unlockedByAnyIngredient(ItemRegistration.HAMBURG.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
@@ -35,7 +35,9 @@ public class CookingRecipesProv {
                         new Ingredient.ItemValue(new ItemStack(ModItems.PASTA_WITH_MEATBALLS.get())),
                         new Ingredient.ItemValue(new ItemStack(ModItems.PASTA_WITH_MUTTON_CHOP.get()))
                 )))
-                .addIngredient(ItemRegistration.HAMBURG.get(),3)
+                .addIngredient(ForgeTagsUD.BURGER_MEAT)
+                .addIngredient(ForgeTagsUD.BURGER_MEAT)
+                .addIngredient(ForgeTagsUD.BURGER_MEAT)
                 .unlockedByAnyIngredient(ItemRegistration.HAMBURG.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(consumer);
