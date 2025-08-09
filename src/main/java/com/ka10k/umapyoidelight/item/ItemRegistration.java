@@ -191,7 +191,7 @@ public class ItemRegistration {
                             .build()));
 
     public static final RegistryObject<Item> RAW_STICK_CARROT =
-            registerWithTab("raw_stick_carrot", () -> new ItemFoodBase(basicItem().craftRemainder(Items.STICK), FoodInfo.builder()
+            registerWithTab("raw_stick_carrot", () -> new StickUmaFood(status -> {}, FoodInfo.builder()
                     .amountAndCalories(3, 0.6F)
                     .build()));
 

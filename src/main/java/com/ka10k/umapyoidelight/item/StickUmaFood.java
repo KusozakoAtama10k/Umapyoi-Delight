@@ -18,7 +18,7 @@ public class StickUmaFood extends ItemFoodBase {
     private final Consumer<ItemStack> consumer;
 
     public StickUmaFood(Consumer<ItemStack> consumer, FoodInfo info) {
-        super(basicItem().craftRemainder(Items.STICK), info);
+        super(basicItem(), info);
         this.consumer = consumer;
     }
 
@@ -30,13 +30,13 @@ public class StickUmaFood extends ItemFoodBase {
                 Player entityplayer = (Player) entity;
                 if (entityplayer.getAbilities().instabuild)
                     return itemstack;
-                if (!entityplayer.addItem(this.getCraftingRemainingItem(stack)))
-                    entityplayer.drop(this.getCraftingRemainingItem(stack), true);
+                if (!entityplayer.addItem(Items.STICK.getDefaultInstance()))
+                    entityplayer.drop(Items.STICK.getDefaultInstance(), true);
             }
             return itemstack;
         }
         return entity instanceof Player && ((Player) entity).getAbilities().instabuild ? itemstack
-                : this.getCraftingRemainingItem(stack);
+                : Items.STICK.getDefaultInstance();
     }
 
     private ItemStack eatAsUma(ItemStack stack, Level level, LivingEntity entity) {
