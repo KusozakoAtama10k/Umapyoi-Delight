@@ -191,18 +191,18 @@ public class ItemRegistration {
                             .build()));
 
     public static final RegistryObject<Item> RAW_STICK_CARROT =
-            registerWithTab("raw_stick_carrot", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
+            registerWithTab("raw_stick_carrot", () -> new StickUmaFood(status -> {}, FoodInfo.builder()
                     .amountAndCalories(3, 0.6F)
                     .build()));
 
     public static final RegistryObject<Item> GRILLED_STICK_CARROT =
-            registerWithTab("grilled_stick_carrot", () -> new UmaFoodItem(status -> {},
+            registerWithTab("grilled_stick_carrot", () -> new StickUmaFood(status -> {},
                     FoodInfo.builder().amountAndCalories(4, 0.75F)
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.SHORT_DURATION, 0), 1.0F)
                             .build()));
 
     public static final RegistryObject<Item> CHOCOLATE_STICK_CARROT =
-            registerWithTab("chocolate_stick_carrot", () -> new UmaFoodItem(UmaStatusUtils::addMotivation,
+            registerWithTab("chocolate_stick_carrot", () -> new StickUmaFood(UmaStatusUtils::addMotivation,
                     FoodInfo.builder().amountAndCalories(5, 0.6F)
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
                             .build()));
