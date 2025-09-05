@@ -70,7 +70,6 @@ public class ItemModelsProv extends ItemModelProvider {
         simpleItem(ItemRegistration.TRIANGLE_BREAD);
         simpleItem(ItemRegistration.STRAWBERRY_SANDWICH);
         simpleItem(ItemRegistration.VEGETABLE_SANDWICH);
-        simpleItem(ItemRegistration.VEGETABLE_SANDWICH);
         simpleItem(ItemRegistration.SAKURAMOCHI);
         simpleItem(ItemRegistration.POTION);
         simpleItem(ItemRegistration.CARROT_BATTER);
