@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:crops/strawberry"
+    },
+    {
+      "tag": "c:crops/strawberry"
+    },
+    [
+      {
+        "item": "umapyoidelight:grated_carrot"
+      },
+      {
+        "tag": "c:crops/carrot"
+      }
+    ],
+    {
+      "tag": "c:foods/milk"
+    },
+    {
+      "tag": "c:crops/wheat"
+    },
+    {
+      "item": "minecraft:snowball"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:carrot_strawberry_icecream"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "tag": "c:foods/bread"
+      },
+      {
+        "item": "umapyoidelight:carrot_bread"
+      }
+    ],
+    {
+      "item": "farmersdelight:beef_patty"
+    },
+    {
+      "tag": "c:foods/leafy_green"
+    },
+    {
+      "tag": "c:crops/carrot"
+    },
+    {
+      "tag": "c:crops/onion"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:carrot_burger"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "umapyoidelight:raw_stick_carrot"
+    },
+    {
+      "tag": "c:foods/chocolates"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:chocolate_stick_carrot"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "tag": "c:crops/strawberry"
+    },
+    "I": {
+      "item": "umapyoidelight:strawberry"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "##I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:strawberry_crate"
+  }
+}

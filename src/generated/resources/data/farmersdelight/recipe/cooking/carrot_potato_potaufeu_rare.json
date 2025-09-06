@@ -1,0 +1,27 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 2.0,
+  "ingredients": [
+    {
+      "tag": "c:crops/carrot"
+    },
+    {
+      "tag": "c:crops/potato"
+    },
+    {
+      "tag": "c:foods/leafy_green"
+    },
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "umapyoidelight:carrot_rare"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:carrot_potato_potaufeu_rare"
+  }
+}

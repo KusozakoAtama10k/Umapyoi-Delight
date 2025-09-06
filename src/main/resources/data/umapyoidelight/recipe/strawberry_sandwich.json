@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "umapyoidelight:triangular_bread"
+    },
+    {
+      "item": "umapyoidelight:triangular_bread"
+    },
+    {
+      "tag": "c:drinks/milk"
+    },
+    {
+      "tag": "c:crops/strawberry"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:strawberry_sandwich"
+  }
+}
