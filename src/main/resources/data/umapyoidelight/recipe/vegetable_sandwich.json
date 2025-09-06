@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "umapyoidelight:triangular_bread"
+    },
+    {
+      "item": "umapyoidelight:triangular_bread"
+    },
+    {
+      "tag": "c:foods/leafy_green"
+    },
+    [
+      {
+        "item": "umapyoidelight:cut_carrot"
+      },
+      {
+        "tag": "c:crops/carrot"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:vegetable_sandwich"
+  }
+}

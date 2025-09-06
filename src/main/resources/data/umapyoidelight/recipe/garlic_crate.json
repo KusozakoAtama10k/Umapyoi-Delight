@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "tag": "c:crops/garlic"
+    },
+    "I": {
+      "item": "umapyoidelight:garlic"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "##I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:garlic_crate"
+  }
+}

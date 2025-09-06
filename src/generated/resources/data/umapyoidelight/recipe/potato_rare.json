@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "umapyoidelight:potato_crate_rare"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "umapyoidelight:potato_rare"
+  }
+}

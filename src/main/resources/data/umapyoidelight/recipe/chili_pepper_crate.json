@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "tag": "c:crops/chilipepper"
+    },
+    "I": {
+      "item": "umapyoidelight:chili_pepper"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "##I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:chili_pepper_crate"
+  }
+}

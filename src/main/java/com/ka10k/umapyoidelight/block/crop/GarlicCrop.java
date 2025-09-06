@@ -1,6 +1,5 @@
 package com.ka10k.umapyoidelight.block.crop;
 
-import com.ka10k.umapyoidelight.block.BlockRegistration;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
@@ -28,10 +27,10 @@ public class GarlicCrop extends CropBlock
         super(properties);
     }
 
-    @Override
+    /*@Override
     public BlockState getPlant(BlockGetter level, BlockPos pos) {
         return BlockRegistration.GARLIC_CROP.get().defaultBlockState();
-    }
+    }*/
 
     @Override
     protected ItemLike getBaseSeedId() {

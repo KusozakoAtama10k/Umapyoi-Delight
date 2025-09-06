@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_carrot_batter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "umapyoidelight:carrot_batter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "umapyoidelight:carrot_cake"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_carrot_batter"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "umapyoidelight:carrot_cake"
+    ]
+  }
+}
