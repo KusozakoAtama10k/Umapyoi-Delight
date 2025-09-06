@@ -2,12 +2,12 @@ package com.ka10k.umapyoidelight.datagen;
 
 import com.ka10k.umapyoidelight.Umapyoidelight;
 import com.ka10k.umapyoidelight.block.BlockRegistration;
-import com.ka10k.umapyoidelight.tag.CommonTagsUD;
+import com.ka10k.umapyoidelight.tag.ForgeTagsUD;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.BlockTagsProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.tracen.umapyoi.data.tag.UmapyoiBlockTags;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.tag.CompatibilityTags;
@@ -32,7 +32,7 @@ public class BlockTagsProv extends BlockTagsProvider {
     }
 
     protected void registerBlockMineables() {
-        tag(BlockTags.MINEABLE_WITH_AXE).add(
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE).add(
                 BlockRegistration.CARROT_CRATE_RARE.get(),
                 BlockRegistration.POTATO_CRATE_RARE.get(),
                 BlockRegistration.CHILI_CRATE.get(),
@@ -42,7 +42,7 @@ public class BlockTagsProv extends BlockTagsProvider {
                 BlockRegistration.STRAWBERRY_CRATE.get(),
                 BlockRegistration.STRAWBERRY_CRATE_RARE.get()
         );
-        tag(BlockTags.MINEABLE_WITH_HOE).add(
+        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_HOE).add(
                 BlockRegistration.WOODCHIP_ROAD.get(),
                 BlockRegistration.WOODCHIP_BLOCK.get()
         );
@@ -65,9 +65,9 @@ public class BlockTagsProv extends BlockTagsProvider {
     }
 
     protected void registerForgeTags() {
-        tag(CommonTagsUD.STORAGE_BLOCKS_CHILI).add(BlockRegistration.CHILI_CRATE.get());
-        tag(CommonTagsUD.STORAGE_BLOCKS_GARLIC).add(BlockRegistration.GARLIC_CRATE.get());
-        tag(CommonTagsUD.STORAGE_BLOCKS_STRAWBERRY).add(BlockRegistration.STRAWBERRY_CRATE.get());
+        tag(ForgeTagsUD.STORAGE_BLOCKS_CHILI).add(BlockRegistration.CHILI_CRATE.get());
+        tag(ForgeTagsUD.STORAGE_BLOCKS_GARLIC).add(BlockRegistration.GARLIC_CRATE.get());
+        tag(ForgeTagsUD.STORAGE_BLOCKS_STRAWBERRY).add(BlockRegistration.STRAWBERRY_CRATE.get());
     }
 
     private void registerModTags() {

@@ -1,0 +1,65 @@
+{
+  "parent": "umapyoidelight:main/root",
+  "criteria": {
+    "chili_pepper": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:chili_pepper"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "garlic": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:garlic"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "strawberry": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:strawberry"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "umapyoidelight.advancement.get_crops.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:golden_hoe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "umapyoidelight.advancement.get_crops"
+    }
+  },
+  "requirements": [
+    [
+      "garlic",
+      "chili_pepper",
+      "strawberry"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -5,15 +5,17 @@ import com.ka10k.umapyoidelight.block.PotatoGarlicPizzaBlock;
 import com.ka10k.umapyoidelight.block.crop.ChiliCrop;
 import com.ka10k.umapyoidelight.block.crop.GarlicCrop;
 import com.ka10k.umapyoidelight.block.crop.StrawberryCrop;
+import com.ka10k.umapyoidelight.item.ItemRegistration;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 
@@ -22,8 +24,8 @@ import java.util.Set;
 
 public class BlockLootTables extends BlockLootSubProvider {
 
-    public BlockLootTables(HolderLookup.Provider holder) {
-        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), holder);
+    public BlockLootTables() {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
 
     @Override
@@ -42,9 +44,9 @@ public class BlockLootTables extends BlockLootSubProvider {
         LootItemCondition.Builder Chili_Mature = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BlockRegistration.CHILI_CROP.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ChiliCrop.AGE, 7));
         LootItemCondition.Builder Garlic_Mature = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BlockRegistration.GARLIC_CROP.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(GarlicCrop.AGE, 7));
         LootItemCondition.Builder Strawberry_Mature = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BlockRegistration.STRAWBERRY_CROP.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(StrawberryCrop.AGE, 7));
-        //this.add(BlockRegistration.CHILI_CROP.get(), this.applyExplosionDecay(BlockRegistration.CHILI_CROP.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(ItemRegistration.CHILI_ITEM.get()))).withPool(LootPool.lootPool().when(Chili_Mature).add(LootItem.lootTableItem(ItemRegistration.CHILI_ITEM.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.FORTUNE, 0.5714286F, 3))))));
-        //this.add(BlockRegistration.GARLIC_CROP.get(), this.applyExplosionDecay(BlockRegistration.CHILI_CROP.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(ItemRegistration.GARLIC_ITEM.get()))).withPool(LootPool.lootPool().when(Garlic_Mature).add(LootItem.lootTableItem(ItemRegistration.GARLIC_ITEM.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.FORTUNE, 0.5714286F, 3))))));
-        //this.add(BlockRegistration.STRAWBERRY_CROP.get(), this.applyExplosionDecay(BlockRegistration.STRAWBERRY_CROP.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(ItemRegistration.STRAWBERRY_ITEM.get()))).withPool(LootPool.lootPool().when(Strawberry_Mature).add(LootItem.lootTableItem(ItemRegistration.STRAWBERRY_ITEM.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.FORTUNE, 0.5714286F, 3))))));
+        this.add(BlockRegistration.CHILI_CROP.get(), this.applyExplosionDecay(BlockRegistration.CHILI_CROP.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(ItemRegistration.CHILI_ITEM.get()))).withPool(LootPool.lootPool().when(Chili_Mature).add(LootItem.lootTableItem(ItemRegistration.CHILI_ITEM.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 3))))));
+        this.add(BlockRegistration.GARLIC_CROP.get(), this.applyExplosionDecay(BlockRegistration.CHILI_CROP.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(ItemRegistration.GARLIC_ITEM.get()))).withPool(LootPool.lootPool().when(Garlic_Mature).add(LootItem.lootTableItem(ItemRegistration.GARLIC_ITEM.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 3))))));
+        this.add(BlockRegistration.STRAWBERRY_CROP.get(), this.applyExplosionDecay(BlockRegistration.STRAWBERRY_CROP.get(), LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(ItemRegistration.STRAWBERRY_ITEM.get()))).withPool(LootPool.lootPool().when(Strawberry_Mature).add(LootItem.lootTableItem(ItemRegistration.STRAWBERRY_ITEM.get()).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 3))))));
 
         LootItemCondition.Builder Pizza_Full = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BlockRegistration.POTATO_GARLIC_PIZZA.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PotatoGarlicPizzaBlock.SERVINGS, 6));
         LootItemCondition.Builder Pizza_Rare_Full = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PotatoGarlicPizzaBlock.SERVINGS, 6));

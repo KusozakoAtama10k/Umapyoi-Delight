@@ -1,12 +1,13 @@
 package com.ka10k.umapyoidelight.block;
 
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
@@ -23,10 +24,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.event.ForgeEventFactory;
 import vectorwing.farmersdelight.common.tag.ModTags;
 import vectorwing.farmersdelight.common.utility.ItemUtils;
 
@@ -36,7 +39,7 @@ import java.util.function.Supplier;
 public class CarrotCakeBlock extends CakeBlock
 {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    //public static final IntegerProperty BITES = IntegerProperty.create("bites", 0, 6);
+    public static final IntegerProperty BITES = IntegerProperty.create("bites", 0, 6);
     protected static final VoxelShape[] SHAPE = {Block.box(1.0F, 0.0F, 1.0F, 15.0F, 8.0F, 15.0F), Block.box(3.0F, 0.0F, 1.0F, 15.0F, 8.0F, 15.0F), Block.box(5.0F, 0.0F, 1.0F, 15.0F, 8.0F, 15.0F), Block.box(7.0F, 0.0F, 1.0F, 15.0F, 8.0F, 15.0F), Block.box(9.0F, 0.0F, 1.0F, 15.0F, 8.0F, 15.0F), Block.box(11.0F, 0.0F, 1.0F, 15.0F, 8.0F, 15.0F), Block.box(13.0F, 0.0F, 1.0F, 15.0F, 8.0F, 15.0F)};
 
     public final Supplier<Item> cakeSlice;
@@ -66,26 +69,26 @@ public class CarrotCakeBlock extends CakeBlock
     }
 
     @Override
-    public ItemInteractionResult useItemOn(ItemStack heldStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (heldStack.is(ModTags.KNIVES)) {
-            return cutSlice(level, pos, state, player);
-        }
-
-        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
-    }
-
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        ItemStack heldStack = player.getItemInHand(hand);
         if (level.isClientSide) {
-            if (consumeBite(level, pos, state, player).consumesAction()) {
+            if (heldStack.is(ModTags.KNIVES)) {
+                return cutSlice(level, pos, state, player);
+            }
+
+            if (this.consumeBite(level, pos, state, player) == InteractionResult.SUCCESS) {
                 return InteractionResult.SUCCESS;
             }
 
-            if (player.getItemInHand(InteractionHand.MAIN_HAND).isEmpty()) {
+            if (heldStack.isEmpty()) {
                 return InteractionResult.CONSUME;
             }
         }
 
-        return consumeBite(level, pos, state, player);
+        if (heldStack.is(ModTags.KNIVES)) {
+            return cutSlice(level, pos, state, player);
+        }
+        return this.consumeBite(level, pos, state, player);
     }
 
     /**
@@ -96,13 +99,16 @@ public class CarrotCakeBlock extends CakeBlock
             return InteractionResult.PASS;
         } else {
             ItemStack sliceStack = this.getcakeSliceItem();
-            FoodProperties sliceFood = sliceStack.getItem().getFoodProperties(sliceStack, playerIn);
+            ItemStack sliceCopy = sliceStack.copy();
+            FoodProperties sliceFood = sliceStack.getItem().getFoodProperties();
 
-            if (sliceFood != null) {
-                playerIn.getFoodData().eat(sliceFood);
-                for (FoodProperties.PossibleEffect effect : sliceFood.effects()) {
-                    if (!level.isClientSide && effect != null && level.random.nextFloat() < effect.probability()) {
-                        playerIn.addEffect(effect.effect());
+            playerIn.getFoodData().eat(sliceStack.getItem(), sliceStack);
+            // Fire an event for food-tracking mods like Spice of Life, but ignore the result.
+            ForgeEventFactory.onItemUseFinish(playerIn, sliceCopy, 0, ItemStack.EMPTY);
+            if (this.getcakeSliceItem().getItem().isEdible() && sliceFood != null) {
+                for (Pair<MobEffectInstance, Float> pair : sliceFood.getEffects()) {
+                    if (!level.isClientSide && pair.getFirst() != null && level.random.nextFloat() < pair.getSecond()) {
+                        playerIn.addEffect(new MobEffectInstance(pair.getFirst()));
                     }
                 }
             }
@@ -121,7 +127,7 @@ public class CarrotCakeBlock extends CakeBlock
     /**
      * Cuts off a bite and drops a slice item, without feeding the player.
      */
-    protected ItemInteractionResult cutSlice(Level level, BlockPos pos, BlockState state, Player player) {
+    protected InteractionResult cutSlice(Level level, BlockPos pos, BlockState state, Player player) {
         int bites = state.getValue(BITES);
         if (bites < getMaxBites() - 1) {
             level.setBlock(pos, state.setValue(BITES, bites + 1), 3);
@@ -134,7 +140,7 @@ public class CarrotCakeBlock extends CakeBlock
                 pos.getX() + (bites * 0.1), pos.getY() + 0.2, pos.getZ() + 0.5,
                 -0.05, 0, 0);
         level.playSound(null, pos, SoundEvents.WOOL_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);
-        return ItemInteractionResult.SUCCESS;
+        return InteractionResult.SUCCESS;
     }
 
     @Override
@@ -163,7 +169,7 @@ public class CarrotCakeBlock extends CakeBlock
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, PathComputationType type) {
+    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
         return false;
     }
 }
