@@ -1,0 +1,31 @@
+{
+  "parent": "umapyoidelight:main/trade_special_items",
+  "criteria": {
+    "drink_tachyon_potion": {
+      "conditions": {
+        "item": {
+          "items": "umapyoidelight:agnes_tachyon_potion"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "umapyoidelight.advancement.drink_tachyon_potion.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "umapyoidelight:agnes_tachyon_potion"
+    },
+    "title": {
+      "translate": "umapyoidelight.advancement.drink_tachyon_potion"
+    }
+  },
+  "requirements": [
+    [
+      "drink_tachyon_potion"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

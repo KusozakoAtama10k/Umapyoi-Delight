@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "umapyoidelight:raw_potato_garlic_pizza_rare"
+  },
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:potato_garlic_pizza_rare"
+  }
+}

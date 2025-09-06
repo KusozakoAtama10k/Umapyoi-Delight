@@ -1,0 +1,9 @@
+{
+  "values": [
+    "umapyoidelight:hamburg",
+    {
+      "id": "sakura:burger",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "umapyoidelight:white_bread"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "umapyoidelight:triangular_bread"
+      }
+    },
+    {
+      "item": {
+        "count": 1,
+        "id": "umapyoidelight:bread_crust"
+      }
+    },
+    {
+      "chance": 0.5,
+      "item": {
+        "count": 1,
+        "id": "umapyoidelight:bread_crust"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}

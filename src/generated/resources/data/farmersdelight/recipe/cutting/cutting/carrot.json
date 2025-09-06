@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "tag": "c:crops/carrot"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "umapyoidelight:cut_carrot"
+      }
+    },
+    {
+      "chance": 0.2,
+      "item": {
+        "count": 1,
+        "id": "umapyoidelight:cut_carrot"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}

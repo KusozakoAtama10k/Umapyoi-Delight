@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "umapyoidelight:potato_garlic_pizza_rare"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "potato_garlic_pizza_rare": {
+      "conditions": {
+        "items": [
+          {
+            "items": "umapyoidelight:raw_potato_garlic_pizza_rare"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "potato_garlic_pizza_rare"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "umapyoidelight:potato_garlic_pizza_rare"
+    ]
+  }
+}

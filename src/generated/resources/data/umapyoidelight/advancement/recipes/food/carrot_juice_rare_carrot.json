@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_carrot_rare": {
+      "conditions": {
+        "items": [
+          {
+            "items": "umapyoidelight:carrot_rare"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "umapyoidelight:carrot_juice_rare_carrot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_carrot_rare"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "umapyoidelight:carrot_juice_rare_carrot"
+    ]
+  }
+}

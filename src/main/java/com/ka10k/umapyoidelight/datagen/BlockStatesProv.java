@@ -5,16 +5,16 @@ import com.ka10k.umapyoidelight.block.BlockRegistration;
 import com.ka10k.umapyoidelight.block.crop.ChiliCrop;
 import com.ka10k.umapyoidelight.block.crop.GarlicCrop;
 import com.ka10k.umapyoidelight.block.crop.StrawberryCrop;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.block.FeastBlock;
 
@@ -28,7 +28,7 @@ public class BlockStatesProv extends BlockStateProvider {
     }
 
     private String blockName(Block block) {
-        return ForgeRegistries.BLOCKS.getKey(block).getPath();
+        return BuiltInRegistries.BLOCK.getKey(block).getPath();
     }
 
     public String blockTextureName(String path) {
@@ -36,11 +36,11 @@ public class BlockStatesProv extends BlockStateProvider {
     }
 
     public ResourceLocation resourceBlock(String path) {
-        return new ResourceLocation(Umapyoidelight.MOD_ID, "block/" + path);
+        return ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, "block/" + path);
     }
 
     public ResourceLocation FDresource(String path) {
-        return new ResourceLocation(FarmersDelight.MODID, "block/" + path);
+        return ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "block/" + path);
     }
 
     private void CrateBlock(Block block, String cropName) {
@@ -116,6 +116,6 @@ public class BlockStatesProv extends BlockStateProvider {
         wildCropBlock(BlockRegistration.WILD_CHILIS.get(), false);
         wildCropBlock(BlockRegistration.WILD_GARLIC.get(), false);
         wildCropBlock(BlockRegistration.WILD_STRAWBERRIES.get(), false);
-        simpleBlockWithItem(BlockRegistration.WOODCHIP_BLOCK.get(),models().cubeAll("woodchip_block",resourceBlock("woodchip")));
+        //simpleBlockWithItem(BlockRegistration.WOODCHIP_BLOCK.get(),models().cubeAll("woodchip_block",resourceBlock("woodchip")));
     }
 }

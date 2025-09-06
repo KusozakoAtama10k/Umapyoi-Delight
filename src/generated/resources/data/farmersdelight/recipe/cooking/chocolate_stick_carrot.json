@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "umapyoidelight:raw_stick_carrot"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "tag": "c:crops/cocoa_bean"
+    },
+    {
+      "tag": "c:drinks/milk"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:chocolate_stick_carrot"
+  }
+}
