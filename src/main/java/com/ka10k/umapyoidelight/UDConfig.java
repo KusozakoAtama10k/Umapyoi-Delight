@@ -1,39 +1,39 @@
 package com.ka10k.umapyoidelight;
 
-import net.neoforged.neoforge.common.ModConfigSpec;
+import net.minecraftforge.common.ForgeConfigSpec;
 
 public class UDConfig {
 
-    public static ModConfigSpec COMMON_CONFIG;
+    public static ForgeConfigSpec COMMON_CONFIG;
 
-    public static ModConfigSpec.BooleanValue GENERATE_UD_LOOT;
-    public static ModConfigSpec.BooleanValue FARMERS_TRADE_UD_CROPS;
-    public static ModConfigSpec.BooleanValue FARMERS_TRADE_RARE_CROPS;
-    public static ModConfigSpec.BooleanValue VILLAGERS_TRADE_OTHER_ITEMS;
-    public static ModConfigSpec.BooleanValue TRAINERS_TRADE_ITEMS;
-    public static ModConfigSpec.BooleanValue WANDERING_TRADER_TRADE_UD_CROPS;
+    public static ForgeConfigSpec.BooleanValue GENERATE_UD_LOOT;
+    public static ForgeConfigSpec.BooleanValue FARMERS_TRADE_UD_CROPS;
+    public static ForgeConfigSpec.BooleanValue FARMERS_TRADE_RARE_CROPS;
+    public static ForgeConfigSpec.BooleanValue VILLAGERS_TRADE_OTHER_ITEMS;
+    public static ForgeConfigSpec.BooleanValue TRAINERS_TRADE_ITEMS;
+    public static ForgeConfigSpec.BooleanValue WANDERING_TRADER_TRADE_UD_CROPS;
 
-    public static ModConfigSpec.DoubleValue AP_RECOVER_POTAUFEU;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_POTAUFEU_RARE;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_RAMEN;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_RAMEN_RARE;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_PIZZASLICE;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_PIZZASLICE_RARE;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_MAPO;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_MAPO_RARE;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_ICECREAM;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_ICECREAM_RARE;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_GI_PLATE;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_CARROT_BURGER;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_COFFEE;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_CARROT_JUICE;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_YAKISOBA;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_SAKURAMOCHI;
-    public static ModConfigSpec.DoubleValue AP_RECOVER_CARROT_PUDDING;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_POTAUFEU;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_POTAUFEU_RARE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_RAMEN;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_RAMEN_RARE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_PIZZASLICE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_PIZZASLICE_RARE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_MAPO;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_MAPO_RARE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_ICECREAM;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_ICECREAM_RARE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_GI_PLATE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_CARROT_BURGER;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_COFFEE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_CARROT_JUICE;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_YAKISOBA;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_SAKURAMOCHI;
+    public static ForgeConfigSpec.DoubleValue AP_RECOVER_CARROT_PUDDING;
 
 
     static{
-        ModConfigSpec.Builder COMMON_BUILDER = new ModConfigSpec.Builder();
+        ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
         COMMON_BUILDER.comment("General settings").push("general");
         GENERATE_UD_LOOT = COMMON_BUILDER
                 .translation("config.umapyoidelight.generateudloot")

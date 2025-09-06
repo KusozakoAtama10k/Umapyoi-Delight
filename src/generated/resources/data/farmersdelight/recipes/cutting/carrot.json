@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "tag": "forge:vegetables/carrot"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "umapyoidelight:cut_carrot"
+    },
+    {
+      "chance": 0.2,
+      "item": "umapyoidelight:cut_carrot"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

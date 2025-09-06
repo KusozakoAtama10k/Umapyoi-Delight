@@ -2,43 +2,46 @@ package com.ka10k.umapyoidelight.datagen.advancements;
 
 import com.ka10k.umapyoidelight.Umapyoidelight;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
-import net.minecraft.advancements.*;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementRewards;
+import net.minecraft.advancements.FrameType;
+import net.minecraft.advancements.RequirementsStrategy;
 import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.common.data.AdvancementProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.ForgeAdvancementProvider;
 
 import java.util.function.Consumer;
 
-public class AdvancementGen implements AdvancementProvider.AdvancementGenerator
+public class AdvancementGen implements ForgeAdvancementProvider.AdvancementGenerator
 {
 	@Override
-	public void generate(HolderLookup.Provider registries, Consumer<AdvancementHolder> consumer, ExistingFileHelper existingFileHelper) {
-		AdvancementHolder root = Advancement.Builder.advancement()
+	public void generate(HolderLookup.Provider registries, Consumer<Advancement> consumer, ExistingFileHelper existingFileHelper) {
+		Advancement root = Advancement.Builder.advancement()
 				.display(ItemRegistration.CARROT_CRATE_RARE.get(),
 						Component.translatable("umapyoidelight.advancement.root"),
 						Component.translatable("umapyoidelight.advancement.root.desc"),
-                        ResourceLocation.parse("minecraft:textures/block/oak_planks.png"),
-						AdvancementType.TASK, false, false, false)
+						new ResourceLocation("minecraft:textures/block/oak_planks.png"),
+						FrameType.TASK, false, false, false)
 				.addCriterion("garlic", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GARLIC_ITEM.get()))
 				.addCriterion("chili_pepper", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CHILI_ITEM.get()))
 				.addCriterion("strawberry", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_ITEM.get()))
-				.requirements(AdvancementRequirements.Strategy.OR)
+				.requirements(RequirementsStrategy.OR)
 				.save(consumer, getNameId("main/root"));
 
 		// Main Branch
-		AdvancementHolder getCrops = getAdvancement(root, Items.GOLDEN_HOE, "get_crops", AdvancementType.TASK, true, true, false)
+		Advancement getCrops = getAdvancement(root, Items.GOLDEN_HOE, "get_crops", FrameType.TASK, true, true, false)
 				.addCriterion("garlic", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GARLIC_ITEM.get()))
 				.addCriterion("chili_pepper", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CHILI_ITEM.get()))
 				.addCriterion("strawberry", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_ITEM.get()))
-				.requirements(AdvancementRequirements.Strategy.OR)
+				.requirements(RequirementsStrategy.OR)
 				.save(consumer, getNameId("main/get_crops"));
 
-		AdvancementHolder cookNormalMeal = getAdvancement(getCrops, ItemRegistration.CARROT_HAMBURG.get(), "cook_normal_meal", AdvancementType.TASK, true, true, false)
+		Advancement cookNormalMeal = getAdvancement(getCrops, ItemRegistration.CARROT_HAMBURG.get(), "cook_normal_meal", FrameType.TASK, true, true, false)
 				.addCriterion("carrot_hamburg", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_HAMBURG.get()))
 				.addCriterion("carrot_potato_potaufeu", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_POTATO_POTAUFEU.get()))
 				.addCriterion("garlic_ramen", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GARLIC_RAMEN.get()))
@@ -51,37 +54,37 @@ public class AdvancementGen implements AdvancementProvider.AdvancementGenerator
 				.addCriterion("potato_garlic_pizza_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_GARLIC_PIZZA_RARE.get()))
 				.addCriterion("mapo_carrot_potato_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.MAPO_CARROT_POTATO_RARE.get()))
 				.addCriterion("carrot_strawberry_icecream_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_STRAWBERRY_ICECREAM_RARE.get()))
-				.requirements(AdvancementRequirements.Strategy.OR)
+				.requirements(RequirementsStrategy.OR)
 				.save(consumer, getNameId("main/cook_normal_meal"));
 
-		AdvancementHolder cookGoodMeal = getAdvancement(cookNormalMeal, ItemRegistration.CARROT_HAMBURG_DELUXE.get(), "cook_good_meal", AdvancementType.TASK, true, true, false)
+		Advancement cookGoodMeal = getAdvancement(cookNormalMeal, ItemRegistration.CARROT_HAMBURG_DELUXE.get(), "cook_good_meal", FrameType.TASK, true, true, false)
 				.addCriterion("carrot_hamburg_deluxe", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_HAMBURG_DELUXE.get()))
 				.addCriterion("carrot_potato_potaufeu_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_POTATO_POTAUFEU_RARE.get()))
 				.addCriterion("garlic_ramen_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GARLIC_RAMEN_RARE.get()))
 				.addCriterion("potato_garlic_pizza_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_GARLIC_PIZZA_RARE.get()))
 				.addCriterion("mapo_carrot_potato_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.MAPO_CARROT_POTATO_RARE.get()))
 				.addCriterion("carrot_strawberry_icecream_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_STRAWBERRY_ICECREAM_RARE.get()))
-				.requirements(AdvancementRequirements.Strategy.OR)
+				.requirements(RequirementsStrategy.OR)
 				.save(consumer, getNameId("main/cook_good_meal"));
 
-		AdvancementHolder cookGIPlate = getAdvancement(cookGoodMeal, ItemRegistration.GI_PLATE.get(), "cook_g1_plate", AdvancementType.GOAL, true, true, false)
+		Advancement cookGIPlate = getAdvancement(cookGoodMeal, ItemRegistration.GI_PLATE.get(), "cook_g1_plate", FrameType.GOAL, true, true, false)
 				.addCriterion("g1_plate", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GI_PLATE.get()))
 				.save(consumer, getNameId("main/cook_g1_plate"));
 
-		AdvancementHolder getRareCrops = getAdvancement(getCrops, ItemRegistration.CARROT_ITEM_RARE.get(), "get_rare_crops", AdvancementType.TASK, true, true, false)
+		Advancement getRareCrops = getAdvancement(getCrops, ItemRegistration.CARROT_ITEM_RARE.get(), "get_rare_crops", FrameType.TASK, true, true, false)
 				.addCriterion("carrot_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_ITEM_RARE.get()))
 				.addCriterion("garlic_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GARLIC_ITEM_RARE.get()))
 				.addCriterion("potato_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_ITEM_RARE.get()))
 				.addCriterion("chili_pepper_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CHILI_ITEM_RARE.get()))
 				.addCriterion("strawberry_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_ITEM_RARE.get()))
-				.requirements(AdvancementRequirements.Strategy.OR)
+				.requirements(RequirementsStrategy.OR)
 				.save(consumer, getNameId("main/get_rare_crops"));
 
-		AdvancementHolder craftChoiceVegetables = getAdvancement(getRareCrops, ItemRegistration.CHOICE_VEGETABLES.get(), "craft_choice_vegetables", AdvancementType.GOAL, true, true, false)
+		Advancement craftChoiceVegetables = getAdvancement(getRareCrops, ItemRegistration.CHOICE_VEGETABLES.get(), "craft_choice_vegetables", FrameType.GOAL, true, true, false)
 				.addCriterion("choice_vegetables", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CHOICE_VEGETABLES.get()))
 				.save(consumer, getNameId("main/craft_choice_vegetables"));
 
-		AdvancementHolder eatAllMeals = getAdvancement(cookGIPlate, ItemRegistration.GI_PLATE.get(), "consume_all_cookable_foods", AdvancementType.CHALLENGE, true, true, false)
+		Advancement eatAllMeals = getAdvancement(cookGIPlate, ItemRegistration.GI_PLATE.get(), "consume_all_cookable_foods", FrameType.CHALLENGE, true, true, false)
 				.addCriterion("eat_hamburg", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.HAMBURG.get()))
 				.addCriterion("eat_carrot_hamburg", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_HAMBURG.get()))
 				.addCriterion("eat_carrot_hamburg_deluxe", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_HAMBURG_DELUXE.get()))
@@ -112,21 +115,22 @@ public class AdvancementGen implements AdvancementProvider.AdvancementGenerator
 				.rewards(AdvancementRewards.Builder.experience(150))
 				.save(consumer, getNameId("main/consume_all_cookable_foods"));
 
-		AdvancementHolder tradeSpecialItems = getAdvancement(getCrops, ItemRegistration.COFFEE.get(), "trade_special_items", AdvancementType.TASK, true, true, false)
+		Advancement tradeSpecialItems = getAdvancement(getCrops, ItemRegistration.COFFEE.get(), "trade_special_items", FrameType.TASK, true, true, false)
 				.addCriterion("manhattan_cafe_coffee", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.COFFEE.get()))
 				.addCriterion("gold_ship_yakisoba", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.YAKISOBA.get()))
 				.addCriterion("victory_club_rice_cake", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.SAKURAMOCHI.get()))
 				.addCriterion("tachyon_potion", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTION.get()))
-				.requirements(AdvancementRequirements.Strategy.OR)
+				.requirements(RequirementsStrategy.OR)
 				.save(consumer, getNameId("main/trade_special_items"));
 
-		AdvancementHolder drinkTachyonPotion = getAdvancement(tradeSpecialItems, ItemRegistration.POTION.get(), "drink_tachyon_potion", AdvancementType.TASK, true, true, false)
+		Advancement drinkTachyonPotion = getAdvancement(tradeSpecialItems, ItemRegistration.POTION.get(), "drink_tachyon_potion", FrameType.TASK, true, true, false)
 				.addCriterion("drink_tachyon_potion", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.POTION.get()))
 				.save(consumer, getNameId("main/drink_tachyon_potion"));
 
+
 	}
 
-	protected static Advancement.Builder getAdvancement(AdvancementHolder parent, ItemLike display, String name, AdvancementType frame, boolean showToast, boolean announceToChat, boolean hidden) {
+	protected static Advancement.Builder getAdvancement(Advancement parent, ItemLike display, String name, FrameType frame, boolean showToast, boolean announceToChat, boolean hidden) {
 		return Advancement.Builder.advancement().parent(parent).display(display,
 				Component.translatable("umapyoidelight.advancement." + name),
 				Component.translatable("umapyoidelight.advancement." + name + ".desc"),

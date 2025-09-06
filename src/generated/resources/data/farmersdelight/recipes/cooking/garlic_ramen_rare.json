@@ -1,0 +1,29 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 2.0,
+  "ingredients": [
+    {
+      "tag": "forge:pasta/raw_pasta"
+    },
+    {
+      "tag": "forge:raw_pork"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "umapyoidelight:garlic_rare"
+    },
+    {
+      "tag": "forge:vegetables/chilipepper"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "umapyoidelight:garlic_ramen_rare"
+  }
+}

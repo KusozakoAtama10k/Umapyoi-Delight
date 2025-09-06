@@ -1,0 +1,29 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 2.0,
+  "ingredients": [
+    {
+      "item": "umapyoidelight:choice_vegetables"
+    },
+    {
+      "item": "umapyoidelight:choice_vegetables"
+    },
+    {
+      "item": "umapyoidelight:choice_vegetables"
+    },
+    {
+      "tag": "forge:pasta"
+    },
+    {
+      "item": "umapyoidelight:raw_hamburg"
+    },
+    {
+      "tag": "forge:grain/wheat"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "umapyoidelight:g1_plate"
+  }
+}

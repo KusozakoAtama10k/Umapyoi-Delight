@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "umapyoidelight:strawberry_rare"
+    },
+    {
+      "tag": "forge:fruits/strawberry"
+    },
+    {
+      "tag": "forge:vegetables/carrot"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "tag": "forge:vegetables/carrot"
+    },
+    {
+      "item": "minecraft:snowball"
+    }
+  ],
+  "result": {
+    "item": "umapyoidelight:carrot_strawberry_icecream_rare"
+  }
+}

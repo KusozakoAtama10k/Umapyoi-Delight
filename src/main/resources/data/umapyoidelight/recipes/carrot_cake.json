@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "umapyoidelight:carrot_batter"
+    },
+    "C": {
+      "item": "umapyoidelight:cut_carrot"
+    },
+    "M": {
+      "tag": "forge:milk"
+    }
+  },
+  "pattern": [
+    " C ",
+    "MMM",
+    "BBB"
+  ],
+  "result": {
+    "item": "umapyoidelight:carrot_cake"
+  },
+  "show_notification": true
+}

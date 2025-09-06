@@ -2,18 +2,18 @@ package com.ka10k.umapyoidelight.datagen;
 
 import com.ka10k.umapyoidelight.Umapyoidelight;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
-import com.ka10k.umapyoidelight.tag.CommonTagsUD;
+import com.ka10k.umapyoidelight.tag.ForgeTagsUD;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.common.Tags;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.tag.CompatibilityTags;
-import vectorwing.farmersdelight.common.tag.CommonTags;
+import vectorwing.farmersdelight.common.tag.ForgeTags;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -32,28 +32,36 @@ public class ItemTagsProv extends ItemTagsProvider {
     }
 
     private void registerMinecraftTags() {
-        tag(ItemTags.VILLAGER_PLANTABLE_SEEDS)
+        tag(net.minecraft.tags.ItemTags.VILLAGER_PLANTABLE_SEEDS)
                 .add(ItemRegistration.CHILI_ITEM.get())
                 .add(ItemRegistration.GARLIC_ITEM.get())
                 .add(ItemRegistration.STRAWBERRY_ITEM.get());
     }
 
     private void registerForgeTags() {
-        tag(Tags.Items.FOODS_BERRY).add(ItemRegistration.STRAWBERRY_ITEM.get());
-        tag(CommonTagsUD.BERRIES_STRAWBERRY).add(ItemRegistration.STRAWBERRY_ITEM.get());
+        tag(ForgeTags.BERRIES).add(ItemRegistration.STRAWBERRY_ITEM.get());
+        tag(ForgeTagsUD.BERRIES_STRAWBERRY).add(ItemRegistration.STRAWBERRY_ITEM.get());
 
-        tag(Tags.Items.CROPS).addTags(CommonTagsUD.CROPS_CHILI, CommonTagsUD.CROPS_GARLIC, CommonTagsUD.CROPS_STRAWBERRY);
-        tag(CommonTagsUD.CROPS_CHILI).add(ItemRegistration.CHILI_ITEM.get());
-        tag(CommonTagsUD.CROPS_GARLIC).add(ItemRegistration.GARLIC_ITEM.get());
-        tag(CommonTagsUD.CROPS_STRAWBERRY).add(ItemRegistration.STRAWBERRY_ITEM.get());
+        tag(ForgeTags.CROPS).addTags(ForgeTagsUD.CROPS_CHILI, ForgeTagsUD.CROPS_GARLIC, ForgeTagsUD.CROPS_STRAWBERRY,ForgeTagsUD.CROPS_COCOA_BEANS);
+        tag(ForgeTagsUD.CROPS_CHILI).add(ItemRegistration.CHILI_ITEM.get());
+        tag(ForgeTagsUD.CROPS_GARLIC).add(ItemRegistration.GARLIC_ITEM.get());
+        tag(ForgeTagsUD.CROPS_STRAWBERRY).add(ItemRegistration.STRAWBERRY_ITEM.get());
+        tag(ForgeTagsUD.CROPS_COCOA_BEANS).add(Items.COCOA_BEANS);
 
+        tag(ForgeTagsUD.FRUITS).addTag(ForgeTagsUD.FRUITS_STRAWBERRY);
+        tag(ForgeTagsUD.FRUITS_STRAWBERRY).add(ItemRegistration.STRAWBERRY_ITEM.get());
 
-        tag(CommonTagsUD.STORAGE_BLOCKS_ITEM_CHILI).add(ItemRegistration.CHILI_CRATE.get());
-        tag(CommonTagsUD.STORAGE_BLOCKS_ITEM_GARLIC).add(ItemRegistration.GARLIC_CRATE.get());
-        tag(CommonTagsUD.STORAGE_BLOCKS_ITEM_STRAWBERRY).add(ItemRegistration.STRAWBERRY_CRATE.get());
+        tag(ForgeTagsUD.STORAGE_BLOCKS_ITEM_CHILI).add(ItemRegistration.CHILI_CRATE.get());
+        tag(ForgeTagsUD.STORAGE_BLOCKS_ITEM_GARLIC).add(ItemRegistration.GARLIC_CRATE.get());
+        tag(ForgeTagsUD.STORAGE_BLOCKS_ITEM_STRAWBERRY).add(ItemRegistration.STRAWBERRY_CRATE.get());
 
-        tag(Tags.Items.FOODS_BREAD).add(ItemRegistration.WHITE_BREAD.get());
-        tag(CommonTags.FOODS_DOUGH).add(ItemRegistration.CARROT_DOUGH.get());
+        tag(ForgeTags.VEGETABLES).addTags(ForgeTagsUD.VEGETABLES_CHILI, ForgeTagsUD.VEGETABLES_GARLIC);
+        tag(ForgeTagsUD.VEGETABLES_CHILI).add(ItemRegistration.CHILI_ITEM.get());
+        tag(ForgeTagsUD.VEGETABLES_GARLIC).add(ItemRegistration.GARLIC_ITEM.get());
+
+        tag(ForgeTags.BREAD).add(ItemRegistration.WHITE_BREAD.get());
+        tag(ForgeTags.BREAD_WHEAT).add(ItemRegistration.WHITE_BREAD.get());
+        tag(ForgeTags.DOUGH).add(ItemRegistration.CARROT_DOUGH.get());
 
         tag(ItemTags.FLOWERS).add(
                 ItemRegistration.WILD_CHILIS.get(),
@@ -93,9 +101,9 @@ public class ItemTagsProv extends ItemTagsProvider {
                 ItemRegistration.STRAWBERRY_ITEM.get()
         );
         
-        tag(CommonTagsUD.FOODS_BURGER_MEAT).add(
+        tag(ForgeTagsUD.BURGER_MEAT).add(
                 ItemRegistration.HAMBURG.get()
-        ).addOptional(ResourceLocation.fromNamespaceAndPath("sakura", "burger"));
+        ).addOptional(new ResourceLocation("sakura", "burger"));
     }
 }
 

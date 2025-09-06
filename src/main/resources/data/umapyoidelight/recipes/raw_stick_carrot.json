@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "tag": "forge:vegetables/carrot"
+    }
+  ],
+  "result": {
+    "item": "umapyoidelight:raw_stick_carrot"
+  }
+}

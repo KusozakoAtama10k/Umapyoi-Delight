@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:fruits/strawberry"
+    },
+    {
+      "tag": "forge:fruits/strawberry"
+    },
+    [
+      {
+        "item": "umapyoidelight:grated_carrot"
+      },
+      {
+        "tag": "forge:vegetables/carrot"
+      }
+    ],
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "tag": "forge:grain/wheat"
+    },
+    {
+      "item": "minecraft:snowball"
+    }
+  ],
+  "result": {
+    "item": "umapyoidelight:carrot_strawberry_icecream"
+  }
+}
