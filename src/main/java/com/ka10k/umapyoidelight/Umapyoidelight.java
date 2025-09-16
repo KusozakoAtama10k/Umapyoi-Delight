@@ -46,7 +46,9 @@ public class Umapyoidelight {
         CreativeTab.CREATIVE_MODE_TABS.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
         LootModifiers.LOOT_MODIFIERS.register(modEventBus);
-        modEventBus.addListener(Umapyoidelight::onAddPackFinders);
+        if(ModList.get().isLoaded("agricraft")){
+            modEventBus.addListener(Umapyoidelight::onAddPackFinders);
+        }
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, UDConfig.COMMON_CONFIG);
