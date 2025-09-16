@@ -30,6 +30,9 @@
   "block.umapyoidelight.potato_garlic_pizza": "ポテトガーリックピザ",
   "block.umapyoidelight.potato_garlic_pizza_rare": "2400m夢の先",
   "block.umapyoidelight.wild_chili_peppers": "野生のトウガラシ",
+  "block.umapyoidelight.chili_pepper_crop": "トウガラシ",
+  "block.umapyoidelight.garlic_crop": "ニンニク",
+  "block.umapyoidelight.strawberry_crop": "イチゴ",
   "block.umapyoidelight.wild_garlic": "野生のニンニク",
   "block.umapyoidelight.wild_strawberries": "野イチゴ",
   "block.umapyoidelight.woodchip_block": "ウッドチップブロック",
@@ -42,6 +45,7 @@
   "config.umapyoidelight.tradeotheritems": "村人とのその他アイテムの取引",
   "config.umapyoidelight.trainerstradeitems": "トレーナーとのアイテムの取引",
   "config.umapyoidelight.wandererstradeudcrops": "行商人との作物の取引",
+
   "config.umapyoidelight.ap_recover_potaufeu": "にんじんじゃがポトフ",
   "config.umapyoidelight.ap_recover_potaufeu_rare": "秘湯：極楽ポトフの湯",
   "config.umapyoidelight.ap_recover_ramen": "にんにくラーメン",
@@ -58,7 +62,6 @@
   "config.umapyoidelight.ap_recover_coffee": "マンハッタンカフェ特製ブレンドコーヒー",
   "config.umapyoidelight.ap_recover_yakisoba": "ゴルシちゃん印のソース焼きそば",
   "config.umapyoidelight.ap_recover_rice_cake": "ヴィクトリー倶楽部の桜餅",
-
 
   "item.umapyoidelight.carrot_hamburg": "にんじんハンバーグ",
   "item.umapyoidelight.carrot_hamburg_deluxe": "にんじんハンバーグDX",

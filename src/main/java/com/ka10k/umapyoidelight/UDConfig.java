@@ -63,6 +63,7 @@ public class UDConfig {
                 .comment("If you disable vegetable trades, the trades will be disabled regardless of this field")
                 .define("wanderersTradeUDCrops", true);
         COMMON_BUILDER.pop();
+
         COMMON_BUILDER.comment("Foods").push("foods");
         AP_RECOVER_POTAUFEU = COMMON_BUILDER
                 .translation("config.umapyoidelight.ap_recover_potaufeu")

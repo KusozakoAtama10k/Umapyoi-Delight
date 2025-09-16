@@ -1,0 +1,6 @@
+{
+  "chance": 0.5,
+  "child": "umapyoidelight:garlic",
+  "parent1": "farmersdelight:onion",
+  "parent2": "umapyoidelight:chili_pepper"
+}

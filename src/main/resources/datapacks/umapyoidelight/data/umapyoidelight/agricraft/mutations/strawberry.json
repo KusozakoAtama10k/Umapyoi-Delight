@@ -1,0 +1,6 @@
+{
+  "chance": 0.5,
+  "child": "umapyoidelight:strawberry",
+  "parent1": "minecraft:sweet_berries",
+  "parent2": "farmersdelight:tomato"
+}

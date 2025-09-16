@@ -1,0 +1,16 @@
+{
+  "pack": {
+    "description": "Umapyoi Delight extra crops (resources)",
+    "pack_format": 15,
+    "filter": {
+      "block": [
+        {
+          "path": "agricraft/plants/carrot"
+        },
+        {
+          "path": "agricraft/plants/potato"
+        }
+      ]
+    }
+  }
+}
