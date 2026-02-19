@@ -14,9 +14,9 @@ import static com.ka10k.umapyoidelight.item.ItemRegistration.bottleDrink;
 
 
 public class BottleUmaDrink extends ItemDrinkBase {
-    private final Consumer<ItemStack> consumer;
+    private final Consumer<LivingEntity> consumer;
 
-    public BottleUmaDrink(Consumer<ItemStack> consumer, FoodInfo info) {
+    public BottleUmaDrink(Consumer<LivingEntity> consumer, FoodInfo info) {
         super(bottleDrink(), info);
         this.consumer = consumer;
     }
@@ -46,7 +46,7 @@ public class BottleUmaDrink extends ItemDrinkBase {
                     stack.shrink(1);
                 return stack;
             } else {
-                this.consumer.accept(UmapyoiAPI.getUmaSoul(player));
+                this.consumer.accept(player);
             }
         }
         return entity.eat(level, stack);

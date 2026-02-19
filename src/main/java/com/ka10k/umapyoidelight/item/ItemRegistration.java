@@ -8,6 +8,7 @@ import com.ka10k.umapyoidelight.Umapyoidelight;
 import com.ka10k.umapyoidelight.block.BlockRegistration;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -15,6 +16,7 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.tracen.umapyoi.api.UmapyoiAPI;
 import net.tracen.umapyoi.effect.MobEffectRegistry;
 import net.tracen.umapyoi.item.food.UmaDrinkItem;
 import net.tracen.umapyoi.item.food.UmaFoodItem;
@@ -56,7 +58,8 @@ public class ItemRegistration {
         return new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16);
     }
 
-    public static void APRecover(ItemStack soul, double ratio) {
+    public static void APRecover(LivingEntity entity, double ratio) {
+        ItemStack soul = UmapyoiAPI.getUmaSoul(entity);
         UmaSoulUtils.addActionPoint(soul, (int)((double)UmaSoulUtils.getMaxActionPoint(soul) * ratio));
     }
 
@@ -431,5 +434,11 @@ public class ItemRegistration {
                     .addEffect(() -> new MobEffectInstance(MobEffects.CONFUSION, FoodValues.SHORT_DURATION, 0), 0.05F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, FoodValues.LONG_DURATION, 3), 0.05F)
                     .addEffect(() -> new MobEffectInstance(MobEffectRegistry.PANICKING.get(), FoodValues.LONG_DURATION, 0), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.NIGHT_OWL.get(), FoodValues.LONG_DURATION, 0), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.SLOW_METABOLISM.get(), FoodValues.LONG_DURATION, 0), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.MOOD_BONUS.get(), FoodValues.LONG_DURATION, 9), 0.05F)
+
+
+
                     .build()));
 }

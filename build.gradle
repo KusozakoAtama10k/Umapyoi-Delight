@@ -139,8 +139,10 @@ dependencies {
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    implementation fg.deobf("curse.maven:mysterious-mountain-lib-368098:5414924")
-    implementation fg.deobf("curse.maven:umapyoi-776121:5906982")
+    //implementation fg.deobf("curse.maven:mysterious-mountain-lib-368098:5414924")
+    implementation fg.deobf("curse.maven:mysterious-mountain-lib-368098:7636232")
+    implementation fg.deobf("curse.maven:umapyoi-776121:7642596")
+    //implementation fg.deobf("curse.maven:umapyoi-776121:5906982")
     implementation fg.deobf("curse.maven:jei-238222:6075247")
     implementation fg.deobf("curse.maven:appleskin-248787:4770828")
     implementation fg.deobf("curse.maven:patchouli-306770:4636277")
