@@ -11,6 +11,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.tracen.umapyoi.data.tag.UmapyoiItemTags;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.tag.CompatibilityTags;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
@@ -81,6 +82,29 @@ public class ItemTagsProv extends ItemTagsProvider {
                 ItemRegistration.WILD_CHILIS.get(),
                 ItemRegistration.WILD_GARLIC.get(),
                 ItemRegistration.WILD_STRAWBERRIES.get()
+        );
+
+        tag(UmapyoiItemTags.getMotivationFoodTag(1)).add(
+                ItemRegistration.CARROT_CAKE_SLICE.get(),
+                ItemRegistration.CHOCOLATE_STICK_CARROT.get(),
+                ItemRegistration.CARROT_PUDDING.get(),
+                ItemRegistration.CARROT_HAMBURG.get(),
+                ItemRegistration.CARROT_POTATO_POTAUFEU_RARE.get(),
+                ItemRegistration.GARLIC_RAMEN_RARE.get(),
+                ItemRegistration.MAPO_CARROT_POTATO_RARE.get(),
+                ItemRegistration.GARLIC_RAMEN_RARE.get(),
+                ItemRegistration.CARROT_STRAWBERRY_ICECREAM_RARE.get(),
+                ItemRegistration.COFFEE.get(),
+                ItemRegistration.SAKURAMOCHI.get(),
+                ItemRegistration.YAKISOBA.get()
+        );
+
+        tag(UmapyoiItemTags.getMotivationFoodTag(2)).add(
+                ItemRegistration.CARROT_HAMBURG_DELUXE.get()
+        );
+
+        tag(UmapyoiItemTags.getMotivationFoodTag(3)).add(
+                ItemRegistration.GI_PLATE.get()
         );
     }
 

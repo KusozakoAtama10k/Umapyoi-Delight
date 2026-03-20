@@ -21,7 +21,6 @@ import net.tracen.umapyoi.effect.MobEffectRegistry;
 import net.tracen.umapyoi.item.food.UmaDrinkItem;
 import net.tracen.umapyoi.item.food.UmaFoodItem;
 import net.tracen.umapyoi.utils.UmaSoulUtils;
-import net.tracen.umapyoi.utils.UmaStatusUtils;
 import vectorwing.farmersdelight.common.FoodValues;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
@@ -188,7 +187,7 @@ public class ItemRegistration {
                             .build()));
 
     public static final RegistryObject<Item> CARROT_CAKE_SLICE =
-            registerWithTab("carrot_cake_slice", () -> new UmaFoodItem(UmaStatusUtils::addMotivation,
+            registerWithTab("carrot_cake_slice", () -> new UmaFoodItem(status -> {},
                     FoodInfo.builder().amountAndCalories(3, 0.3F).eatTime(16)
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.BRIEF_DURATION, 0), 1.0F)
                             .build()));
@@ -205,7 +204,7 @@ public class ItemRegistration {
                             .build()));
 
     public static final RegistryObject<Item> CHOCOLATE_STICK_CARROT =
-            registerWithTab("chocolate_stick_carrot", () -> new StickUmaFood(UmaStatusUtils::addMotivation,
+            registerWithTab("chocolate_stick_carrot", () -> new StickUmaFood(status -> {},
                     FoodInfo.builder().amountAndCalories(5, 0.6F)
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
                             .build()));
@@ -226,7 +225,7 @@ public class ItemRegistration {
 
     public static final RegistryObject<Item> CARROT_PUDDING =
             registerWithTab("carrot_pudding", () -> new BottleUmaFood(status -> {
-                UmaStatusUtils.addMotivation(status);APRecover(status, AP_RECOVER_CARROT_PUDDING.get());},
+                APRecover(status, AP_RECOVER_CARROT_PUDDING.get());},
                     FoodInfo.builder().amountAndCalories(7, 0.4F).alwaysEat()
                             .addEffect(() -> new MobEffectInstance(MobEffects.LUCK, FoodValues.SHORT_DURATION, 0), 1.0F)
                             .build()));
@@ -269,14 +268,13 @@ public class ItemRegistration {
                     .amountAndCalories(1, 0.5F).eatTime(16).build()));
 
     public static final RegistryObject<Item> CARROT_HAMBURG =
-            registerWithTab("carrot_hamburg", () -> new BowlUmaFood(UmaStatusUtils::addMotivation,
+            registerWithTab("carrot_hamburg", () -> new BowlUmaFood(status -> {},
                     FoodInfo.builder().amountAndCalories(10, 0.4F)
                             .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
                             .build()));
 
     public static final RegistryObject<Item> CARROT_HAMBURG_DELUXE =
-            registerWithTab("carrot_hamburg_deluxe", () -> new BowlUmaFood(status -> {
-                UmaStatusUtils.addMotivation(status);UmaStatusUtils.addMotivation(status);},
+            registerWithTab("carrot_hamburg_deluxe", () -> new BowlUmaFood(status -> {},
                     FoodInfo.builder().amountAndCalories(18, 0.5F).alwaysEat()
                             .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .build()));
@@ -303,7 +301,7 @@ public class ItemRegistration {
 
     public static final RegistryObject<Item> CARROT_POTATO_POTAUFEU_RARE =
             registerWithTab("carrot_potato_potaufeu_rare", () -> new BowlUmaFood(status -> {
-                APRecover(status, AP_RECOVER_POTAUFEU_RARE.get());UmaStatusUtils.addMotivation(status);},
+                APRecover(status, AP_RECOVER_POTAUFEU_RARE.get());},
                     FoodInfo.builder().amountAndCalories(17, 0.65F).alwaysEat()
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, FoodValues.LONG_DURATION, 3), 1.0F)
@@ -319,7 +317,7 @@ public class ItemRegistration {
 
     public static final RegistryObject<Item> GARLIC_RAMEN_RARE =
             registerWithTab("garlic_ramen_rare", () -> new BowlUmaFoodNoodle(status -> {
-                APRecover(status, AP_RECOVER_RAMEN_RARE.get());UmaStatusUtils.addMotivation(status);},
+                APRecover(status, AP_RECOVER_RAMEN_RARE.get());},
                     FoodInfo.builder().amountAndCalories(17, 0.65F).alwaysEat()
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, FoodValues.LONG_DURATION, 1), 1.0F)
@@ -351,7 +349,7 @@ public class ItemRegistration {
 
     public static final RegistryObject<Item> MAPO_CARROT_POTATO_RARE =
             registerWithTab("mapo_carrot_potato_rare", () -> new BowlUmaFood(status -> {
-                APRecover(status, AP_RECOVER_MAPO_RARE.get());UmaStatusUtils.addMotivation(status);},
+                APRecover(status, AP_RECOVER_MAPO_RARE.get());},
                     FoodInfo.builder().amountAndCalories(16, 0.65F).alwaysEat()
                             .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, FoodValues.LONG_DURATION, 1), 1.0F)
@@ -367,7 +365,7 @@ public class ItemRegistration {
 
     public static final RegistryObject<Item> CARROT_STRAWBERRY_ICECREAM_RARE =
             registerWithTab("carrot_strawberry_icecream_rare", () -> new UmaFoodItem(status -> {
-                APRecover(status, AP_RECOVER_ICECREAM_RARE.get());UmaStatusUtils.addMotivation(status);},
+                APRecover(status, AP_RECOVER_ICECREAM_RARE.get());},
                     FoodInfo.builder().amountAndCalories(10, 0.35F).alwaysEat()
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.HEAL, 0, 1), 1.0F)
@@ -375,7 +373,7 @@ public class ItemRegistration {
 
     public static final RegistryObject<Item> GI_PLATE =
             registerWithTab("g1_plate", () -> new BowlUmaFood(status -> {
-                APRecover(status, AP_RECOVER_GI_PLATE.get());UmaStatusUtils.addMotivation(status);UmaStatusUtils.addMotivation(status);UmaStatusUtils.addMotivation(status);},
+                APRecover(status, AP_RECOVER_GI_PLATE.get());},
                     FoodInfo.builder().amountAndCalories(50, 0.5F).alwaysEat()
                             .eatTime(120)
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
@@ -391,7 +389,7 @@ public class ItemRegistration {
     //misc
     public static final RegistryObject<Item> COFFEE =
             registerWithTab("manhattan_cafe_coffee", () -> new UmaDrinkItem(status -> {
-                APRecover(status, AP_RECOVER_COFFEE.get());UmaStatusUtils.addMotivation(status);},
+                APRecover(status, AP_RECOVER_COFFEE.get());},
                     FoodInfo.builder().alwaysEat()
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
@@ -400,7 +398,7 @@ public class ItemRegistration {
 
     public static final RegistryObject<Item> SAKURAMOCHI =
             registerWithTab("victory_club_rice_cake", () -> new UmaFoodItem(status -> {
-                APRecover(status, AP_RECOVER_SAKURAMOCHI.get());UmaStatusUtils.addMotivation(status);},
+                APRecover(status, AP_RECOVER_SAKURAMOCHI.get());},
                     FoodInfo.builder().alwaysEat()
                             .amountAndCalories(6, 1.4F)
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
@@ -410,7 +408,7 @@ public class ItemRegistration {
 
     public static final RegistryObject<Item> YAKISOBA =
             registerWithTab("gold_ship_yakisoba", () -> new UmaDrinkItem(status -> {
-                APRecover(status, AP_RECOVER_YAKISOBA.get());UmaStatusUtils.addMotivation(status);},
+                APRecover(status, AP_RECOVER_YAKISOBA.get());},
                     FoodInfo.builder().alwaysEat()
                             .amountAndCalories(12, 0.75F)
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
