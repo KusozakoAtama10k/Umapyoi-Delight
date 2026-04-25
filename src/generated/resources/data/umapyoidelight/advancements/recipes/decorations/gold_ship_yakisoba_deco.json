@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "umapyoidelight:gold_ship_yakisoba_deco"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yakisoba": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:gold_ship_yakisoba"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_yakisoba",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "umapyoidelight:gold_ship_yakisoba_deco"
+    ]
+  },
+  "sends_telemetry_event": false
+}

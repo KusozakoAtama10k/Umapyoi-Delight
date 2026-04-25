@@ -124,12 +124,13 @@ public class CookingRecipesProv {
                 .addIngredient(ForgeTags.MILK)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(consumer);
-
-        CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.CHOCOLATE_STICK_CARROT.get(), 1, FAST_COOKING, SMALL_EXP, Items.AIR)
+/*
+        CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.CHOCOLATE_STICK_CARROT.get(), 1, FAST_COOKING, SMALL_EXP)
                 .addIngredient(ItemRegistration.RAW_STICK_CARROT.get())
                 .addIngredient(ForgeTagsUD.CHOCOLATES)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(consumer,"farmersdelight:cooking/chocolate_stick_carrot_using_chocolates");
+ */
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.CARROT_PUDDING.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
                 .addIngredient(ForgeTags.EGGS)

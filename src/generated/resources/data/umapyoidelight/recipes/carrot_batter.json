@@ -21,10 +21,10 @@
       "item": "umapyoidelight:grated_carrot"
     },
     {
-      "item": "minecraft:sugar"
+      "tag": "forge:sugar"
     },
     {
-      "item": "minecraft:sugar"
+      "tag": "forge:sugar"
     }
   ],
   "result": {

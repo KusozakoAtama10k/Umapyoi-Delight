@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
 
@@ -71,6 +72,24 @@ public class BlockRegistration {
 
     public static final RegistryObject<Block> CARROT_CAKE = BLOCKS.register("carrot_cake",
             () -> new CarrotCakeBlock(BlockBehaviour.Properties.copy(Blocks.CAKE), ItemRegistration.CARROT_CAKE_SLICE));
+
+    public static final RegistryObject<Block> CARROT_PIE = BLOCKS.register("carrot_pie",
+            () -> new PieBlock(BlockBehaviour.Properties.copy(Blocks.CAKE), ItemRegistration.CARROT_PIE_SLICE));
+
+    public static final RegistryObject<Block> YAKISOBA_PILE = BLOCKS.register("pile_of_yakisoba",
+            () -> new YakisobaPileBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).sound(SoundType.BAMBOO_SAPLING)));
+
+    public static final RegistryObject<Block> COFFEE_DECO = BLOCKS.register("manhattan_cafe_coffee_deco",
+            () -> new MugcupBlock(BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).noParticlesOnBreak().destroyTime(0.1F)));
+
+    public static final RegistryObject<Block> YAKISOBA_DECO = BLOCKS.register("gold_ship_yakisoba_deco",
+            () -> new YakisobaDecoBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).sound(SoundType.BAMBOO_SAPLING)));
+
+    public static final RegistryObject<Block> CARROT_HAMBURG_DECO = BLOCKS.register("carrot_hamburg_deco",
+            () -> new CarrotHamburgBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).strength(0.5F, 0.5F)));
+
+    public static final RegistryObject<Block> CARROT_HAMBURG_DELUXE_DECO = BLOCKS.register("carrot_hamburg_deluxe_deco",
+            () -> new CarrotHamburgDeluxeBlock(BlockBehaviour.Properties.copy(Blocks.CAKE).strength(0.5F, 0.5F)));
 
     public static final RegistryObject<Block> WOODCHIP_BLOCK = BLOCKS.register("woodchip_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(0.5F, 0.5F).sound(SoundType.AZALEA)));

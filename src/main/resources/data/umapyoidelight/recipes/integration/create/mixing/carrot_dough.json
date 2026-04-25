@@ -1,0 +1,43 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    },
+    [
+      {
+        "tag": "forge:crops/wheat"
+      },
+      {
+        "tag": "forge:flour"
+      }
+    ],
+    [
+      {
+        "tag": "forge:crops/wheat"
+      },
+      {
+        "tag": "forge:flour"
+      }
+    ],
+    {
+      "item": "umapyoidelight:grated_carrot"
+    },
+    {
+      "item": "umapyoidelight:grated_carrot"
+    }
+  ],
+  "results":  [
+    {
+    "count": 3,
+    "item": "umapyoidelight:carrot_dough"
+    }
+  ]
+}

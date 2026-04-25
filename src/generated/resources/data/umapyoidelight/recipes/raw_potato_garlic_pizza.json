@@ -11,9 +11,17 @@
     "G": {
       "tag": "forge:vegetables/garlic"
     },
-    "M": {
-      "tag": "forge:milk"
-    },
+    "M": [
+      {
+        "tag": "forge:milk"
+      },
+      {
+        "tag": "forge:cheese"
+      },
+      {
+        "tag": "forge:cheeses"
+      }
+    ],
     "P": {
       "tag": "forge:vegetables/potato"
     }

@@ -1,0 +1,52 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluidTag": "forge:milk",
+      "amount": 250
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    [
+      {
+        "tag": "forge:crops/wheat"
+      },
+      {
+        "tag": "forge:flour"
+      }
+    ],
+    [
+      {
+        "tag": "forge:crops/wheat"
+      },
+      {
+        "tag": "forge:flour"
+      }
+    ],
+    {
+      "item": "umapyoidelight:grated_carrot"
+    },
+    {
+      "item": "umapyoidelight:grated_carrot"
+    },
+    {
+      "tag": "forge:sugar"
+    },
+    {
+      "tag": "forge:sugar"
+    }
+  ],
+  "results": [
+    {
+      "count": 3,
+      "item": "umapyoidelight:carrot_batter"
+    }
+  ]
+}

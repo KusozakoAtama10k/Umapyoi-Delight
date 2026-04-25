@@ -20,6 +20,7 @@ import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -41,6 +42,7 @@ public class Umapyoidelight {
     public Umapyoidelight() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
+        //modEventBus.addListener(this::clientSetup);
         BlockRegistration.BLOCKS.register(modEventBus);
         ItemRegistration.ITEMS.register(modEventBus);
         CreativeTab.CREATIVE_MODE_TABS.register(modEventBus);
@@ -57,6 +59,9 @@ public class Umapyoidelight {
 	public static Logger getLogger() {
 		return LOGGER;
 	}
+
+    private void clientSetup(final FMLClientSetupEvent event){
+    }
 
     private void setup(final FMLCommonSetupEvent event){
         event.enqueueWork(ComposterRegistration::registerCompost);

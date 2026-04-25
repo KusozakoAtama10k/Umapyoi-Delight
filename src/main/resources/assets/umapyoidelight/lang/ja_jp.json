@@ -38,6 +38,12 @@
   "block.umapyoidelight.woodchip_block": "ウッドチップブロック",
   "block.umapyoidelight.woodchip_road": "ウッドチップの道",
   "block.umapyoidelight.carrot_cake": "にんじんケーキ",
+  "block.umapyoidelight.carrot_pie": "キャロットパイ",
+  "block.umapyoidelight.pile_of_yakisoba": "焼きそばの山",
+  "block.umapyoidelight.gold_ship_yakisoba_deco": "ゴルシちゃん印のソース焼きそば（装飾用）",
+  "block.umapyoidelight.manhattan_cafe_coffee_deco": "マンハッタンカフェ特製ブレンドコーヒー（装飾用）",
+  "block.umapyoidelight.carrot_hamburg_deco": "にんじんハンバーグ（装飾用）",
+  "block.umapyoidelight.carrot_hamburg_deluxe_deco": "にんじんハンバーグDX（装飾用）",
 
   "config.umapyoidelight.generateudloot": "チェストへの戦利品生成",
   "config.umapyoidelight.tradeudcrops": "農民との作物の取引",
@@ -112,5 +118,14 @@
   "item.umapyoidelight.grated_carrot": "ニンジンのみじん切り",
   "item.umapyoidelight.carrot_batter": "ニンジンバッター",
   "item.umapyoidelight.carrot_dough": "ニンジン生地",
-  "item.umapyoidelight.carrot_cake_slice": "にんじんショートケーキ"
+  "item.umapyoidelight.carrot_cake_slice": "にんじんショートケーキ",
+  "item.umapyoidelight.carrot_pie_slice": "切り分けたキャロットパイ",
+
+  "jei.info.umapyoidelight.wild_chili_peppers": "トウガラシは、平原や森林などの温帯バイオームで野生の植物としてよく見られます。",
+  "jei.info.umapyoidelight.garlics": "ニンニクは、平原や森林などの温帯バイオームで野生の植物としてよく見られます。",
+  "jei.info.umapyoidelight.strawberries": "イチゴは、平原や森林などの温帯バイオームで野生の植物としてよく見られます。",
+  "jei.info.umapyoidelight.agnes_tachyon_potion": "§a100%安全なポーション。身体機能と新陳代謝を強化する。§r\n\nエメラルドバッジを持つトレーナーとの取引で入手できます。",
+  "jei.info.umapyoidelight.gold_ship_yakisoba": "「破天荒」ゴールドシップ謹製の焼きそば。「美味すぎてトビウオになる」らしい。\n\nエメラルドバッジを持つトレーナーとの取引で入手できます。",
+  "jei.info.umapyoidelight.manhattan_cafe_coffee": "マンハッタンカフェこだわりのブレンドコーヒー。感覚を研ぎ澄ます香り高い味わい。\n\nエメラルドバッジを持つトレーナーとの取引で入手できます。",
+  "jei.info.umapyoidelight.victory_club_rice_cake": "あるクラブのウマ娘が好む桜餅。彼女たちの元気の秘訣。\n\nエメラルドバッジを持つトレーナーとの取引で入手できます。"
 }

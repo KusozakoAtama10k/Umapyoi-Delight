@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "umapyoidelight:carrot_pie"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "umapyoidelight:carrot_pie_slice"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

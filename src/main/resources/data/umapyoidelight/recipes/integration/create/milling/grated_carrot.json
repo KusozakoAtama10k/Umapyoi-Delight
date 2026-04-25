@@ -1,0 +1,26 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "tag": "forge:vegetables/carrot"
+    }
+  ],
+  "results": [
+    {
+      "item": "umapyoidelight:grated_carrot",
+      "count": 3
+    },
+    {
+      "item": "umapyoidelight:grated_carrot",
+      "count": 1,
+      "chance": 0.1
+    }
+  ],
+  "processingTime": 50
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "umapyoidelight:item/carrot_burger_in_gui",
+    "particle": "umapyoidelight:item/carrot_burger"
+  }
+}

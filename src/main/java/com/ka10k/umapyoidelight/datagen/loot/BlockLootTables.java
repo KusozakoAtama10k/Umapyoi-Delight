@@ -39,6 +39,10 @@ public class BlockLootTables extends BlockLootSubProvider {
         this.dropSelf(BlockRegistration.CARROT_CRATE_RARE.get());
         this.dropSelf(BlockRegistration.POTATO_CRATE_RARE.get());
         this.dropSelf(BlockRegistration.WOODCHIP_BLOCK.get());
+        this.dropSelf(BlockRegistration.COFFEE_DECO.get());
+        this.dropSelf(BlockRegistration.YAKISOBA_DECO.get());
+        this.dropSelf(BlockRegistration.CARROT_HAMBURG_DECO.get());
+        this.dropSelf(BlockRegistration.CARROT_HAMBURG_DELUXE_DECO.get());
 
 
         LootItemCondition.Builder Chili_Mature = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BlockRegistration.CHILI_CROP.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ChiliCrop.AGE, 7));

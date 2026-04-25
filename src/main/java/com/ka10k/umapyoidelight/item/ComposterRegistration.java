@@ -23,6 +23,8 @@ public class ComposterRegistration {
         register(ItemRegistration.CARROT_BREAD, 0.85F);
         register(ItemRegistration.CARROT_CAKE_SLICE, 0.85F);
         register(ItemRegistration.CARROT_CAKE, 1.0F);
+        register(ItemRegistration.CARROT_PIE_SLICE, 0.85F);
+        register(ItemRegistration.CARROT_PIE, 1.0F);
         
         register(ItemRegistration.GARLIC_ITEM_RARE, 0.85F);
         register(ItemRegistration.CHILI_ITEM_RARE, 0.85F);

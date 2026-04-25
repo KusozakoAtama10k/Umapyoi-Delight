@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "umapyoidelight:block/carrot_hamburg_deluxe_deco"
+    },
+    "facing=east": {
+      "model": "umapyoidelight:block/carrot_hamburg_deluxe_deco",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "umapyoidelight:block/carrot_hamburg_deluxe_deco",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "umapyoidelight:block/carrot_hamburg_deluxe_deco",
+      "y": 270
+    }
+  }
+}

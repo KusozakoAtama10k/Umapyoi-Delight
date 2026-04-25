@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "umapyoidelight:carrot_hamburg"
+    }
+  ],
+  "result": {
+    "item": "umapyoidelight:carrot_hamburg_deco"
+  }
+}
