@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
 
@@ -70,6 +71,24 @@ public class BlockRegistration {
 
     public static final DeferredBlock<Block> CARROT_CAKE = BLOCKS.register("carrot_cake",
             () -> new CarrotCakeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE), ItemRegistration.CARROT_CAKE_SLICE));
+
+    public static final DeferredBlock<Block> CARROT_PIE = BLOCKS.register("carrot_pie",
+            () -> new PieBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE), ItemRegistration.CARROT_PIE_SLICE));
+
+    public static final DeferredBlock<Block> YAKISOBA_PILE = BLOCKS.register("pile_of_yakisoba",
+            () -> new YakisobaPileBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE).sound(SoundType.BAMBOO_SAPLING)));
+
+    public static final DeferredBlock<Block> COFFEE_DECO = BLOCKS.register("manhattan_cafe_coffee_deco",
+            () -> new MugcupBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.FLOWER_POT).noTerrainParticles().destroyTime(0.1F)));
+
+    public static final DeferredBlock<Block> YAKISOBA_DECO = BLOCKS.register("gold_ship_yakisoba_deco",
+            () -> new YakisobaDecoBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE).sound(SoundType.BAMBOO_SAPLING)));
+
+    public static final DeferredBlock<Block> CARROT_HAMBURG_DECO = BLOCKS.register("carrot_hamburg_deco",
+            () -> new CarrotHamburgBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE).strength(0.5F, 0.5F)));
+
+    public static final DeferredBlock<Block> CARROT_HAMBURG_DELUXE_DECO = BLOCKS.register("carrot_hamburg_deluxe_deco",
+            () -> new CarrotHamburgDeluxeBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE).strength(0.5F, 0.5F)));
 
     public static final DeferredBlock<Block> WOODCHIP_BLOCK = BLOCKS.register("woodchip_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(0.5F, 0.5F).sound(SoundType.AZALEA)));

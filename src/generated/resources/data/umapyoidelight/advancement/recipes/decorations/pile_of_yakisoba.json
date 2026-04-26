@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "umapyoidelight:pile_of_yakisoba"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yakisoba": {
+      "conditions": {
+        "items": [
+          {
+            "items": "umapyoidelight:gold_ship_yakisoba"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yakisoba"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "umapyoidelight:pile_of_yakisoba"
+    ]
+  }
+}

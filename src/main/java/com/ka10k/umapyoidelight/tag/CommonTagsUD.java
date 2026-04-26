@@ -21,7 +21,10 @@ public class CommonTagsUD
 	public static final TagKey<Item> CROPS_GARLIC = commonItemTag("crops/garlic");
 	public static final TagKey<Item> CROPS_STRAWBERRY = commonItemTag("crops/strawberry");
 
-	public static final TagKey<Item> FOODS_CHOCOLATES = commonItemTag("foods/chocolates");
+	public static final TagKey<Item> SUGAR = commonItemTag("sugar");
+	public static final TagKey<Item> CHOCOLATES = commonItemTag("chocolates");
+	public static final TagKey<Item> CHEESES = commonItemTag("cheeses");
+
 
 	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_CHILI = commonItemTag("storage_blocks/chilipepper");
 	public static final TagKey<Item> STORAGE_BLOCKS_ITEM_GARLIC = commonItemTag("storage_blocks/garlic");

@@ -108,6 +108,7 @@ public class AdvancementGen implements AdvancementProvider.AdvancementGenerator
 				.addCriterion("eat_chocolate_stick_carrot", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CHOCOLATE_STICK_CARROT.get()))
 				.addCriterion("eat_carrot_pudding", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_PUDDING.get()))
 				.addCriterion("eat_carrot_cake", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_CAKE_SLICE.get()))
+				.addCriterion("eat_carrot_pie", ConsumeItemTrigger.TriggerInstance.usedItem(ItemRegistration.CARROT_PIE_SLICE.get()))
 
 				.rewards(AdvancementRewards.Builder.experience(150))
 				.save(consumer, getNameId("main/consume_all_cookable_foods"));

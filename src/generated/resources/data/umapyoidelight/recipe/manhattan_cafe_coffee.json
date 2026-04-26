@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "umapyoidelight:manhattan_cafe_coffee_deco"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:manhattan_cafe_coffee"
+  }
+}

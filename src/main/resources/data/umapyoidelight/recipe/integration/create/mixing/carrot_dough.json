@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000
+    },
+    [
+      {
+        "tag": "c:crops/wheat"
+      },
+      {
+        "tag": "c:flour"
+      },
+      {
+        "tag": "c:flours"
+      }
+    ],
+    [
+      {
+        "tag": "c:crops/wheat"
+      },
+      {
+        "tag": "c:flour"
+      },
+      {
+        "tag": "c:flours"
+      }
+    ],
+    {
+      "item": "umapyoidelight:grated_carrot"
+    },
+    {
+      "item": "umapyoidelight:grated_carrot"
+    }
+  ],
+  "results":  [
+    {
+    "count": 3,
+    "id": "umapyoidelight:carrot_dough"
+    }
+  ]
+}

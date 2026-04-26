@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-06T03:04:51.3757379	Item Models: umapyoidelight
+// 1.21.1	2026-04-26T02:51:16.1488817	Item Models: umapyoidelight
 6737f2a39a0cbdeffe2f732845735f664495424e assets/umapyoidelight/models/item/agnes_tachyon_potion.json
 afd185e0b8e85571dd8218d6350380c538272267 assets/umapyoidelight/models/item/bread_crust.json
 0af4c4a89272e4cfa491046ffc6bc14c2a1b4895 assets/umapyoidelight/models/item/carrot_batter.json
@@ -8,7 +8,10 @@ afd185e0b8e85571dd8218d6350380c538272267 assets/umapyoidelight/models/item/bread
 aecfc68816c10e546078d8208cc9d55dcb296154 assets/umapyoidelight/models/item/carrot_dough.json
 40917699908b69fba7b67726a3a711a52a033f56 assets/umapyoidelight/models/item/carrot_hamburg.json
 094a18c705d973050424017bfa09d914b20984c1 assets/umapyoidelight/models/item/carrot_hamburg_deluxe.json
+cc0acfa6711b2146ce0cd77286248762e55e299e assets/umapyoidelight/models/item/carrot_hamburg_deluxe_deco.json
 5e361f57d69297a4f5ac70cbcb5a65d688c116c3 assets/umapyoidelight/models/item/carrot_juice.json
+7d18c704954fc4069f303d90f4a6a65e8c594951 assets/umapyoidelight/models/item/carrot_pie.json
+41d000733b487a3f716ff60d3cee9cee2e9997b9 assets/umapyoidelight/models/item/carrot_pie_slice.json
 83bf9b980f27237353228c10b747ea5a1152b9e9 assets/umapyoidelight/models/item/carrot_potato_potaufeu.json
 b11d23b618bb820f9b5573a382d9b7cdb905949e assets/umapyoidelight/models/item/carrot_potato_potaufeu_rare.json
 004c8cb6f0f4320285075846c457b4f547235bca assets/umapyoidelight/models/item/carrot_pudding.json
@@ -25,9 +28,11 @@ a5bb18569b6cbea579d41f39f50788074120ebb0 assets/umapyoidelight/models/item/garli
 903d02ef5319f5c27f9a63d8dc45eb5111d9872e assets/umapyoidelight/models/item/garlic_ramen.json
 a42a9ce6b38558db444046952763dfe0fffcf392 assets/umapyoidelight/models/item/garlic_ramen_rare.json
 0c97e650d18b02a6a72de899d5278411c52d71ea assets/umapyoidelight/models/item/garlic_rare.json
+76c4c1139163a411d565012289cd9951e205bed0 assets/umapyoidelight/models/item/gold_ship_yakisoba_deco.json
 b054444ee72ca5bf0fefd1d6125c860cc12a83f0 assets/umapyoidelight/models/item/grated_carrot.json
 a383361687e373d24e1795c45694f525ed36f47f assets/umapyoidelight/models/item/grilled_stick_carrot.json
 3d39d31dea0c712fcb29c9a60db1469c690b0a56 assets/umapyoidelight/models/item/hamburg.json
+b4b68d50e24aad9750298da0de1bb2778e817452 assets/umapyoidelight/models/item/manhattan_cafe_coffee_deco.json
 8501326513406a456e28ed60733ab535d7015e22 assets/umapyoidelight/models/item/mapo_carrot_potato.json
 ff9077e81dbedd056bf8d845f3f798a780f31072 assets/umapyoidelight/models/item/mapo_carrot_potato_rare.json
 fec925c10300ff45f477e632b6de3dc65a02d134 assets/umapyoidelight/models/item/potato_garlic_pizza.json

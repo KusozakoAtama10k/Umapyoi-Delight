@@ -11,9 +11,14 @@
     "G": {
       "tag": "c:crops/garlic"
     },
-    "M": {
-      "tag": "c:drinks/milk"
-    },
+    "M": [
+      {
+        "tag": "c:foods/milk"
+      },
+      {
+        "tag": "c:cheeses"
+      }
+    ],
     "P": {
       "tag": "c:crops/potato"
     }

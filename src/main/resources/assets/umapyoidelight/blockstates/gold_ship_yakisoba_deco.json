@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "umapyoidelight:block/gold_ship_yakisoba_deco",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "umapyoidelight:block/gold_ship_yakisoba_deco",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "umapyoidelight:block/gold_ship_yakisoba_deco",
+      "y": 0
+    },
+    "facing=west": {
+      "model": "umapyoidelight:block/gold_ship_yakisoba_deco",
+      "y": 90
+    }
+  }
+}

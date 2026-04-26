@@ -85,11 +85,22 @@ public class ItemRegistration {
 
     public static final DeferredItem<Item> WOODCHIP_BLOCK = registerWithTab("woodchip_block",
             () -> new BlockItem(BlockRegistration.WOODCHIP_BLOCK.get(),basicItem()));
-
-
+    
     public static final DeferredItem<Item> WOODCHIP_ROAD = registerWithTab("woodchip_road",
             () -> new BlockItem(BlockRegistration.WOODCHIP_ROAD.get(),basicItem()));
 
+    public static final DeferredItem<Item> YAKISOBA_DECO = registerWithTab("gold_ship_yakisoba_deco",
+            () -> new BlockItem(BlockRegistration.YAKISOBA_DECO.get(),basicItem()));
+
+    public static final DeferredItem<Item> COFFEE_DECO = registerWithTab("manhattan_cafe_coffee_deco",
+            () -> new BlockItem(BlockRegistration.COFFEE_DECO.get(),basicItem()));
+
+    public static final DeferredItem<Item> CARROT_HAMBURG_DECO = registerWithTab("carrot_hamburg_deco",
+            () -> new BlockItem(BlockRegistration.CARROT_HAMBURG_DECO.get(),basicItem().stacksTo(16)));
+
+    public static final DeferredItem<Item> CARROT_HAMBURG_DELUXE_DECO = registerWithTab("carrot_hamburg_deluxe_deco",
+            () -> new BlockItem(BlockRegistration.CARROT_HAMBURG_DELUXE_DECO.get(),basicItem().stacksTo(16)));
+    
     public static final DeferredItem<Item> WILD_CHILIS = registerWithTab("wild_chili_peppers",
             () -> new BlockItem(BlockRegistration.WILD_CHILIS.get(),basicItem()));
 
@@ -114,6 +125,12 @@ public class ItemRegistration {
 
     public static final DeferredItem<Item> CARROT_CAKE = registerWithTab("carrot_cake",
             () -> new BlockItem(BlockRegistration.CARROT_CAKE.get(),basicItem().stacksTo(1)));
+
+    public static final DeferredItem<Item> CARROT_PIE = registerWithTab("carrot_pie",
+            () -> new BlockItem(BlockRegistration.CARROT_PIE.get(),basicItem()));
+
+    public static final DeferredItem<Item> YAKISOBA_PILE = registerWithTab("pile_of_yakisoba",
+            () -> new BlockItem(BlockRegistration.YAKISOBA_PILE.get(),basicItem()));
 
     //crops
     public static final DeferredItem<Item> CHILI_ITEM =
@@ -186,6 +203,12 @@ public class ItemRegistration {
             registerWithTab("carrot_cake_slice", () -> new UmaFoodItem(status -> {},
                     FoodInfo.builder().amountAndCalories(3, 0.3F).eatTime(16)
                             .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.BRIEF_DURATION, 0), 1.0F)
+                            .build()));
+
+    public static final DeferredItem<Item> CARROT_PIE_SLICE =
+            registerWithTab("carrot_pie_slice", () -> new ItemFoodBase(basicItem(),
+                    FoodInfo.builder().amountAndCalories(3, 0.3F).eatTime(16)
+                            .addEffect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300, 1), 1.0F)
                             .build()));
 
     public static final DeferredItem<Item> RAW_STICK_CARROT =
@@ -425,8 +448,13 @@ public class ItemRegistration {
                     .addEffect(() -> new MobEffectInstance(MobEffects.LEVITATION, FoodValues.BRIEF_DURATION, 0), 0.1F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.HUNGER, FoodValues.LONG_DURATION, 1), 0.1F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.POISON, FoodValues.LONG_DURATION, 1), 0.05F)
-                    .addEffect(() -> new MobEffectInstance(MobEffects.CONFUSION, FoodValues.SHORT_DURATION, 0), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffects.CONFUSION, FoodValues.BRIEF_DURATION, 0), 0.05F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, FoodValues.LONG_DURATION, 3), 0.05F)
                     .addEffect(() -> new MobEffectInstance(MobEffectRegistry.PANICKING, FoodValues.LONG_DURATION, 0), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.NIGHT_OWL, FoodValues.LONG_DURATION, 0), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.SLOW_METABOLISM, FoodValues.LONG_DURATION, 0), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.MOOD_BONUS, FoodValues.LONG_DURATION, 9), 0.05F)
+
+
                     .build()));
 }

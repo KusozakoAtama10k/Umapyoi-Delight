@@ -49,5 +49,9 @@ public class CuttingRecipesProv {
         CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(ItemRegistration.CARROT_CAKE.get()),
                         Ingredient.of(CommonTags.TOOLS_KNIFE), ItemRegistration.CARROT_CAKE_SLICE.get(), 7)
                 .build(output);
+
+        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(ItemRegistration.CARROT_PIE.get()),
+                        Ingredient.of(CommonTags.TOOLS_KNIFE), ItemRegistration.CARROT_PIE_SLICE.get(), 4)
+                .build(output);
     }
 }

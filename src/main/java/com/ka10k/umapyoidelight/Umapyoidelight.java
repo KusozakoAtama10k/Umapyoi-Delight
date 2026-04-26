@@ -1,7 +1,6 @@
 package com.ka10k.umapyoidelight;
 
 import com.ka10k.umapyoidelight.block.BlockRegistration;
-import com.ka10k.umapyoidelight.item.ComposterRegistration;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
 import com.ka10k.umapyoidelight.loot.LootModifiers;
 import com.mojang.logging.LogUtils;
@@ -9,7 +8,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.slf4j.Logger;
 
 @Mod(Umapyoidelight.MOD_ID)
@@ -34,9 +32,5 @@ public class Umapyoidelight {
 	public static Logger getLogger() {
 		return LOGGER;
 	}
-
-    private void setup(final FMLCommonSetupEvent event){
-        event.enqueueWork(ComposterRegistration::registerCompost);
-    }
 
 }

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "c:crops/carrot"
+    },
+    "P": {
+      "item": "farmersdelight:pie_crust"
+    },
+    "S": {
+      "tag": "c:sugar"
+    },
+    "W": {
+      "tag": "c:crops/wheat"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "CCC",
+    "SPS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:carrot_pie"
+  }
+}

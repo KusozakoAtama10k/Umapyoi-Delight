@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "umapyoidelight:block/manhattan_cafe_coffee_deco"
+    },
+    "facing=east": {
+      "model": "umapyoidelight:block/manhattan_cafe_coffee_deco",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "umapyoidelight:block/manhattan_cafe_coffee_deco",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "umapyoidelight:block/manhattan_cafe_coffee_deco",
+      "y": 270
+    }
+  }
+}

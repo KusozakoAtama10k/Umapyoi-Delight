@@ -49,7 +49,8 @@ public class BlockTagsProv extends BlockTagsProvider {
         tag(ModTags.MINEABLE_WITH_KNIFE).add(
                 BlockRegistration.POTATO_GARLIC_PIZZA.get(),
                 BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get(),
-                BlockRegistration.CARROT_CAKE.get());
+                BlockRegistration.CARROT_CAKE.get(),
+                BlockRegistration.CARROT_PIE.get());
     }
 
     protected void registerMinecraftTags() {

@@ -1,0 +1,64 @@
+{
+  "values": {
+    "umapyoidelight:carrot_bread": {
+      "chance": 0.85
+    },
+    "umapyoidelight:carrot_cake": {
+      "chance": 1.0
+    },
+    "umapyoidelight:carrot_cake_slice": {
+      "chance": 0.85
+    },
+    "umapyoidelight:carrot_pie": {
+      "chance": 1.0
+    },
+    "umapyoidelight:carrot_pie_slice": {
+      "chance": 0.85
+    },
+    "umapyoidelight:carrot_rare": {
+      "chance": 0.85
+    },
+    "umapyoidelight:chili_pepper": {
+      "chance": 0.65
+    },
+    "umapyoidelight:chili_pepper_rare": {
+      "chance": 0.85
+    },
+    "umapyoidelight:cut_carrot": {
+      "chance": 0.3
+    },
+    "umapyoidelight:garlic": {
+      "chance": 0.65
+    },
+    "umapyoidelight:garlic_rare": {
+      "chance": 0.85
+    },
+    "umapyoidelight:grated_carrot": {
+      "chance": 0.3
+    },
+    "umapyoidelight:potato_rare": {
+      "chance": 0.85
+    },
+    "umapyoidelight:strawberry": {
+      "chance": 0.65
+    },
+    "umapyoidelight:strawberry_rare": {
+      "chance": 0.85
+    },
+    "umapyoidelight:white_bread": {
+      "chance": 0.65
+    },
+    "umapyoidelight:wild_chili_peppers": {
+      "chance": 0.65
+    },
+    "umapyoidelight:wild_garlic": {
+      "chance": 0.65
+    },
+    "umapyoidelight:wild_strawberries": {
+      "chance": 0.65
+    },
+    "umapyoidelight:woodchip_block": {
+      "chance": 0.3
+    }
+  }
+}

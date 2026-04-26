@@ -9,6 +9,7 @@ import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.data.DataMapProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
@@ -33,9 +34,10 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(), new ItemTagsProv(packOutput, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
         generator.addProvider(event.includeServer(), new AdvancementProv(packOutput, lookupProvider, existingFileHelper));
-
+        generator.addProvider(event.includeServer(), new DataMapProv(packOutput, lookupProvider));
         generator.addProvider(event.includeClient(), new BlockStatesProv(packOutput,existingFileHelper));
         generator.addProvider(event.includeClient(), new ItemModelsProv(packOutput,existingFileHelper));
+
 
     }
 

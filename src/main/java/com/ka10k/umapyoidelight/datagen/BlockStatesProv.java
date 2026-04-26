@@ -116,6 +116,7 @@ public class BlockStatesProv extends BlockStateProvider {
         wildCropBlock(BlockRegistration.WILD_CHILIS.get(), false);
         wildCropBlock(BlockRegistration.WILD_GARLIC.get(), false);
         wildCropBlock(BlockRegistration.WILD_STRAWBERRIES.get(), false);
-        //simpleBlockWithItem(BlockRegistration.WOODCHIP_BLOCK.get(),models().cubeAll("woodchip_block",resourceBlock("woodchip")));
+        simpleBlockWithItem(BlockRegistration.WOODCHIP_BLOCK.get(),models().cubeAll("woodchip_block",resourceBlock("woodchip")));
+        feastBlock((FeastBlock) BlockRegistration.YAKISOBA_PILE.get());
     }
 }

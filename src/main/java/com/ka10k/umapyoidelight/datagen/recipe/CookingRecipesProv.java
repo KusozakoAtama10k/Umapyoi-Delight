@@ -125,7 +125,7 @@ public class CookingRecipesProv {
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.CHOCOLATE_STICK_CARROT.get(), 1, FAST_COOKING, SMALL_EXP)
                 .addIngredient(ItemRegistration.RAW_STICK_CARROT.get())
-                .addIngredient(CommonTagsUD.FOODS_CHOCOLATES)
+                .addIngredient(CommonTagsUD.CHOCOLATES)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(output,"farmersdelight:cooking/chocolate_stick_carrot_using_chocolates");
 

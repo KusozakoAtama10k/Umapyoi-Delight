@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "umapyoidelight:gold_ship_yakisoba_deco"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:gold_ship_yakisoba"
+  }
+}

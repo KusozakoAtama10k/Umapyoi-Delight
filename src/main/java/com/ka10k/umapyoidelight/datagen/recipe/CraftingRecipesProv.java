@@ -143,7 +143,7 @@ public class CraftingRecipesProv {
                 .requires(Ingredient.of(CommonTagsUD.CROPS_STRAWBERRY))
                 .requires(Ingredient.fromValues(Stream.of(new Ingredient.ItemValue(new ItemStack(ItemRegistration.GRATED_CARROT.get())),
                         new Ingredient.TagValue(Tags.Items.CROPS_CARROT))))
-                .requires(Ingredient.of(Tags.Items.DRINKS_MILK))
+                .requires(Ingredient.of(CommonTags.FOODS_MILK))
                 .requires(Ingredient.of(Tags.Items.CROPS_CARROT))
                 .requires(Items.SNOWBALL)
                 .unlockedBy("has_strawberry_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_ITEM_RARE.get()))
@@ -170,7 +170,8 @@ public class CraftingRecipesProv {
                 .define('B', Items.BOWL)
                 .define('P', Ingredient.of(Tags.Items.CROPS_POTATO))
                 .define('G', Ingredient.of(CommonTagsUD.CROPS_GARLIC))
-                .define('M', Ingredient.of(Tags.Items.DRINKS_MILK))
+                .define('M', Ingredient.fromValues(Stream.of(new Ingredient.TagValue(CommonTags.FOODS_MILK),
+                        new Ingredient.TagValue(CommonTagsUD.CHEESES))))
                 .unlockedBy("has_potato", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POTATO))
                 .save(output);
 
@@ -183,7 +184,8 @@ public class CraftingRecipesProv {
                 .define('P', Ingredient.of(Tags.Items.CROPS_POTATO))
                 .define('R', ItemRegistration.POTATO_ITEM_RARE.get())
                 .define('G', Ingredient.of(CommonTagsUD.CROPS_GARLIC))
-                .define('M', Ingredient.of(Tags.Items.DRINKS_MILK))
+                .define('M', Ingredient.fromValues(Stream.of(new Ingredient.TagValue(CommonTags.FOODS_MILK),
+                        new Ingredient.TagValue(CommonTagsUD.CHEESES))))
                 .unlockedBy("has_potato_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_ITEM_RARE.get()))
                 .save(output);
 
@@ -229,7 +231,7 @@ public class CraftingRecipesProv {
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.STRAWBERRY_SANDWICH.get())
                 .requires(ItemRegistration.TRIANGLE_BREAD.get(),2)
-                .requires(Tags.Items.DRINKS_MILK)
+                .requires(CommonTags.FOODS_MILK)
                 .requires(CommonTagsUD.CROPS_STRAWBERRY)
                 .unlockedBy("has_triangular_bread", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.TRIANGLE_BREAD.get()))
                 .save(output);
@@ -273,11 +275,11 @@ public class CraftingRecipesProv {
                 .save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_BATTER.get(),3)
-                .requires(Tags.Items.DRINKS_MILK)
+                .requires(CommonTags.FOODS_MILK)
                 .requires(Tags.Items.EGGS)
                 .requires(Ingredient.of(Tags.Items.CROPS_WHEAT),2)
                 .requires(Ingredient.of(ItemRegistration.GRATED_CARROT.get()),2)
-                .requires(Items.SUGAR,2)
+                .requires(Ingredient.of(CommonTagsUD.SUGAR),2)
                 .unlockedBy("has_grated_carrot", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.GRATED_CARROT.get()))
                 .save(output);
 
@@ -287,7 +289,7 @@ public class CraftingRecipesProv {
                 .pattern("BBB")
                 .define('C', ItemRegistration.CUT_CARROT.get())
                 .define('B', ItemRegistration.CARROT_BATTER.get())
-                .define('M', Ingredient.of(Tags.Items.DRINKS_MILK))
+                .define('M', Ingredient.of(CommonTags.FOODS_MILK))
                 .unlockedBy("has_carrot_batter", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_BATTER.get()))
                 .save(output);
 
@@ -295,5 +297,77 @@ public class CraftingRecipesProv {
                 .requires(Ingredient.of(ItemRegistration.CARROT_CAKE_SLICE.get()),7)
                 .unlockedBy("has_carrot_cake_slice", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_CAKE_SLICE.get()))
                 .save(output,"umapyoidelight:carrot_cake_from_slice");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ItemRegistration.CARROT_PIE.get(), 1)
+                .pattern("WWW")
+                .pattern("CCC")
+                .pattern("SPS")
+                .define('W', Ingredient.of(Tags.Items.CROPS_WHEAT))
+                .define('C', Tags.Items.CROPS_CARROT)
+                .define('P', ModItems.PIE_CRUST.get())
+                .define('S', Ingredient.of(CommonTagsUD.SUGAR))
+                .unlockedBy("has_pie_crust", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PIE_CRUST.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ItemRegistration.CARROT_PIE.get(), 1)
+                .pattern("CC ")
+                .pattern("CC ")
+                .pattern("   ")
+                .define('C', ItemRegistration.CARROT_PIE_SLICE.get())
+                .unlockedBy("has_pie_slice", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_PIE_SLICE.get()))
+                .save(output,"umapyoidelight:carrot_pie_from_slice");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemRegistration.YAKISOBA_PILE.get())
+                .requires(Ingredient.fromValues(Stream.of(new Ingredient.ItemValue(new ItemStack(ItemRegistration.YAKISOBA.get())),
+                        new Ingredient.ItemValue(new ItemStack(ItemRegistration.YAKISOBA_DECO.get())))),8)
+                .unlockedBy("has_yakisoba", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.YAKISOBA.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.YAKISOBA.get(),8)
+                .requires(Ingredient.of(ItemRegistration.YAKISOBA_PILE.get()),1)
+                .unlockedBy("has_yakisoba_pile", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.YAKISOBA_PILE.get()))
+                .save(output,"umapyoidelight:yakisoba_from_block");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemRegistration.YAKISOBA_DECO.get())
+                .requires(ItemRegistration.YAKISOBA.get())
+                .unlockedBy("has_yakisoba", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.YAKISOBA.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.YAKISOBA.get())
+                .requires(ItemRegistration.YAKISOBA_DECO.get())
+                .unlockedBy("has_yakisoba_deco", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.YAKISOBA_DECO.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemRegistration.COFFEE_DECO.get())
+                .requires(ItemRegistration.COFFEE.get())
+                .unlockedBy("has_coffee", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.COFFEE.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.COFFEE.get())
+                .requires(ItemRegistration.COFFEE_DECO.get())
+                .unlockedBy("has_coffee_deco", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.COFFEE_DECO.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemRegistration.CARROT_HAMBURG_DECO.get())
+                .requires(ItemRegistration.CARROT_HAMBURG.get())
+                .unlockedBy("has_carrot_hamburg", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_HAMBURG.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_HAMBURG.get())
+                .requires(ItemRegistration.CARROT_HAMBURG_DECO.get())
+                .requires(Items.BOWL)
+                .unlockedBy("has_carrot_hamburg_deco", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_HAMBURG_DECO.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ItemRegistration.CARROT_HAMBURG_DELUXE_DECO.get())
+                .requires(ItemRegistration.CARROT_HAMBURG_DELUXE.get())
+                .unlockedBy("has_carrot_hamburg_deluxe", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_HAMBURG_DELUXE.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_HAMBURG_DELUXE.get())
+                .requires(ItemRegistration.CARROT_HAMBURG_DELUXE_DECO.get())
+                .requires(Items.BOWL)
+                .unlockedBy("has_carrot_hamburg_deluxe_deco", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_HAMBURG_DELUXE_DECO.get()))
+                .save(output);
     }
 }

@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-06T03:04:51.3808108	Tags for minecraft:item mod id umapyoidelight
+// 1.21.1	2026-04-26T02:42:36.2269473	Tags for minecraft:item mod id umapyoidelight
 2feaf13609e2fb828eece0c8d7ca4d9426e4434d data/c/tags/item/berry/strawberry.json
 5d3dbbfd8db948780807b33b2957940b26153f12 data/c/tags/item/crops.json
 e44703aa2b313a9aea04a1c48942799905b57943 data/c/tags/item/crops/chilipepper.json
@@ -19,3 +19,6 @@ bfec91e308b96a6a06000f427580c4dc888b1f35 data/minecraft/tags/item/villager_plant
 31cd640ae675468ec1bc93b2cdd83523e6a7cd63 data/sereneseasons/tags/item/summer_crops.json
 2feaf13609e2fb828eece0c8d7ca4d9426e4434d data/sereneseasons/tags/item/winter_crops.json
 faeb869aecf520bacc2bb08f0809a01d58c20085 data/umapyoidelight/tags/item/foods/burger_meat.json
+7f07f085281d5426af6b30bb221287244e159b67 data/umapyoi/tags/item/motivation_up_1.json
+050d484901f131510768f9915393244690be41c8 data/umapyoi/tags/item/motivation_up_2.json
+1310e7fb0c14887f853afd2fcc5c5202084e0254 data/umapyoi/tags/item/motivation_up_3.json

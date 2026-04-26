@@ -32,13 +32,21 @@
   "block.umapyoidelight.strawberry_crate_rare": "Large Strawberry Crate",
   "block.umapyoidelight.potato_garlic_pizza": "Potato Garlic Pizza",
   "block.umapyoidelight.potato_garlic_pizza_rare": "Beyond the 2400m Dream",
+  "block.umapyoidelight.chili_pepper_crop": "Chili Peppers",
+  "block.umapyoidelight.garlic_crop": "Garlic",
+  "block.umapyoidelight.strawberry_crop": "Strawberries",
   "block.umapyoidelight.wild_chili_peppers": "Wild Chili Peppers",
   "block.umapyoidelight.wild_garlic": "Wild Garlic",
   "block.umapyoidelight.wild_strawberries": "Wild Strawberries",
   "block.umapyoidelight.woodchip_block": "Woodchip Block",
   "block.umapyoidelight.woodchip_road": "Woodchip Road",
   "block.umapyoidelight.carrot_cake": "Carrot Cake",
-
+  "block.umapyoidelight.carrot_pie": "Carrot Pie",
+  "block.umapyoidelight.pile_of_yakisoba": "Pile of Yakisoba Packs",
+  "block.umapyoidelight.gold_ship_yakisoba_deco": "Decorative Golshi-chan's Yakisoba",
+  "block.umapyoidelight.manhattan_cafe_coffee_deco": "Decorative Manhattan Cafe's Special Blend Coffee",
+  "block.umapyoidelight.carrot_hamburg_deco": "Decorative Carrot Hamburger Steak",
+  "block.umapyoidelight.carrot_hamburg_deluxe_deco": "Decorative Deluxe Carrot Hamburger Steak",
 
   "config.umapyoidelight.generateudloot": "Generate Chest Loot",
   "config.umapyoidelight.tradeudcrops": "Farmers Trade UD Crops",
@@ -63,8 +71,6 @@
   "config.umapyoidelight.ap_recover_coffee": "Manhattan Cafe's Special Blend Coffee",
   "config.umapyoidelight.ap_recover_yakisoba": "Golshi-chan's Yakisoba",
   "config.umapyoidelight.ap_recover_rice_cake": "Victory Club's Sakuramochi",
-
-
 
   "item.umapyoidelight.carrot_hamburg": "Carrot Hamburger Steak",
   "item.umapyoidelight.carrot_hamburg_deluxe": "Deluxe Carrot Hamburger Steak",
@@ -115,5 +121,15 @@
   "item.umapyoidelight.grated_carrot": "Grated Carrot",
   "item.umapyoidelight.carrot_batter": "Carrot Batter",
   "item.umapyoidelight.carrot_dough": "Carrot Dough",
-  "item.umapyoidelight.carrot_cake_slice": "Slice of Carrot Cake"
+  "item.umapyoidelight.carrot_cake_slice": "Slice of Carrot Cake",
+  "item.umapyoidelight.carrot_pie_slice": "Slice of Carrot Pie",
+
+  "jei.info.umapyoidelight.wild_chili_peppers": "Chili peppers can be commonly found as a wild plant in temperate lands, such as plains and forests.",
+  "jei.info.umapyoidelight.garlics": "Garlics can be commonly found as a wild plant in temperate lands, such as plains and forests.",
+  "jei.info.umapyoidelight.strawberries": "Strawberries can be commonly found as a wild plant in temperate lands, such as plains and forests.",
+  "jei.info.umapyoidelight.agnes_tachyon_potion": "§aA completely safe potion. Boosts physical performance and metabolism.§r\n\nIt can be purchased from trainers with a emerald badge.",
+  "jei.info.umapyoidelight.gold_ship_yakisoba": "A pack of yakisoba cooked by \"Unpredictable\" Gold Ship. Apparently it’s so good it’ll turn you into a flying fish.\n\nIt can be purchased from trainers with a emerald badge.",
+  "jei.info.umapyoidelight.manhattan_cafe_coffee": "Manhattan Cafe's artisanal coffee blend. A richly aromatic flavor that sharpens your senses.\n\nIt can be purchased from trainers with a emerald badge.",
+  "jei.info.umapyoidelight.victory_club_rice_cake": "Sakuramochi loved by the umamusumes of a certain club. Their source of energy.\n\nIt can be purchased from trainers with a emerald badge."
+
 }

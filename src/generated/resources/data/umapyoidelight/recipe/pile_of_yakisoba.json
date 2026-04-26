@@ -1,0 +1,74 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba"
+      },
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba_deco"
+      }
+    ],
+    [
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba"
+      },
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba_deco"
+      }
+    ],
+    [
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba"
+      },
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba_deco"
+      }
+    ],
+    [
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba"
+      },
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba_deco"
+      }
+    ],
+    [
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba"
+      },
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba_deco"
+      }
+    ],
+    [
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba"
+      },
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba_deco"
+      }
+    ],
+    [
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba"
+      },
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba_deco"
+      }
+    ],
+    [
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba"
+      },
+      {
+        "item": "umapyoidelight:gold_ship_yakisoba_deco"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "umapyoidelight:pile_of_yakisoba"
+  }
+}

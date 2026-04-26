@@ -85,10 +85,10 @@ public class Trades {
             //Apprentice(Iron)
             //Journeyman(Gold)
             //Expert(Emerald)
-            trades.get(4).add(Jewel2Item(ItemRegistration.COFFEE.get(), 6, 2, 20));
-            trades.get(4).add(Jewel2Item(ItemRegistration.YAKISOBA.get(), 4, 2, 20));
-            trades.get(4).add(Jewel2Item(ItemRegistration.POTION.get(), 1, 1, 20));
-            trades.get(4).add(Jewel2Item(ItemRegistration.SAKURAMOCHI.get(), 8, 1, 20));
+            trades.get(4).add(Jewel2Item(ItemRegistration.COFFEE.get(), 8, 4, 20));
+            trades.get(4).add(Jewel2Item(ItemRegistration.YAKISOBA.get(), 4, 4, 20));
+            trades.get(4).add(Jewel2Item(ItemRegistration.POTION.get(), 1, 2, 20));
+            trades.get(4).add(Jewel2Item(ItemRegistration.SAKURAMOCHI.get(), 4, 4, 20));
             //Master(Diamond)
 
         }

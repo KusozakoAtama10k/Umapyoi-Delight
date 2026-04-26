@@ -33,6 +33,11 @@ public class ItemModelsProv extends ItemModelProvider {
                 ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, "block/" + item.getId().getPath()));
     }
 
+    private ItemModelBuilder blockItem(DeferredItem<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, "block/" + item.getId().getPath()));
+    }
+
     @Override
     protected void registerModels() {
         simpleItem(ItemRegistration.CHILI_ITEM);
@@ -80,6 +85,10 @@ public class ItemModelsProv extends ItemModelProvider {
         simpleItem(ItemRegistration.CARROT_PUDDING);
         simpleItem(ItemRegistration.CARROT_CAKE);
         simpleItem(ItemRegistration.CARROT_CAKE_SLICE);
+        simpleItem(ItemRegistration.CARROT_PIE);
+        simpleItem(ItemRegistration.CARROT_PIE_SLICE);
+        simpleItem(ItemRegistration.COFFEE_DECO);
+        simpleItem(ItemRegistration.YAKISOBA_DECO);
 
         handheldItem(ItemRegistration.CARROT_STRAWBERRY_ICECREAM);
         handheldItem(ItemRegistration.CARROT_STRAWBERRY_ICECREAM_RARE);
@@ -90,5 +99,7 @@ public class ItemModelsProv extends ItemModelProvider {
         flatBlockItem(ItemRegistration.WILD_CHILIS);
         flatBlockItem(ItemRegistration.WILD_GARLIC);
         flatBlockItem(ItemRegistration.WILD_STRAWBERRIES);
+
+        blockItem(ItemRegistration.CARROT_HAMBURG_DELUXE_DECO);
     }
 }

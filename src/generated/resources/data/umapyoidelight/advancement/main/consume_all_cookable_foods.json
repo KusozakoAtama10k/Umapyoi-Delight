@@ -41,6 +41,14 @@
       },
       "trigger": "minecraft:consume_item"
     },
+    "eat_carrot_pie": {
+      "conditions": {
+        "item": {
+          "items": "umapyoidelight:carrot_pie_slice"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
     "eat_carrot_potato_potaufeu": {
       "conditions": {
         "item": {
@@ -301,6 +309,9 @@
     ],
     [
       "eat_carrot_cake"
+    ],
+    [
+      "eat_carrot_pie"
     ]
   ],
   "rewards": {
