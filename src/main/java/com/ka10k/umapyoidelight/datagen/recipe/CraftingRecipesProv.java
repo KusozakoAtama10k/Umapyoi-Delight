@@ -119,7 +119,7 @@ public class CraftingRecipesProv {
                 .save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.STRAWBERRY_ITEM_RARE.get(), 9)
-                .requires(ItemRegistration.STRAWBERRY_ITEM_RARE.get())
+                .requires(ItemRegistration.STRAWBERRY_CRATE_RARE.get())
                 .unlockedBy("has_strawberry_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_ITEM_RARE.get()))
                 .save(output);
 
