@@ -118,6 +118,12 @@ public class CraftingRecipesProv {
                 .unlockedBy("has_potato_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_ITEM_RARE.get()))
                 .save(output);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.STRAWBERRY_ITEM_RARE.get(), 9)
+                .requires(ItemRegistration.STRAWBERRY_ITEM_RARE.get())
+                .unlockedBy("has_strawberry_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_ITEM_RARE.get()))
+                .save(output);
+
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.RAW_HAMBURG.get(), 3)
                 .requires(Ingredient.of(CommonTags.CROPS_ONION))
                 .requires(Ingredient.of(CommonTags.FOODS_RAW_BEEF),2)
