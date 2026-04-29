@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "minecraft:carrot"
+              "umapyoidelight:hamburg"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "farmersdelight:cooking/carrot_potato_potaufeu"
+        "recipe": "umapyoidelight:cooking/carrot_hamburg_deluxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "farmersdelight:cooking/carrot_potato_potaufeu"
+      "umapyoidelight:cooking/carrot_hamburg_deluxe"
     ]
   },
   "sends_telemetry_event": true

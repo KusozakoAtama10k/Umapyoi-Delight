@@ -8,7 +8,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
 import vectorwing.farmersdelight.common.registry.ModItems;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
+import vectorwing.farmersdelight.common.tag.CommonTags;
 import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 
 import java.util.function.Consumer;
@@ -19,14 +19,14 @@ import static vectorwing.farmersdelight.data.recipe.CookingRecipes.*;
 public class CookingRecipesProv {
     public static void register(Consumer<FinishedRecipe> consumer) {
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.CARROT_HAMBURG.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
-                .addIngredient(ForgeTags.VEGETABLES_CARROT)
-                .addIngredient(ForgeTags.SALAD_INGREDIENTS)
+                .addIngredient(CommonTags.Items.VEGETABLES_CARROT)
+                .addIngredient(CommonTags.Items.SALAD_INGREDIENTS)
                 .addIngredient(ModItems.TOMATO_SAUCE.get())
                 .addIngredient(ForgeTagsUD.BURGER_MEAT)
-                .addIngredient(ForgeTags.CROPS_TOMATO)
+                .addIngredient(CommonTags.Items.CROPS_TOMATO)
                 .unlockedByAnyIngredient(ItemRegistration.HAMBURG.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.CARROT_HAMBURG_DELUXE.get(), 1, SLOW_COOKING, LARGE_EXP)
                 .addIngredient(ItemRegistration.CARROT_ITEM_RARE.get())
@@ -40,105 +40,105 @@ public class CookingRecipesProv {
                 .addIngredient(ForgeTagsUD.BURGER_MEAT)
                 .unlockedByAnyIngredient(ItemRegistration.HAMBURG.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.CARROT_POTATO_POTAUFEU.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
-                .addIngredient(Ingredient.of(ForgeTags.VEGETABLES_CARROT),2)
-                .addIngredient(ForgeTags.VEGETABLES_POTATO)
-                .addIngredient(ForgeTags.SALAD_INGREDIENTS)
+                .addIngredient(Ingredient.of(CommonTags.Items.VEGETABLES_CARROT),2)
+                .addIngredient(CommonTags.Items.VEGETABLES_POTATO)
+                .addIngredient(CommonTags.Items.SALAD_INGREDIENTS)
                 .addIngredient(Items.BONE)
                 .unlockedByAnyIngredient(Items.CARROT)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.CARROT_POTATO_POTAUFEU_RARE.get(), 1, SLOW_COOKING, LARGE_EXP)
-                .addIngredient(ForgeTags.VEGETABLES_CARROT)
-                .addIngredient(ForgeTags.VEGETABLES_POTATO)
-                .addIngredient(ForgeTags.SALAD_INGREDIENTS)
+                .addIngredient(CommonTags.Items.VEGETABLES_CARROT)
+                .addIngredient(CommonTags.Items.VEGETABLES_POTATO)
+                .addIngredient(CommonTags.Items.SALAD_INGREDIENTS)
                 .addIngredient(Items.BONE)
                 .addIngredient(ItemRegistration.CARROT_ITEM_RARE.get())
                 .unlockedByAnyIngredient(ItemRegistration.CARROT_ITEM_RARE.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.GARLIC_RAMEN.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
-                .addIngredient(ForgeTags.PASTA_RAW_PASTA)
-                .addIngredient(ForgeTags.RAW_PORK)
-                .addIngredient(ForgeTags.EGGS)
+                .addIngredient(CommonTags.Items.PASTA_RAW_PASTA)
+                .addIngredient(CommonTags.Items.RAW_PORK)
+                .addIngredient(CommonTags.Items.EGGS)
                 .addIngredient(Items.DRIED_KELP)
                 .addIngredient(ForgeTagsUD.VEGETABLES_GARLIC)
                 .addIngredient(ForgeTagsUD.VEGETABLES_CHILI)
                 .unlockedByAnyIngredient(ItemRegistration.GARLIC_ITEM.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.GARLIC_RAMEN_RARE.get(), 1, SLOW_COOKING, LARGE_EXP)
-                .addIngredient(ForgeTags.PASTA_RAW_PASTA)
-                .addIngredient(ForgeTags.RAW_PORK)
-                .addIngredient(ForgeTags.EGGS)
+                .addIngredient(CommonTags.Items.PASTA_RAW_PASTA)
+                .addIngredient(CommonTags.Items.RAW_PORK)
+                .addIngredient(CommonTags.Items.EGGS)
                 .addIngredient(Items.DRIED_KELP)
                 .addIngredient(ItemRegistration.GARLIC_ITEM_RARE.get())
                 .addIngredient(ForgeTagsUD.VEGETABLES_CHILI)
                 .unlockedByAnyIngredient(ItemRegistration.GARLIC_ITEM_RARE.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.MAPO_CARROT_POTATO.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
-                .addIngredient(ForgeTags.VEGETABLES_CARROT)
-                .addIngredient(ForgeTags.VEGETABLES_POTATO)
+                .addIngredient(CommonTags.Items.VEGETABLES_CARROT)
+                .addIngredient(CommonTags.Items.VEGETABLES_POTATO)
                 .addIngredient(Ingredient.of(ForgeTagsUD.VEGETABLES_CHILI),2)
-                .addIngredient(ForgeTags.RAW_PORK)
+                .addIngredient(CommonTags.Items.RAW_PORK)
                 .unlockedByAnyIngredient(ItemRegistration.CHILI_ITEM.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.MAPO_CARROT_POTATO_RARE.get(), 1, SLOW_COOKING, LARGE_EXP)
-                .addIngredient(ForgeTags.VEGETABLES_CARROT)
-                .addIngredient(ForgeTags.VEGETABLES_POTATO)
+                .addIngredient(CommonTags.Items.VEGETABLES_CARROT)
+                .addIngredient(CommonTags.Items.VEGETABLES_POTATO)
                 .addIngredient(ForgeTagsUD.VEGETABLES_CHILI)
                 .addIngredient(ItemRegistration.CHILI_ITEM_RARE.get())
-                .addIngredient(ForgeTags.RAW_PORK)
+                .addIngredient(CommonTags.Items.RAW_PORK)
                 .unlockedByAnyIngredient(ItemRegistration.CHILI_ITEM_RARE.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.GI_PLATE.get(), 1, SLOW_COOKING, LARGE_EXP)
                 .addIngredient(ItemRegistration.CHOICE_VEGETABLES.get(),3)
-                .addIngredient(ForgeTags.PASTA)
+                .addIngredient(CommonTags.Items.PASTA)
                 .addIngredient(ItemRegistration.RAW_HAMBURG.get())
-                .addIngredient(ForgeTags.GRAIN_WHEAT)
+                .addIngredient(CommonTags.Items.GRAIN_WHEAT)
                 .unlockedByAnyIngredient(ItemRegistration.CHOICE_VEGETABLES.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.STRAWBERRY_JAM.get(), 2, FAST_COOKING, SMALL_EXP)
                 .addIngredient(Ingredient.of(ForgeTagsUD.CROPS_STRAWBERRY),2)
                 .addIngredient(Items.SUGAR,3)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.CHOCOLATE_STICK_CARROT.get(), 1, FAST_COOKING, SMALL_EXP)
                 .addIngredient(ItemRegistration.RAW_STICK_CARROT.get())
                 .addIngredient(Items.SUGAR)
                 .addIngredient(ForgeTagsUD.CROPS_COCOA_BEANS)
-                .addIngredient(ForgeTags.MILK)
+                .addIngredient(CommonTags.Items.MILK)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
 /*
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.CHOCOLATE_STICK_CARROT.get(), 1, FAST_COOKING, SMALL_EXP)
                 .addIngredient(ItemRegistration.RAW_STICK_CARROT.get())
                 .addIngredient(ForgeTagsUD.CHOCOLATES)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer,"farmersdelight:cooking/chocolate_stick_carrot_using_chocolates");
+                .save(consumer,"farmersdelight:cooking/chocolate_stick_carrot_using_chocolates");
  */
 
         CookingPotRecipeBuilder.cookingPotRecipe(ItemRegistration.CARROT_PUDDING.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
-                .addIngredient(ForgeTags.EGGS)
+                .addIngredient(CommonTags.Items.EGGS)
                 .addIngredient(Items.SUGAR)
                 .addIngredient(ItemRegistration.GRATED_CARROT.get())
-                .addIngredient(ForgeTags.MILK)
+                .addIngredient(CommonTags.Items.MILK)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
-                .build(consumer);
+                .save(consumer);
     }
 
 }

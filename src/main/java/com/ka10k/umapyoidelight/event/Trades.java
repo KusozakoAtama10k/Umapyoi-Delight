@@ -45,7 +45,7 @@ public class Trades {
     public static void addVillagerTrades(VillagerTradesEvent event) {
 
         if(event.getType() == VillagerProfession.FARMER) {
-            if(!UDConfig.FARMERS_TRADE_UD_CROPS.get() || !Configuration.FARMERS_BUY_FD_CROPS.get()) return;
+            if(!UDConfig.FARMERS_TRADE_UD_CROPS.get() || !Configuration.ENABLE_FARMERS_BUY_FD_CROPS.get()) return;
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             //Novice(Stone)
             trades.get(1).add(Item2Emerald(ItemRegistration.CHILI_ITEM.get(),26,16,2));

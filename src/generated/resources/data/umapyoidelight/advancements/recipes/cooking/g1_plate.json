@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "umapyoidelight:hamburg"
+              "umapyoidelight:choice_vegetables"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "farmersdelight:cooking/carrot_hamburg_deluxe"
+        "recipe": "umapyoidelight:cooking/g1_plate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "farmersdelight:cooking/carrot_hamburg_deluxe"
+      "umapyoidelight:cooking/g1_plate"
     ]
   },
   "sends_telemetry_event": true

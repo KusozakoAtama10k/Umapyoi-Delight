@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "umapyoidelight:choice_vegetables"
+              "umapyoidelight:chili_pepper_rare"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "farmersdelight:cooking/g1_plate"
+        "recipe": "umapyoidelight:cooking/mapo_carrot_potato_rare"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "farmersdelight:cooking/g1_plate"
+      "umapyoidelight:cooking/mapo_carrot_potato_rare"
     ]
   },
   "sends_telemetry_event": true

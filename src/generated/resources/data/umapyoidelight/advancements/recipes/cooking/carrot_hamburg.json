@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "umapyoidelight:garlic_rare"
+              "umapyoidelight:hamburg"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "farmersdelight:cooking/garlic_ramen_rare"
+        "recipe": "umapyoidelight:cooking/carrot_hamburg"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "farmersdelight:cooking/garlic_ramen_rare"
+      "umapyoidelight:cooking/carrot_hamburg"
     ]
   },
   "sends_telemetry_event": true

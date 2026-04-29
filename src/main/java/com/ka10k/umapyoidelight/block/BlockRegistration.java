@@ -65,10 +65,10 @@ public class BlockRegistration {
             () -> new Block(Block.Properties.copy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> POTATO_GARLIC_PIZZA = BLOCKS.register("potato_garlic_pizza",
-            () -> new PotatoGarlicPizzaBlock(BlockBehaviour.Properties.copy(Blocks.CAKE)));
+            () -> new PotatoGarlicPizzaBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
     public static final RegistryObject<Block> POTATO_GARLIC_PIZZA_RARE = BLOCKS.register("potato_garlic_pizza_rare",
-            () -> new PotatoGarlicPizzaBlockRare(BlockBehaviour.Properties.copy(Blocks.CAKE)));
+            () -> new PotatoGarlicPizzaBlockRare(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
     public static final RegistryObject<Block> CARROT_CAKE = BLOCKS.register("carrot_cake",
             () -> new CarrotCakeBlock(BlockBehaviour.Properties.copy(Blocks.CAKE), ItemRegistration.CARROT_CAKE_SLICE));

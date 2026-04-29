@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "farmersdelight:cooking/mapo_carrot_potato"
+        "recipe": "umapyoidelight:cooking/mapo_carrot_potato"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "farmersdelight:cooking/mapo_carrot_potato"
+      "umapyoidelight:cooking/mapo_carrot_potato"
     ]
   },
   "sends_telemetry_event": true

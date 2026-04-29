@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "umapyoidelight:garlic"
+              "umapyoidelight:garlic_rare"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "farmersdelight:cooking/garlic_ramen"
+        "recipe": "umapyoidelight:cooking/garlic_ramen_rare"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "farmersdelight:cooking/garlic_ramen"
+      "umapyoidelight:cooking/garlic_ramen_rare"
     ]
   },
   "sends_telemetry_event": true

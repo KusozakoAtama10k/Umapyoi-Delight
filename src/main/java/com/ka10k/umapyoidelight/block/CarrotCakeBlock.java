@@ -72,7 +72,7 @@ public class CarrotCakeBlock extends CakeBlock
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack heldStack = player.getItemInHand(hand);
         if (level.isClientSide) {
-            if (heldStack.is(ModTags.KNIVES)) {
+            if (heldStack.is(ModTags.Items.KNIVES)) {
                 return cutSlice(level, pos, state, player);
             }
 
@@ -85,7 +85,7 @@ public class CarrotCakeBlock extends CakeBlock
             }
         }
 
-        if (heldStack.is(ModTags.KNIVES)) {
+        if (heldStack.is(ModTags.Items.KNIVES)) {
             return cutSlice(level, pos, state, player);
         }
         return this.consumeBite(level, pos, state, player);

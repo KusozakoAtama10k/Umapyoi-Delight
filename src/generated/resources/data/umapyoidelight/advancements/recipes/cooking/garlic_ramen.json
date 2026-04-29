@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "umapyoidelight:chili_pepper_rare"
+              "umapyoidelight:garlic"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "farmersdelight:cooking/mapo_carrot_potato_rare"
+        "recipe": "umapyoidelight:cooking/garlic_ramen"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "farmersdelight:cooking/mapo_carrot_potato_rare"
+      "umapyoidelight:cooking/garlic_ramen"
     ]
   },
   "sends_telemetry_event": true

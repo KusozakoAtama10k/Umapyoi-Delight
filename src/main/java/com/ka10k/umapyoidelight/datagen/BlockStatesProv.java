@@ -108,7 +108,7 @@ public class BlockStatesProv extends BlockStateProvider {
         CrateBlockRare(BlockRegistration.STRAWBERRY_CRATE_RARE.get(),"strawberry");
         simpleBlockWithItem(BlockRegistration.CARROT_CRATE_RARE.get(), models().cubeBottomTop(blockName(BlockRegistration.CARROT_CRATE_RARE.get()), resourceBlock( "carrot_crate_rare_side"), FDresource("crate_bottom"), FDresource("carrot_crate_top")));
         simpleBlockWithItem(BlockRegistration.POTATO_CRATE_RARE.get(), models().cubeBottomTop(blockName(BlockRegistration.POTATO_CRATE_RARE.get()), resourceBlock( "potato_crate_rare_side"), FDresource("crate_bottom"), FDresource("potato_crate_top")));
-        customStageBlock(BlockRegistration.CHILI_CROP.get(), FDresource("crop_cross"), "cross", ChiliCrop.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 3, 4));
+        customStageBlock(BlockRegistration.CHILI_CROP.get(), FDresource("template_crop_cross"), "cross", ChiliCrop.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 3, 4));
         customStageBlock(BlockRegistration.GARLIC_CROP.get(), mcLoc("crop"), "crop", GarlicCrop.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
         customStageBlock(BlockRegistration.STRAWBERRY_CROP.get(), mcLoc("crop"), "crop", StrawberryCrop.AGE, Arrays.asList(0, 1, 1, 1, 2, 2, 3, 4));
         feastBlock((FeastBlock) BlockRegistration.POTATO_GARLIC_PIZZA.get());

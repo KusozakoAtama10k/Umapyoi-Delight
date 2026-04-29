@@ -1,52 +1,163 @@
 {
   "type": "minecraft:block",
-  "functions": [
-    {
-      "function": "minecraft:explosion_decay"
-    }
-  ],
   "pools": [
     {
-      "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "block": "umapyoidelight:potato_garlic_pizza_rare",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "servings": "6"
-          }
-        }
-      ],
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "umapyoidelight:potato_garlic_pizza_rare"
+          "name": "minecraft:bowl",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1,
+              "add": false
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:block_state_property",
+                "block": "umapyoidelight:potato_garlic_pizza_rare",
+                "properties": {
+                  "servings": "6"
+                }
+              }
+            }
+          ]
         }
-      ],
-      "rolls": 1.0
+      ]
     },
     {
-      "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "minecraft:inverted",
-          "term": {
-            "block": "umapyoidelight:potato_garlic_pizza",
-            "condition": "minecraft:block_state_property",
-            "properties": {
-              "servings": "6"
-            }
-          }
-        }
-      ],
+      "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:bowl"
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "umapyoidelight:potato_garlic_pizza_slice_rare",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 1,
+                  "add": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "umapyoidelight:potato_garlic_pizza_rare",
+                  "properties": {
+                    "servings": "1"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "umapyoidelight:potato_garlic_pizza_slice_rare",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 2,
+                  "add": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "umapyoidelight:potato_garlic_pizza_rare",
+                  "properties": {
+                    "servings": "2"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "umapyoidelight:potato_garlic_pizza_slice_rare",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 3,
+                  "add": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "umapyoidelight:potato_garlic_pizza_rare",
+                  "properties": {
+                    "servings": "3"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "umapyoidelight:potato_garlic_pizza_slice_rare",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 4,
+                  "add": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "umapyoidelight:potato_garlic_pizza_rare",
+                  "properties": {
+                    "servings": "4"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "umapyoidelight:potato_garlic_pizza_slice_rare",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 5,
+                  "add": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "umapyoidelight:potato_garlic_pizza_rare",
+                  "properties": {
+                    "servings": "5"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "umapyoidelight:potato_garlic_pizza_rare",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": 1,
+                  "add": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "umapyoidelight:potato_garlic_pizza_rare",
+                  "properties": {
+                    "servings": "6"
+                  }
+                }
+              ]
+            }
+          ]
         }
-      ],
-      "rolls": 1.0
+      ]
     }
-  ],
-  "random_sequence": "umapyoidelight:blocks/potato_garlic_pizza_rare"
+  ]
 }
