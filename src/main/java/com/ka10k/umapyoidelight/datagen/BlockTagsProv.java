@@ -40,15 +40,15 @@ public class BlockTagsProv extends BlockTagsProvider {
                 BlockRegistration.GARLIC_CRATE.get(),
                 BlockRegistration.GARLIC_CRATE_RARE.get(),
                 BlockRegistration.STRAWBERRY_CRATE.get(),
-                BlockRegistration.STRAWBERRY_CRATE_RARE.get()
+                BlockRegistration.STRAWBERRY_CRATE_RARE.get(),
+                BlockRegistration.POTATO_GARLIC_PIZZA.get(),
+                BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get()
         );
         tag(BlockTags.MINEABLE_WITH_HOE).add(
                 BlockRegistration.WOODCHIP_ROAD.get(),
                 BlockRegistration.WOODCHIP_BLOCK.get()
         );
-        tag(ModTags.MINEABLE_WITH_KNIFE).add(
-                BlockRegistration.POTATO_GARLIC_PIZZA.get(),
-                BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get(),
+        tag(ModTags.Blocks.MINEABLE_WITH_KNIFE).add(
                 BlockRegistration.CARROT_CAKE.get(),
                 BlockRegistration.CARROT_PIE.get());
     }
@@ -72,10 +72,17 @@ public class BlockTagsProv extends BlockTagsProvider {
     }
 
     private void registerModTags() {
-        tag(ModTags.WILD_CROPS).add(
+        tag(ModTags.Blocks.WILD_CROPS).add(
                 BlockRegistration.WILD_CHILIS.get(),
                 BlockRegistration.WILD_GARLIC.get(),
                 BlockRegistration.WILD_STRAWBERRIES.get()
+        );
+        tag(ModTags.Blocks.PIES).add(
+                BlockRegistration.CARROT_PIE.get()
+        );
+        tag(ModTags.Blocks.FEASTS).add(
+                BlockRegistration.POTATO_GARLIC_PIZZA.get(),
+                BlockRegistration.POTATO_GARLIC_PIZZA_RARE.get()
         );
         tag(UmapyoiBlockTags.TRACK_DIRT).add(
                 BlockRegistration.WOODCHIP_ROAD.get(),

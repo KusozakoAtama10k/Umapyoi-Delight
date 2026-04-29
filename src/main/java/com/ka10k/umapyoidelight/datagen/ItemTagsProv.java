@@ -54,7 +54,7 @@ public class ItemTagsProv extends ItemTagsProvider {
         tag(CommonTagsUD.STORAGE_BLOCKS_ITEM_STRAWBERRY).add(ItemRegistration.STRAWBERRY_CRATE.get());
 
         tag(Tags.Items.FOODS_BREAD).add(ItemRegistration.WHITE_BREAD.get());
-        tag(CommonTags.FOODS_DOUGH).add(ItemRegistration.CARROT_DOUGH.get());
+        tag(CommonTags.Items.FOODS_DOUGH).add(ItemRegistration.CARROT_DOUGH.get());
 
         tag(ItemTags.FLOWERS).add(
                 ItemRegistration.WILD_CHILIS.get(),
@@ -70,10 +70,49 @@ public class ItemTagsProv extends ItemTagsProvider {
     }
 
     private void registerModTags() {
-        tag(ModTags.WILD_CROPS_ITEM).add(
+        tag(ModTags.Items.WILD_CROPS).add(
                 ItemRegistration.WILD_CHILIS.get(),
                 ItemRegistration.WILD_GARLIC.get(),
                 ItemRegistration.WILD_STRAWBERRIES.get()
+        );
+        tag(ModTags.Items.MEALS).add(
+                ItemRegistration.CARROT_HAMBURG.get(),
+                ItemRegistration.CARROT_HAMBURG_DELUXE.get(),
+                ItemRegistration.CARROT_POTATO_POTAUFEU.get(),
+                ItemRegistration.CARROT_POTATO_POTAUFEU_RARE.get(),
+                ItemRegistration.GARLIC_RAMEN.get(),
+                ItemRegistration.GARLIC_RAMEN_RARE.get(),
+                ItemRegistration.MAPO_CARROT_POTATO.get(),
+                ItemRegistration.MAPO_CARROT_POTATO_RARE.get(),
+                ItemRegistration.GI_PLATE.get()
+        );
+        tag(ModTags.Items.FEASTS).add(
+                ItemRegistration.POTATO_GARLIC_PIZZA.get(),
+                ItemRegistration.POTATO_GARLIC_PIZZA_RARE.get()
+        );
+        tag(ModTags.Items.DRINKS).add(
+                ItemRegistration.CARROT_JUICE.get(),
+                ItemRegistration.COFFEE.get()
+        );
+        tag(ModTags.Items.SNACKS).add(
+                ItemRegistration.POTATO_GARLIC_PIZZA_SLICE.get(),
+                ItemRegistration.POTATO_GARLIC_PIZZA_SLICE_RARE.get(),
+                ItemRegistration.RAW_STICK_CARROT.get(),
+                ItemRegistration.GRILLED_STICK_CARROT.get(),
+                ItemRegistration.CARROT_BURGER.get(),
+                ItemRegistration.TOAST.get(),
+                ItemRegistration.TOAST_STRAWBERRY_JAM.get(),
+                ItemRegistration.VEGETABLE_SANDWICH.get()
+        );
+        tag(ModTags.Items.SWEETS).add(
+                ItemRegistration.CARROT_CAKE.get(),
+                ItemRegistration.CARROT_CAKE_SLICE.get(),
+                ItemRegistration.CARROT_PIE_SLICE.get(),
+                ItemRegistration.CARROT_PUDDING.get(),
+                ItemRegistration.STRAWBERRY_SANDWICH.get(),
+                ItemRegistration.CHOCOLATE_STICK_CARROT.get(),
+                ItemRegistration.CARROT_STRAWBERRY_ICECREAM.get(),
+                ItemRegistration.CARROT_STRAWBERRY_ICECREAM_RARE.get()
         );
 
         tag(UmapyoiItemTags.getMotivationFoodTag(1)).add(
@@ -116,7 +155,28 @@ public class ItemTagsProv extends ItemTagsProvider {
         tag(CompatibilityTags.SERENE_SEASONS_WINTER_CROPS).add(
                 ItemRegistration.STRAWBERRY_ITEM.get()
         );
-        
+        tag(CompatibilityTags.CREATE_UPRIGHT_ON_BELT).add(
+                ItemRegistration.CARROT_CAKE.get(),
+                ItemRegistration.CARROT_HAMBURG.get(),
+                ItemRegistration.CARROT_HAMBURG_DELUXE.get(),
+                ItemRegistration.CARROT_JUICE.get(),
+                ItemRegistration.CARROT_PIE.get(),
+                ItemRegistration.CARROT_PUDDING.get(),
+                ItemRegistration.CARROT_PIE.get(),
+                ItemRegistration.CARROT_POTATO_POTAUFEU.get(),
+                ItemRegistration.CARROT_POTATO_POTAUFEU_RARE.get(),
+                ItemRegistration.GARLIC_RAMEN.get(),
+                ItemRegistration.GARLIC_RAMEN_RARE.get(),
+                ItemRegistration.MAPO_CARROT_POTATO.get(),
+                ItemRegistration.MAPO_CARROT_POTATO_RARE.get(),
+                ItemRegistration.GI_PLATE.get(),
+                ItemRegistration.POTION.get(),
+                ItemRegistration.COFFEE_DECO.get(),
+                ItemRegistration.YAKISOBA_DECO.get(),
+                ItemRegistration.STRAWBERRY_JAM.get(),
+                ItemRegistration.CHOICE_VEGETABLES.get()
+        );
+
         tag(CommonTagsUD.FOODS_BURGER_MEAT).add(
                 ItemRegistration.HAMBURG.get()
         ).addOptional(ResourceLocation.fromNamespaceAndPath("sakura", "burger"));

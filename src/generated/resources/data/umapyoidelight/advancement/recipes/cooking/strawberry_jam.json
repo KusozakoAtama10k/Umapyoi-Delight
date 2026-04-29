@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "farmersdelight:cooking/chocolate_stick_carrot"
+        "recipe": "umapyoidelight:cooking/strawberry_jam"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -15,7 +15,7 @@
   ],
   "rewards": {
     "recipes": [
-      "farmersdelight:cooking/chocolate_stick_carrot"
+      "umapyoidelight:cooking/strawberry_jam"
     ]
   }
 }

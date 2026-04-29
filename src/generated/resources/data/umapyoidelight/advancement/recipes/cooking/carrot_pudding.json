@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "farmersdelight:cooking/strawberry_jam"
+        "recipe": "umapyoidelight:cooking/carrot_pudding"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -15,7 +15,7 @@
   ],
   "rewards": {
     "recipes": [
-      "farmersdelight:cooking/strawberry_jam"
+      "umapyoidelight:cooking/carrot_pudding"
     ]
   }
 }

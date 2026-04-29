@@ -67,7 +67,7 @@ public class CarrotCakeBlock extends CakeBlock
 
     @Override
     public ItemInteractionResult useItemOn(ItemStack heldStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (heldStack.is(ModTags.KNIVES)) {
+        if (heldStack.is(ModTags.Items.KNIVES)) {
             return cutSlice(level, pos, state, player);
         }
 

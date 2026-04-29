@@ -125,9 +125,9 @@ public class CraftingRecipesProv {
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.RAW_HAMBURG.get(), 3)
-                .requires(Ingredient.of(CommonTags.CROPS_ONION))
-                .requires(Ingredient.of(CommonTags.FOODS_RAW_BEEF),2)
-                .requires(Ingredient.of(CommonTags.FOODS_RAW_PORK))
+                .requires(Ingredient.of(CommonTags.Items.CROPS_ONION))
+                .requires(Ingredient.of(CommonTags.Items.FOODS_RAW_BEEF),2)
+                .requires(Ingredient.of(CommonTags.Items.FOODS_RAW_PORK))
                 .requires(Ingredient.of(Tags.Items.EGGS))
                 .unlockedBy("has_raw_beef", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BEEF))
                 .unlockedBy("has_raw_porkchop", InventoryChangeTrigger.TriggerInstance.hasItems(Items.PORKCHOP))
@@ -138,7 +138,7 @@ public class CraftingRecipesProv {
                 .requires(Ingredient.of(CommonTagsUD.CROPS_STRAWBERRY))
                 .requires(Ingredient.fromValues(Stream.of(new Ingredient.ItemValue(new ItemStack(ItemRegistration.GRATED_CARROT.get())),
                         new Ingredient.TagValue(Tags.Items.CROPS_CARROT))))
-                .requires(Ingredient.of(CommonTags.FOODS_MILK))
+                .requires(Ingredient.of(Tags.Items.DRINKS_MILK))
                 .requires(Ingredient.of(Tags.Items.CROPS_WHEAT))
                 .requires(Items.SNOWBALL)
                 .unlockedBy("has_strawberry", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_ITEM.get()))
@@ -149,7 +149,7 @@ public class CraftingRecipesProv {
                 .requires(Ingredient.of(CommonTagsUD.CROPS_STRAWBERRY))
                 .requires(Ingredient.fromValues(Stream.of(new Ingredient.ItemValue(new ItemStack(ItemRegistration.GRATED_CARROT.get())),
                         new Ingredient.TagValue(Tags.Items.CROPS_CARROT))))
-                .requires(Ingredient.of(CommonTags.FOODS_MILK))
+                .requires(Ingredient.of(Tags.Items.DRINKS_MILK))
                 .requires(Ingredient.of(Tags.Items.CROPS_CARROT))
                 .requires(Items.SNOWBALL)
                 .unlockedBy("has_strawberry_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.STRAWBERRY_ITEM_RARE.get()))
@@ -172,11 +172,11 @@ public class CraftingRecipesProv {
                 .pattern(" M ")
                 .pattern("PGP")
                 .pattern("DBD")
-                .define('D', Ingredient.of(CommonTags.FOODS_DOUGH))
+                .define('D', Ingredient.of(CommonTags.Items.FOODS_DOUGH))
                 .define('B', Items.BOWL)
                 .define('P', Ingredient.of(Tags.Items.CROPS_POTATO))
                 .define('G', Ingredient.of(CommonTagsUD.CROPS_GARLIC))
-                .define('M', Ingredient.fromValues(Stream.of(new Ingredient.TagValue(CommonTags.FOODS_MILK),
+                .define('M', Ingredient.fromValues(Stream.of(new Ingredient.TagValue(Tags.Items.DRINKS_MILK),
                         new Ingredient.TagValue(CommonTagsUD.CHEESES))))
                 .unlockedBy("has_potato", InventoryChangeTrigger.TriggerInstance.hasItems(Items.POTATO))
                 .save(output);
@@ -185,12 +185,12 @@ public class CraftingRecipesProv {
                 .pattern(" M ")
                 .pattern("RGP")
                 .pattern("DBD")
-                .define('D', Ingredient.of(CommonTags.FOODS_DOUGH))
+                .define('D', Ingredient.of(CommonTags.Items.FOODS_DOUGH))
                 .define('B', Items.BOWL)
                 .define('P', Ingredient.of(Tags.Items.CROPS_POTATO))
                 .define('R', ItemRegistration.POTATO_ITEM_RARE.get())
                 .define('G', Ingredient.of(CommonTagsUD.CROPS_GARLIC))
-                .define('M', Ingredient.fromValues(Stream.of(new Ingredient.TagValue(CommonTags.FOODS_MILK),
+                .define('M', Ingredient.fromValues(Stream.of(new Ingredient.TagValue(Tags.Items.DRINKS_MILK),
                         new Ingredient.TagValue(CommonTagsUD.CHEESES))))
                 .unlockedBy("has_potato_rare", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.POTATO_ITEM_RARE.get()))
                 .save(output);
@@ -229,22 +229,22 @@ public class CraftingRecipesProv {
                 .requires(Ingredient.fromValues(Stream.of(new Ingredient.TagValue(Tags.Items.FOODS_BREAD),
                         new Ingredient.ItemValue(new ItemStack(ItemRegistration.CARROT_BREAD.get())))))
                 .requires(ModItems.BEEF_PATTY.get())
-                .requires(CommonTags.FOODS_LEAFY_GREEN)
+                .requires(CommonTags.Items.FOODS_LEAFY_GREEN)
                 .requires(Tags.Items.CROPS_CARROT)
-                .requires(CommonTags.CROPS_ONION)
+                .requires(CommonTags.Items.CROPS_ONION)
                 .unlockedBy("has_beef_patty", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.BEEF_PATTY.get()))
                 .save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.STRAWBERRY_SANDWICH.get())
                 .requires(ItemRegistration.TRIANGLE_BREAD.get(),2)
-                .requires(CommonTags.FOODS_MILK)
+                .requires(Tags.Items.DRINKS_MILK)
                 .requires(CommonTagsUD.CROPS_STRAWBERRY)
                 .unlockedBy("has_triangular_bread", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.TRIANGLE_BREAD.get()))
                 .save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.VEGETABLE_SANDWICH.get())
                 .requires(ItemRegistration.TRIANGLE_BREAD.get(),2)
-                .requires(CommonTags.FOODS_LEAFY_GREEN)
+                .requires(CommonTags.Items.FOODS_LEAFY_GREEN)
                 .requires(Ingredient.fromValues(Stream.of(new Ingredient.ItemValue(new ItemStack(ItemRegistration.CUT_CARROT.get())),
                         new Ingredient.TagValue(Tags.Items.CROPS_CARROT))))
                 .unlockedBy("has_triangular_bread", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.TRIANGLE_BREAD.get()))
@@ -281,7 +281,7 @@ public class CraftingRecipesProv {
                 .save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ItemRegistration.CARROT_BATTER.get(),3)
-                .requires(CommonTags.FOODS_MILK)
+                .requires(Tags.Items.DRINKS_MILK)
                 .requires(Tags.Items.EGGS)
                 .requires(Ingredient.of(Tags.Items.CROPS_WHEAT),2)
                 .requires(Ingredient.of(ItemRegistration.GRATED_CARROT.get()),2)
@@ -295,7 +295,7 @@ public class CraftingRecipesProv {
                 .pattern("BBB")
                 .define('C', ItemRegistration.CUT_CARROT.get())
                 .define('B', ItemRegistration.CARROT_BATTER.get())
-                .define('M', Ingredient.of(CommonTags.FOODS_MILK))
+                .define('M', Ingredient.of(Tags.Items.DRINKS_MILK))
                 .unlockedBy("has_carrot_batter", InventoryChangeTrigger.TriggerInstance.hasItems(ItemRegistration.CARROT_BATTER.get()))
                 .save(output);
 

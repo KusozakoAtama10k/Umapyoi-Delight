@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "farmersdelight:cooking/carrot_pudding"
+        "recipe": "umapyoidelight:cooking/chocolate_stick_carrot_using_chocolates"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -15,7 +15,7 @@
   ],
   "rewards": {
     "recipes": [
-      "farmersdelight:cooking/carrot_pudding"
+      "umapyoidelight:cooking/chocolate_stick_carrot_using_chocolates"
     ]
   }
 }
