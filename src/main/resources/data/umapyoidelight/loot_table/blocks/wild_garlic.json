@@ -11,10 +11,8 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "tag": "forge:shears"
-                  }
+                  "ability": "shears_harvest",
+                  "condition": "neoforge:can_item_perform_ability"
                 }
               ],
               "name": "umapyoidelight:wild_garlic"
@@ -51,7 +49,7 @@
               "term": {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                  "tag": "forge:shears"
+                  "tag": "c:tools/shear"
                 }
               }
             }
