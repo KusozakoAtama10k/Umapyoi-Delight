@@ -23,7 +23,7 @@ public class PotatoGarlicPizzaBlockRare extends FeastBlock
 {
     public static final IntegerProperty SLICE_SERVINGS = IntegerProperty.create("servings", 0, 6);
 
-    protected static final VoxelShape PLATE_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 2.0D, 15.0D);
+    protected static final VoxelShape PLATE_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 1.0D, 15.0D);
     protected static final VoxelShape FOOD_SHAPE = Shapes.joinUnoptimized(PLATE_SHAPE, Block.box(2.0D, 1.0D, 2.0D, 14.0D, 2.5D, 14.0D), BooleanOp.OR);
 
     public final List<Supplier<Item>> pizzaSliceServings = Arrays.asList(

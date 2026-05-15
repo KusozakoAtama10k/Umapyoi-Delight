@@ -8,10 +8,10 @@ import com.ka10k.umapyoidelight.Umapyoidelight;
 import com.ka10k.umapyoidelight.block.BlockRegistration;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.tracen.umapyoi.effect.MobEffectRegistry;
@@ -133,25 +133,43 @@ public class ItemRegistration {
             () -> new BlockItem(BlockRegistration.YAKISOBA_PILE.get(),basicItem()));
 
     //crops
+    /*
     public static final DeferredItem<Item> CHILI_ITEM =
             registerWithTab("chili_pepper", () -> new ItemFoodSeeds(BlockRegistration.CHILI_CROP.get(),basicItem(),FoodInfo.builder()
                     .amountAndCalories(2, 0.25F).build()));
+    */
+
+    public static final DeferredItem<Item> CHILI_ITEM =
+            registerWithTab("chili_pepper", () -> new ItemNameBlockItem(BlockRegistration.CHILI_CROP.get(),
+                    new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.25F).build())));
 
     public static final DeferredItem<Item> CHILI_ITEM_RARE =
             registerWithTab("chili_pepper_rare", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(4, 0.5F).build()));
 
+    /*
     public static final DeferredItem<Item> GARLIC_ITEM =
             registerWithTab("garlic", () -> new ItemFoodSeeds(BlockRegistration.GARLIC_CROP.get(),basicItem(),FoodInfo.builder()
                     .amountAndCalories(2, 0.25F).build()));
+    */
+
+    public static final DeferredItem<Item> GARLIC_ITEM =
+            registerWithTab("garlic", () -> new ItemNameBlockItem(BlockRegistration.GARLIC_CROP.get(),
+                    new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.25F).build())));
 
     public static final DeferredItem<Item> GARLIC_ITEM_RARE =
             registerWithTab("garlic_rare", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(4, 0.5F).build()));
 
+    /*
     public static final DeferredItem<Item> STRAWBERRY_ITEM =
             registerWithTab("strawberry", () -> new ItemFoodSeeds(BlockRegistration.STRAWBERRY_CROP.get(),basicItem(),FoodInfo.builder()
                     .amountAndCalories(2, 0.25F).build()));
+     */
+
+    public static final DeferredItem<Item> STRAWBERRY_ITEM =
+            registerWithTab("strawberry", () -> new ItemNameBlockItem(BlockRegistration.STRAWBERRY_CROP.get(),
+                    new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.25F).build())));
 
     public static final DeferredItem<Item> STRAWBERRY_ITEM_RARE =
             registerWithTab("strawberry_rare", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
