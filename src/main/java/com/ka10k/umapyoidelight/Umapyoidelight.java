@@ -1,36 +1,40 @@
 package com.ka10k.umapyoidelight;
 
 import com.ka10k.umapyoidelight.block.BlockRegistration;
+import com.ka10k.umapyoidelight.config.UDConfig;
+import com.ka10k.umapyoidelight.datagen.CompostableRegistration;
+import com.ka10k.umapyoidelight.event.Trades;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
 import com.ka10k.umapyoidelight.loot.LootModifiers;
-import com.mojang.logging.LogUtils;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
+import com.ka10k.umapyoidelight.util.regUtilsUD;
+import com.ka10k.umapyoidelight.world.BiomeModifiers;
+import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Mod(Umapyoidelight.MOD_ID)
-public class Umapyoidelight {
+public class Umapyoidelight implements ModInitializer {
+    public static String MOD_ID = "umapyoidelight";
+    public static Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static UDConfig CONFIG;
 
-    // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "umapyoidelight";
-    // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    @Override
+    public void onInitialize() {
 
+        UDConfig.load();
+        CONFIG = UDConfig.HANDLER.instance();
+        //touch with empty method
+        BlockRegistration.register();
+        ItemRegistration.register();
 
-    public Umapyoidelight(IEventBus modEventBus, ModContainer modContainer) {
-        BlockRegistration.BLOCKS.register(modEventBus);
-        ItemRegistration.ITEMS.register(modEventBus);
-        CreativeTab.CREATIVE_MODE_TABS.register(modEventBus);
-        LootModifiers.LOOT_MODIFIERS.register(modEventBus);
+        //actual registration
+        regUtilsUD.registerBlocks();
+        regUtilsUD.registerItems();
 
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, UDConfig.COMMON_CONFIG);
+        CommonSetup.register();
+        CreativeTab.register();
+        CompostableRegistration.register();
+        BiomeModifiers.register();
+        LootModifiers.register();
+        Trades.register();
     }
-
-	public static Logger getLogger() {
-		return LOGGER;
-	}
-
 }

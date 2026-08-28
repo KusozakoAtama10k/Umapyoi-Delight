@@ -12,7 +12,7 @@
               "conditions": [
                 {
                   "ability": "shears_harvest",
-                  "condition": "neoforge:can_item_perform_ability"
+                  "condition": "farmersdelight:can_item_perform_ability"
                 }
               ],
               "name": "umapyoidelight:wild_strawberries"

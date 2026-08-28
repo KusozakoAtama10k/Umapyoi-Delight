@@ -35,7 +35,7 @@ public class YakisobaPileBlock extends FeastBlock
     );
 
     public YakisobaPileBlock(Properties properties) {
-        super(properties, ItemRegistration.YAKISOBA, false);
+        super(properties, ItemRegistration.YAKISOBA, false, false);
     }
 
     @Override

@@ -1,15 +1,16 @@
 package com.ka10k.umapyoidelight.item;
 
-import java.util.function.Consumer;
-
-import cn.mcmod_mmf.mmlib.item.ItemFoodBase;
-import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.tracen.umapyoi.api.UmapyoiAPI;
+import net.tracen.umapyoi.item.ItemFoodBase;
+import net.tracen.umapyoi.item.info.FoodInfo;
+
+import java.util.function.Consumer;
 
 import static com.ka10k.umapyoidelight.item.ItemRegistration.basicItem;
 
@@ -24,7 +25,7 @@ public class StickUmaFood extends ItemFoodBase {
 
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
-        ItemStack itemstack = this.eatAsUma(stack, level, entity);
+        ItemStack itemstack = stack.has(DataComponents.FOOD) ? this.eatAsUma(stack, level, entity) : stack;
         if (stack.getCount() > 0) {
             if (entity instanceof Player) {
                 Player entityplayer = (Player) entity;
@@ -42,7 +43,8 @@ public class StickUmaFood extends ItemFoodBase {
     private ItemStack eatAsUma(ItemStack stack, Level level, LivingEntity entity) {
         if (entity instanceof Player player) {
             if (UmapyoiAPI.getUmaSoul(player).isEmpty()) {
-                player.getFoodData().eat(stack.getFoodProperties(entity));
+                FoodInfo info = this.getFoodInfo();
+                player.getFoodData().eat(info.getAmount(), info.getCalories());
                 if (!player.getAbilities().instabuild)
                     stack.shrink(1);
                 return stack;

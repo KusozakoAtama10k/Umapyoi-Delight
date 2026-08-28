@@ -1,5 +1,6 @@
 package com.ka10k.umapyoidelight.block;
 
+import com.google.common.base.Suppliers;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.Item;
@@ -15,7 +16,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import vectorwing.farmersdelight.common.block.FeastBlock;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -26,13 +26,13 @@ public class PotatoGarlicPizzaBlock extends FeastBlock
     protected static final VoxelShape PLATE_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 1.0D, 15.0D);
     protected static final VoxelShape FOOD_SHAPE = Shapes.joinUnoptimized(PLATE_SHAPE, Block.box(2.0D, 1.0D, 2.0D, 14.0D, 2.5D, 14.0D), BooleanOp.OR);
 
-    public final List<Supplier<Item>> pizzaSliceServings = Arrays.asList(
-            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE,
-            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE,
-            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE,
-            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE,
-            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE,
-            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE
+    public final Supplier<List<Item>> pizzaSliceServings = Suppliers.memoize(() -> List.of(
+            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE.get(),
+            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE.get(),
+            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE.get(),
+            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE.get(),
+            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE.get(),
+            ItemRegistration.POTATO_GARLIC_PIZZA_SLICE.get())
     );
 
     public PotatoGarlicPizzaBlock(Properties properties) {
@@ -51,7 +51,7 @@ public class PotatoGarlicPizzaBlock extends FeastBlock
 
     @Override
     public ItemStack getServingItem(BlockState state) {
-        return new ItemStack(pizzaSliceServings.get(state.getValue(getServingsProperty()) - 1).get());
+        return new ItemStack(pizzaSliceServings.get().get(state.getValue(getServingsProperty()) - 1));
     }
 
     @Override

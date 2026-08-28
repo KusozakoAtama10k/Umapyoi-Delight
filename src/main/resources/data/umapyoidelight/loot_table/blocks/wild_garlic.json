@@ -12,7 +12,7 @@
               "conditions": [
                 {
                   "ability": "shears_harvest",
-                  "condition": "neoforge:can_item_perform_ability"
+                  "condition": "farmersdelight:can_item_perform_ability"
                 }
               ],
               "name": "umapyoidelight:wild_garlic"
@@ -47,10 +47,8 @@
             {
               "condition": "minecraft:inverted",
               "term": {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "tag": "c:tools/shear"
-                }
+                "ability": "shears_harvest",
+                "condition": "farmersdelight:can_item_perform_ability"
               }
             }
           ],

@@ -2,6 +2,7 @@ package com.ka10k.umapyoidelight.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -47,7 +48,7 @@ public class CarrotCakeBlock extends CakeBlock
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(BITES, 0));
     }
 
-    public ItemStack getcakeSliceItem() {
+    public ItemStack getCakeSliceItem() {
         return new ItemStack(this.cakeSlice.get());
     }
 
@@ -95,8 +96,8 @@ public class CarrotCakeBlock extends CakeBlock
         if (!playerIn.canEat(false)) {
             return InteractionResult.PASS;
         } else {
-            ItemStack sliceStack = this.getcakeSliceItem();
-            FoodProperties sliceFood = sliceStack.getItem().getFoodProperties(sliceStack, playerIn);
+            ItemStack sliceStack = this.getCakeSliceItem();
+            FoodProperties sliceFood = sliceStack.get(DataComponents.FOOD);
 
             if (sliceFood != null) {
                 playerIn.getFoodData().eat(sliceFood);
@@ -130,7 +131,7 @@ public class CarrotCakeBlock extends CakeBlock
         }
 
         Direction direction = player.getDirection().getOpposite();
-        ItemUtils.spawnItemEntity(level, this.getcakeSliceItem(),
+        ItemUtils.spawnItemEntity(level, this.getCakeSliceItem(),
                 pos.getX() + (bites * 0.1), pos.getY() + 0.2, pos.getZ() + 0.5,
                 -0.05, 0, 0);
         level.playSound(null, pos, SoundEvents.WOOL_BREAK, SoundSource.PLAYERS, 0.8F, 0.8F);

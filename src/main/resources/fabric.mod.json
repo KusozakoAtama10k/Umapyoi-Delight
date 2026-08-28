@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "umapyoidelight",
+  "version": "${version}",
+  "name": "Umapyoi Delight",
+  "description": "",
+  "authors": [
+    "KusozakoAtama10k"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "logo_square.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.ka10k.umapyoidelight.Umapyoidelight"
+    ],
+    "client": [
+      "com.ka10k.umapyoidelight.client.UDClient"
+    ],
+    "modmenu": [
+      "com.ka10k.umapyoidelight.config.UDModMenuIntegration"
+    ],
+    "jei_mod_plugin": [
+      "com.ka10k.umapyoidelight.JEIIntegration"
+    ]
+  },
+  "mixins": [
+    "fabric.mixins.json"
+  ],
+  "accessWidener": "umapyoidelight.classtweaker",
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "umapyoi": ">=1.12.72-1.21.1",
+    "farmersdelight": ">=1.21.1-3.0.0"
+  }
+}

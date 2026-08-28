@@ -1,52 +1,59 @@
 package com.ka10k.umapyoidelight.item;
 
-import java.util.function.Consumer;
-
-import cn.mcmod_mmf.mmlib.item.ItemFoodBase;
-import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.tracen.umapyoi.api.UmapyoiAPI;
+import net.tracen.umapyoi.item.ItemFoodBase;
+import net.tracen.umapyoi.item.info.FoodInfo;
+
+import java.util.function.Consumer;
 
 import static com.ka10k.umapyoidelight.item.ItemRegistration.bowlFood;
 
 
 public class BowlUmaFood extends ItemFoodBase {
-    private final Consumer<ItemStack> consumer;
+    private final Consumer<LivingEntity> consumer;
 
-    public BowlUmaFood(Consumer<ItemStack> consumer, FoodInfo info) {
-        super(bowlFood(), info);
+    public BowlUmaFood(Consumer<LivingEntity> consumer, FoodInfo info) {
+        this(bowlFood(), consumer, info);
+    }
+
+    public BowlUmaFood(Item.Properties properties, Consumer<LivingEntity> consumer, FoodInfo info) {
+        super(properties, info);
         this.consumer = consumer;
     }
 
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
-        ItemStack itemstack = this.eatAsUma(stack, level, entity);
+        ItemStack itemstack = stack.has(DataComponents.FOOD) ? this.eatAsUma(stack, level, entity) : stack;
         if (stack.getCount() > 0) {
             if (entity instanceof Player) {
                 Player entityplayer = (Player) entity;
                 if (entityplayer.getAbilities().instabuild)
                     return itemstack;
-                if (!entityplayer.addItem(this.getCraftingRemainingItem(stack)))
-                    entityplayer.drop(this.getCraftingRemainingItem(stack), true);
+                if (!entityplayer.addItem(this.getRecipeRemainder(stack)))
+                    entityplayer.drop(this.getRecipeRemainder(stack), true);
             }
             return itemstack;
         }
         return entity instanceof Player && ((Player) entity).getAbilities().instabuild ? itemstack
-                : this.getCraftingRemainingItem(stack);
+                : this.getRecipeRemainder(stack);
     }
 
     private ItemStack eatAsUma(ItemStack stack, Level level, LivingEntity entity) {
         if (entity instanceof Player player) {
             if (UmapyoiAPI.getUmaSoul(player).isEmpty()) {
-                player.getFoodData().eat(stack.getFoodProperties(entity));
+                FoodInfo info = this.getFoodInfo();
+                player.getFoodData().eat(info.getAmount(), info.getCalories());
                 if (!player.getAbilities().instabuild)
                     stack.shrink(1);
                 return stack;
             } else {
-                this.consumer.accept(UmapyoiAPI.getUmaSoul(player));
+                this.consumer.accept(player);
             }
         }
         return entity.eat(level, stack);

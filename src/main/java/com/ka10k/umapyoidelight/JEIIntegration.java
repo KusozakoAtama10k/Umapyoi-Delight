@@ -22,9 +22,9 @@ public class JEIIntegration implements IModPlugin {
         registration.addIngredientInfo(new ItemStack(ItemRegistration.COFFEE.get()), VanillaTypes.ITEM_STACK, Component.translatable("jei.info.umapyoidelight.manhattan_cafe_coffee"));
         registration.addIngredientInfo(new ItemStack(ItemRegistration.SAKURAMOCHI.get()), VanillaTypes.ITEM_STACK, Component.translatable("jei.info.umapyoidelight.victory_club_rice_cake"));
 
-        registration.addIngredientInfo(List.of(new ItemStack(ItemRegistration.WILD_CHILIS.get()), new ItemStack(ItemRegistration.CHILI_ITEM.get()), new ItemStack(ItemRegistration.CHILI_ITEM_RARE.get())), VanillaTypes.ITEM_STACK, Component.translatable("jei.info.umapyoidelight.wild_chili_peppers"));
-        registration.addIngredientInfo(List.of(new ItemStack(ItemRegistration.WILD_GARLIC.get()), new ItemStack(ItemRegistration.GARLIC_ITEM.get()), new ItemStack(ItemRegistration.GARLIC_ITEM_RARE.get())), VanillaTypes.ITEM_STACK, Component.translatable("jei.info.umapyoidelight.wild_garlic"));
-        registration.addIngredientInfo(List.of(new ItemStack(ItemRegistration.WILD_STRAWBERRIES.get()), new ItemStack(ItemRegistration.STRAWBERRY_ITEM.get()), new ItemStack(ItemRegistration.STRAWBERRY_ITEM_RARE.get())), VanillaTypes.ITEM_STACK, Component.translatable("jei.info.umapyoidelight.wild_strawberries"));
+        registration.addIngredientInfo(List.of(new ItemStack(ItemRegistration.WILD_CHILIS.get()), new ItemStack(ItemRegistration.CHILI_ITEM.get()), new ItemStack(ItemRegistration.CHILI_ITEM_RARE.get())), VanillaTypes.ITEM_STACK, Component.translatable("jei.info.umapyoidelight.chili_peppers"));
+        registration.addIngredientInfo(List.of(new ItemStack(ItemRegistration.WILD_GARLIC.get()), new ItemStack(ItemRegistration.GARLIC_ITEM.get()), new ItemStack(ItemRegistration.GARLIC_ITEM_RARE.get())), VanillaTypes.ITEM_STACK, Component.translatable("jei.info.umapyoidelight.garlic"));
+        registration.addIngredientInfo(List.of(new ItemStack(ItemRegistration.WILD_STRAWBERRIES.get()), new ItemStack(ItemRegistration.STRAWBERRY_ITEM.get()), new ItemStack(ItemRegistration.STRAWBERRY_ITEM_RARE.get())), VanillaTypes.ITEM_STACK, Component.translatable("jei.info.umapyoidelight.strawberries"));
     }
 
     @Override

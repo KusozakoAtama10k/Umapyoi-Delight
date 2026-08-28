@@ -1,9 +1,10 @@
 package com.ka10k.umapyoidelight.item;
 
-import cn.mcmod_mmf.mmlib.item.ItemDrinkBase;
-import cn.mcmod_mmf.mmlib.item.info.FoodInfo;
+
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.tracen.umapyoi.item.ItemDrinkBase;
+import net.tracen.umapyoi.item.info.FoodInfo;
 
 public class EnchantedItemDrinkBase extends ItemDrinkBase {
     public EnchantedItemDrinkBase(Item.Properties prop, FoodInfo info) {super(prop, info);}
