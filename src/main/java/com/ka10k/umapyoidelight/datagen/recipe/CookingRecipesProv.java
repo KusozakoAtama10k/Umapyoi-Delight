@@ -64,7 +64,7 @@ public class CookingRecipesProv {
                 .addIngredient(CommonTags.Items.FOODS_RAW_PORK)
                 .addIngredient(Tags.Items.EGGS)
                 .addIngredient(Items.DRIED_KELP)
-                .addIngredient(CommonTagsUD.CROPS_CHILI)
+                .addIngredient(CommonTagsUD.CROPS_GARLIC)
                 .addIngredient(CommonTagsUD.CROPS_CHILI)
                 .unlockedByAnyIngredient(ItemRegistration.GARLIC_ITEM.get())
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
