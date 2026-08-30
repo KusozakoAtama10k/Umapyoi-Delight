@@ -3,11 +3,14 @@
   "id": "umapyoidelight",
   "version": "${version}",
   "name": "Umapyoi Delight",
-  "description": "",
+  "description": "Adds compatibility between Farmer's Delight and Umapyoi mod.",
   "authors": [
     "KusozakoAtama10k"
   ],
-  "contact": {},
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/umapyoi-delight",
+    "sources": "https://github.com/KusozakoAtama10k/Umapyoi-Delight"
+  },
   "license": "MIT",
   "icon": "logo_square.png",
   "environment": "*",
