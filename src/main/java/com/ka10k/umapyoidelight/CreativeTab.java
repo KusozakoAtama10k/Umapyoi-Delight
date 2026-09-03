@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class CreativeTab {
     public static final ResourceKey<CreativeModeTab> UD_TAB_KEY = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(),
-            ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, "umapyoidelight_tab"));
+            new ResourceLocation(Umapyoidelight.MOD_ID, "umapyoidelight_tab"));
 
     public static void register() {
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, UD_TAB_KEY, UD_TAB);

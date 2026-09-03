@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:crops/carrot"
+    },
+    {
+      "tag": "c:salad_ingredients"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    },
+    {
+      "tag": "umapyoidelight:burger_meat"
+    },
+    {
+      "tag": "c:crops/tomato"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "item": "umapyoidelight:carrot_hamburg"
+  }
+}

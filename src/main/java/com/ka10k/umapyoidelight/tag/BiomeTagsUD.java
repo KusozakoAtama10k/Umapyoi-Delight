@@ -17,6 +17,6 @@ public class BiomeTagsUD {
     }
 
     private static TagKey<Biome> BiomeTagUD(String path) {
-        return TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, path));
+        return TagKey.create(Registries.BIOME, new ResourceLocation(Umapyoidelight.MOD_ID, path));
     }
 }

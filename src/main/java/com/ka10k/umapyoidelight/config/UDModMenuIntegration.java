@@ -1,6 +1,9 @@
 package com.ka10k.umapyoidelight.config;
 
 import com.ka10k.umapyoidelight.Umapyoidelight;
+import com.ka10k.umapyoidelight.config.helper.Category;
+import com.ka10k.umapyoidelight.config.helper.DoubleField;
+import com.ka10k.umapyoidelight.config.helper.DoubleSlider;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import dev.isxander.yacl3.api.ConfigCategory;
@@ -10,10 +13,7 @@ import dev.isxander.yacl3.api.YetAnotherConfigLib;
 import dev.isxander.yacl3.api.controller.*;
 import dev.isxander.yacl3.config.v2.api.SerialEntry;
 import dev.isxander.yacl3.gui.controllers.slider.DoubleSliderController;
-import dev.isxander.yacl3.gui.controllers.slider.IntegerSliderController;
-import dev.isxander.yacl3.gui.controllers.slider.LongSliderController;
 import net.minecraft.network.chat.Component;
-import net.tracen.umapyoi.config.helper.*;
 import org.jetbrains.annotations.Nullable;
 
 import java.lang.reflect.Field;
@@ -83,40 +83,40 @@ public class UDModMenuIntegration implements ModMenuApi {
                 }
 
                 option = createOption(field, controllerBuilder);
-            } else if (clazz == int.class) {
-                var integerField = field.getAnnotation(IntegerField.class);
-                Function<Option<Integer>, ControllerBuilder<Integer>> controllerBuilder = opt -> {
-                    var builder = IntegerFieldControllerBuilder.create(opt);
-                    if (integerField != null) {
-                        Method valueFormatterMethod = getValueFormatterMethod(
-                                integerField.valueFormatter(), Integer.class);
-                        ValueFormatter<Integer> valueFormatter = createValueFormatter(
-                                valueFormatterMethod, IntegerSliderController.DEFAULT_FORMATTER::apply);
-                        builder = builder.min(integerField.min())
-                                .max(integerField.max())
-                                .formatValue(valueFormatter);
-                    }
-                    return builder;
-                };
-
-                option = createOption(field, controllerBuilder);
-            } else if (clazz == long.class) {
-                var longField = field.getAnnotation(LongField.class);
-                Function<Option<Long>, ControllerBuilder<Long>> controllerBuilder = opt -> {
-                    var builder = LongFieldControllerBuilder.create(opt);
-                    if (longField != null) {
-                        Method valueFormatterMethod = getValueFormatterMethod(
-                                longField.valueFormatter(), Long.class);
-                        ValueFormatter<Long> valueFormatter = createValueFormatter(
-                                valueFormatterMethod, LongSliderController.DEFAULT_FORMATTER::apply);
-                        builder = builder.min(longField.min())
-                                .max(longField.max())
-                                .formatValue(valueFormatter);
-                    }
-                    return builder;
-                };
-
-                option = createOption(field, controllerBuilder);
+//            } else if (clazz == int.class) {
+//                var integerField = field.getAnnotation(IntegerField.class);
+//                Function<Option<Integer>, ControllerBuilder<Integer>> controllerBuilder = opt -> {
+//                    var builder = IntegerFieldControllerBuilder.create(opt);
+//                    if (integerField != null) {
+//                        Method valueFormatterMethod = getValueFormatterMethod(
+//                                integerField.valueFormatter(), Integer.class);
+//                        ValueFormatter<Integer> valueFormatter = createValueFormatter(
+//                                valueFormatterMethod, IntegerSliderController.DEFAULT_FORMATTER::apply);
+//                        builder = builder.min(integerField.min())
+//                                .max(integerField.max())
+//                                .formatValue(valueFormatter);
+//                    }
+//                    return builder;
+//                };
+//
+//                option = createOption(field, controllerBuilder);
+//            } else if (clazz == long.class) {
+//                var longField = field.getAnnotation(LongField.class);
+//                Function<Option<Long>, ControllerBuilder<Long>> controllerBuilder = opt -> {
+//                    var builder = LongFieldControllerBuilder.create(opt);
+//                    if (longField != null) {
+//                        Method valueFormatterMethod = getValueFormatterMethod(
+//                                longField.valueFormatter(), Long.class);
+//                        ValueFormatter<Long> valueFormatter = createValueFormatter(
+//                                valueFormatterMethod, LongSliderController.DEFAULT_FORMATTER::apply);
+//                        builder = builder.min(longField.min())
+//                                .max(longField.max())
+//                                .formatValue(valueFormatter);
+//                    }
+//                    return builder;
+//                };
+//
+//                option = createOption(field, controllerBuilder);
             } else if (clazz == boolean.class) {
                 option = createOption(field, BooleanControllerBuilder::create);
             } else {

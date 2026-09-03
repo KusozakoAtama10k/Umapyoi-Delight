@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "umapyoidelight:potato_garlic_pizza_slice"
+    },
+    {
+      "item": "umapyoidelight:potato_garlic_pizza_slice"
+    },
+    {
+      "item": "umapyoidelight:potato_garlic_pizza_slice"
+    },
+    {
+      "item": "umapyoidelight:potato_garlic_pizza_slice"
+    },
+    {
+      "item": "umapyoidelight:potato_garlic_pizza_slice"
+    },
+    {
+      "item": "umapyoidelight:potato_garlic_pizza_slice"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "umapyoidelight:potato_garlic_pizza"
+  }
+}

@@ -29,7 +29,7 @@
 //    private void flatBlockItem(ItemModelGenerators generator, Item item) {
 //        ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(item);
 //        TextureMapping textureMapping =
-//                new TextureMapping().put(TextureSlot.LAYER0, ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, "block/" + itemId.getPath()));
+//                new TextureMapping().put(TextureSlot.LAYER0, new ResourceLocation(Umapyoidelight.MOD_ID, "block/" + itemId.getPath()));
 //        ModelTemplates.FLAT_ITEM.create(itemId, textureMapping, generator.output);
 //    }
 //

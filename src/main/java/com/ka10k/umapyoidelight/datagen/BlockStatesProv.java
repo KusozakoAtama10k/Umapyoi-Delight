@@ -41,11 +41,11 @@
 //    }
 //
 //    public ResourceLocation resourceBlock(String path) {
-//        return ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, "block/" + path);
+//        return new ResourceLocation(Umapyoidelight.MOD_ID, "block/" + path);
 //    }
 //
 //    public ResourceLocation FDresource(String path) {
-//        return ResourceLocation.fromNamespaceAndPath(FarmersDelight.MODID, "block/" + path);
+//        return new ResourceLocation(FarmersDelight.MODID, "block/" + path);
 //    }
 //
 //    private void CrateBlock(BlockModelGenerators generator, Block block, String cropName) {

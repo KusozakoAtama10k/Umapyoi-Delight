@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "umapyoidelight:chili_pepper_crate_rare"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "umapyoidelight:chili_pepper_rare"
+  }
+}

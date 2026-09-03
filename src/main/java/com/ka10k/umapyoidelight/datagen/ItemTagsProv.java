@@ -179,7 +179,7 @@
 //
 //        tag(CommonTagsUD.FOODS_BURGER_MEAT).add(
 //                ItemRegistration.HAMBURG.get()
-//        ).addOptional(ResourceLocation.fromNamespaceAndPath("sakura", "burger"));
+//        ).addOptional(new ResourceLocation("sakura", "burger"));
 //    }
 //}
 //

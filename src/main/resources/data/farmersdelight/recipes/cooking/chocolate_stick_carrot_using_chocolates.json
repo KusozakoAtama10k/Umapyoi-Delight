@@ -1,11 +1,10 @@
 {
-  "neoforge:conditions": [
+  "conditions": [
     {
-      "type": "neoforge:not",
+      "type": "forge:not",
       "value": {
-        "type": "neoforge:tag_empty",
-        "registry": "minecraft:item",
-        "tag": "c:chocolates"
+        "type": "forge:tag_empty",
+        "tag": "forge:chocolates"
       }
     }
   ],
@@ -17,11 +16,11 @@
       "item": "umapyoidelight:raw_stick_carrot"
     },
     {
-      "tag": "c:chocolates"
+      "tag": "forge:chocolates"
     }
   ],
   "recipe_book_tab": "meals",
   "result": {
-    "id": "umapyoidelight:chocolate_stick_carrot"
+    "item": "umapyoidelight:chocolate_stick_carrot"
   }
 }

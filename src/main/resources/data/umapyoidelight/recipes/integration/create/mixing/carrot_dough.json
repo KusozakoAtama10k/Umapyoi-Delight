@@ -1,0 +1,51 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "minecraft:water",
+      "amount": 81000
+    },
+    [
+      {
+        "tag": "c:crops/wheat"
+      },
+      {
+        "tag": "c:flour"
+      },
+      {
+        "tag": "c:flours"
+      }
+    ],
+    [
+      {
+        "tag": "c:crops/wheat"
+      },
+      {
+        "tag": "c:flour"
+      },
+      {
+        "tag": "c:flours"
+      }
+    ],
+    {
+      "item": "umapyoidelight:grated_carrot"
+    },
+    {
+      "item": "umapyoidelight:grated_carrot"
+    }
+  ],
+  "results":  [
+    {
+    "count": 3,
+      "item": "umapyoidelight:carrot_dough"
+    }
+  ]
+}

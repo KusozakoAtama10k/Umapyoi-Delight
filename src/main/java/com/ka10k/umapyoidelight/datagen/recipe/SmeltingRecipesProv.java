@@ -12,7 +12,7 @@
 //
 //public class SmeltingRecipesProv {
 //    private static void foodSmeltingRecipes(String name, ItemLike ingredient, ItemLike result, float experience, RecipeOutput output) {
-//        String namePrefix = ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, name).toString();
+//        String namePrefix = new ResourceLocation(Umapyoidelight.MOD_ID, name).toString();
 //        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ingredient), RecipeCategory.FOOD, result, experience, 200)
 //                .unlockedBy(name, InventoryChangeTrigger.TriggerInstance.hasItems(ingredient))
 //                .save(output);
@@ -22,7 +22,7 @@
 //    }
 //
 //    private static void foodSmokingRecipes(String name, ItemLike ingredient, ItemLike result, float experience, RecipeOutput output) {
-//        String namePrefix = ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, name).toString();
+//        String namePrefix = new ResourceLocation(Umapyoidelight.MOD_ID, name).toString();
 //        SimpleCookingRecipeBuilder.smoking(Ingredient.of(ingredient), RecipeCategory.FOOD, result, experience, 100)
 //                .unlockedBy(name, InventoryChangeTrigger.TriggerInstance.hasItems(ingredient))
 //                .save(output, namePrefix + "_from_smoking");

@@ -28,7 +28,7 @@ public abstract class ItemRendererMixin {
     @Unique
     private BakedModel umapyoidelight$getModel(String name) {
         ModelManager modelManager = this.itemModelShaper.getModelManager();
-        ModelResourceLocation modelLocation = ModelResourceLocation.inventory(ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, name));
+        ModelResourceLocation modelLocation = new ModelResourceLocation(new ResourceLocation(Umapyoidelight.MOD_ID, name), "inventory");
 
         return modelManager.getModel(modelLocation);
     }

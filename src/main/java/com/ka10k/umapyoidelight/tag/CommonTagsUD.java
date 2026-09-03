@@ -34,15 +34,15 @@
 //	public static final TagKey<Item> FOODS_BURGER_MEAT = externalItemTag(Umapyoidelight.MOD_ID, "foods/burger_meat");
 //
 //	private static TagKey<Item> externalItemTag(String modId, String path) {
-//		return ItemTags.create(ResourceLocation.fromNamespaceAndPath(modId, path));
+//		return ItemTags.create(new ResourceLocation(modId, path));
 //	}
 //
 //	private static TagKey<Block> commonBlockTag(String path) {
-//		return BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", path));
+//		return BlockTags.create(new ResourceLocation("c", path));
 //	}
 //
 //	private static TagKey<Item> commonItemTag(String path) {
-//		return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", path));
+//		return ItemTags.create(new ResourceLocation("c", path));
 //	}
 //
 //}

@@ -19,7 +19,7 @@ public class BiomeModifiers {
 
     @NotNull
     private static ResourceKey<PlacedFeature> modFeature(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(Umapyoidelight.MOD_ID, name));
 
     }
 

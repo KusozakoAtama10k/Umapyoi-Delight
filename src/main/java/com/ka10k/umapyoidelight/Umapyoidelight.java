@@ -6,7 +6,6 @@ import com.ka10k.umapyoidelight.datagen.CompostableRegistration;
 import com.ka10k.umapyoidelight.event.Trades;
 import com.ka10k.umapyoidelight.item.ItemRegistration;
 import com.ka10k.umapyoidelight.loot.LootModifiers;
-import com.ka10k.umapyoidelight.util.regUtilsUD;
 import com.ka10k.umapyoidelight.world.BiomeModifiers;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -22,19 +21,15 @@ public class Umapyoidelight implements ModInitializer {
 
         UDConfig.load();
         CONFIG = UDConfig.HANDLER.instance();
-        //touch with empty method
-        BlockRegistration.register();
-        ItemRegistration.register();
 
-        //actual registration
-        regUtilsUD.registerBlocks();
-        regUtilsUD.registerItems();
+        BlockRegistration.BLOCKS.register();
+        ItemRegistration.ITEMS.register();
 
         CommonSetup.register();
         CreativeTab.register();
         CompostableRegistration.register();
         BiomeModifiers.register();
-        LootModifiers.register();
         Trades.register();
+        LootModifiers.LOOT_MODIFIERS.register();
     }
 }

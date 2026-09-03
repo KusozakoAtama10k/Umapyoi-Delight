@@ -1,0 +1,38 @@
+{
+  "parent": "umapyoidelight:main/cook_good_meal",
+  "criteria": {
+    "g1_plate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:g1_plate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "umapyoidelight.advancement.cook_g1_plate.desc"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "umapyoidelight:g1_plate"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "umapyoidelight.advancement.cook_g1_plate"
+    }
+  },
+  "requirements": [
+    [
+      "g1_plate"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

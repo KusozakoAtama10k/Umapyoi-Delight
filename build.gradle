@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-version = "${minecraft_version}-${mod_version}-fabric"
+version = "${minecraft_version}-${mod_version}+fabric"
 group = project.maven_group
 
 base {
@@ -16,14 +16,9 @@ loom {
             sourceSet sourceSets.main
         }
     }
-    accessWidenerPath = file("src/main/resources/umapyoidelight.classtweaker")
+    accessWidenerPath = file("src/main/resources/umapyoidelight.accesswidener")
 }
 
-fabricApi {
-    configureDataGeneration {
-        client = true
-    }
-}
 
 repositories {
     // Add repositories to retrieve artifacts from in here.
@@ -54,6 +49,17 @@ repositories {
         name = "Cloth"
         url = "https://maven.shedaniel.me/"
     }
+    maven {
+        url = "https://mvn.devos.one/releases/"
+    }
+    maven {
+        name = "JamiesWhiteShirt"
+        url = "https://maven.jamieswhiteshirt.com/libs-release/"
+    }
+    maven {
+        name = "Cassian's Maven"
+        url = 'https://maven.cassian.cc'
+    }
 }
 
 dependencies {
@@ -63,20 +69,24 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    modImplementation "curse.maven:jei-238222:8622752" //JEI
-    modImplementation "me.shedaniel.cloth:cloth-config-fabric:15.0.127"
-    modImplementation "curse.maven:appleskin-248787:5864741" //Appleskin
+    modImplementation "curse.maven:jei-238222:6600309" //JEI
+    modImplementation "me.shedaniel.cloth:cloth-config-fabric:11.1.136"
+    modImplementation "curse.maven:appleskin-248787:7517366" //Appleskin
 
-    modImplementation "curse.maven:modmenu-308702:7808443"
-    modImplementation "curse.maven:configured-457570:7276575"
+    modImplementation "curse.maven:modmenu-308702:5162837"
+    modImplementation "curse.maven:configured-457570:5180902"
 
-    modImplementation "maven.modrinth:1eAoo2KR:o3cDn8Vp" //YACL
+    modImplementation "curse.maven:yacl-667299:6336639" //YACL
     modImplementation "org.quiltmc.parsers:json:0.2.1" //YACL dependencies
     modImplementation "org.quiltmc.parsers:gson:0.2.1"
 
-    modImplementation "maven.modrinth:x1Rd7p5W:Z8kQbChc" //Umapyoi Fabricated
-    modImplementation "dev.emi:trinkets:3.10.0" // Trinkets
-    modImplementation "maven.modrinth:7vxePowz:6Q2bg2Oh" // Farmer's Delight
+    modImplementation "maven.modrinth:x1Rd7p5W:qa34Gjtf" //Umapyoi Fabricated
+    modImplementation "curse.maven:owo-lib-532610:4749199" // owo-lib
+    modImplementation "dev.emi:trinkets:3.7.1"// Trinkets
+    modImplementation("vectorwing:FarmersDelight:1.20.1-2.5.7+refabricated") {
+        exclude(group: "net.fabricmc")
+    } // Farmer's Delight
+
 
 }
 
@@ -93,7 +103,7 @@ processResources {
     }
 }
 
-def targetJavaVersion = 21
+def targetJavaVersion = 17
 tasks.withType(JavaCompile).configureEach {
     // ensure that the encoding is set to UTF-8, no matter what the system default is
     // this fixes some edge cases with special characters not displaying correctly

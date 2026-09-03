@@ -1,6 +1,8 @@
 package com.ka10k.umapyoidelight.config;
 
 import com.ka10k.umapyoidelight.Umapyoidelight;
+import com.ka10k.umapyoidelight.config.helper.Category;
+import com.ka10k.umapyoidelight.config.helper.DoubleSlider;
 import dev.isxander.yacl3.config.v2.api.ConfigClassHandler;
 import dev.isxander.yacl3.config.v2.api.SerialEntry;
 import dev.isxander.yacl3.config.v2.api.serializer.GsonConfigSerializerBuilder;
@@ -8,14 +10,12 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.tracen.umapyoi.config.helper.Category;
-import net.tracen.umapyoi.config.helper.DoubleSlider;
 
 import static com.ka10k.umapyoidelight.Umapyoidelight.MOD_ID;
 
 public class UDConfig {
     public static ConfigClassHandler<UDConfig> HANDLER = ConfigClassHandler.createBuilder(UDConfig.class)
-            .id(ResourceLocation.fromNamespaceAndPath(MOD_ID, "config"))
+            .id(new ResourceLocation(MOD_ID, "config"))
             .serializer(config -> GsonConfigSerializerBuilder.create(config)
                     .setPath(FabricLoader.getInstance().getConfigDir().resolve("umapyoidelight.json5"))
                     .setJson5(true)

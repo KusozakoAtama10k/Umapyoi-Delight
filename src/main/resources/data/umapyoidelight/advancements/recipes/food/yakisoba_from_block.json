@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "umapyoidelight:yakisoba_from_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yakisoba_pile": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:pile_of_yakisoba"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_yakisoba_pile",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "umapyoidelight:yakisoba_from_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,6 +1,0 @@
-classTweaker v2 named
-
-# villager pickup crops
-accessible field net/minecraft/world/entity/npc/Villager WANTED_ITEMS Ljava/util/Set;
-mutable field net/minecraft/world/entity/npc/Villager WANTED_ITEMS Ljava/util/Set;
-mutable field net/minecraft/world/entity/npc/Villager FOOD_POINTS Ljava/util/Map;

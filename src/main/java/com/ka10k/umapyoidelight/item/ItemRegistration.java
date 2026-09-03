@@ -1,7 +1,9 @@
 package com.ka10k.umapyoidelight.item;
 
 import com.google.common.collect.Sets;
+import com.ka10k.umapyoidelight.Umapyoidelight;
 import com.ka10k.umapyoidelight.block.BlockRegistration;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -13,6 +15,7 @@ import net.tracen.umapyoi.item.ItemFoodBase;
 import net.tracen.umapyoi.item.food.UmaDrinkItem;
 import net.tracen.umapyoi.item.food.UmaFoodItem;
 import net.tracen.umapyoi.item.info.FoodInfo;
+import net.tracen.umapyoi.registry.LazyRegistrar;
 import net.tracen.umapyoi.utils.UmaSoulUtils;
 import vectorwing.farmersdelight.common.FoodValues;
 import vectorwing.farmersdelight.common.item.PlaceableItem;
@@ -22,16 +25,16 @@ import java.util.LinkedHashSet;
 import java.util.function.Supplier;
 
 import static com.ka10k.umapyoidelight.Umapyoidelight.CONFIG;
-import static com.ka10k.umapyoidelight.util.regUtilsUD.regItem;
 
 
 @SuppressWarnings("unused")
 public class ItemRegistration {
 
+    public static final LazyRegistrar<Item> ITEMS = LazyRegistrar.create(Registries.ITEM, Umapyoidelight.MOD_ID);
     public static LinkedHashSet<Supplier<Item>> CREATIVE_TAB_ITEMS = Sets.newLinkedHashSet();
 
     public static Supplier<Item> registerWithTab(final String name, final Supplier<Item> supplier) {
-        Supplier<Item> newItem = regItem(name, supplier);
+        Supplier<Item> newItem = ITEMS.register(name, supplier);
         CREATIVE_TAB_ITEMS.add(newItem);
         return newItem;
     }
@@ -118,7 +121,7 @@ public class ItemRegistration {
 
     public static final Supplier<Item> CHILI_ITEM =
             registerWithTab("chili_pepper", () -> new ItemNameBlockItem(BlockRegistration.CHILI_CROP.get(),
-                    new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.25F).build())));
+                    new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationMod(0.25F).build())));
 
     public static final Supplier<Item> CHILI_ITEM_RARE =
             registerWithTab("chili_pepper_rare", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
@@ -132,7 +135,7 @@ public class ItemRegistration {
 
     public static final Supplier<Item> GARLIC_ITEM =
             registerWithTab("garlic", () -> new ItemNameBlockItem(BlockRegistration.GARLIC_CROP.get(),
-                    new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.25F).build())));
+                    new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationMod(0.25F).build())));
 
     public static final Supplier<Item> GARLIC_ITEM_RARE =
             registerWithTab("garlic_rare", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
@@ -146,7 +149,7 @@ public class ItemRegistration {
 
     public static final Supplier<Item> STRAWBERRY_ITEM =
             registerWithTab("strawberry", () -> new ItemNameBlockItem(BlockRegistration.STRAWBERRY_CROP.get(),
-                    new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.25F).build())));
+                    new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationMod(0.25F).build())));
 
     public static final Supplier<Item> STRAWBERRY_ITEM_RARE =
             registerWithTab("strawberry_rare", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
@@ -197,7 +200,7 @@ public class ItemRegistration {
     public static final Supplier<Item> CARROT_CAKE_SLICE =
             registerWithTab("carrot_cake_slice", () -> new UmaFoodItem(status -> {},
                     FoodInfo.builder().amountAndCalories(3, 0.3F).eatTime(16)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.BRIEF_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.BRIEF_DURATION, 0), 1.0F)
                             .build()));
 
     public static final Supplier<Item> CARROT_PIE_SLICE =
@@ -214,13 +217,13 @@ public class ItemRegistration {
     public static final Supplier<Item> GRILLED_STICK_CARROT =
             registerWithTab("grilled_stick_carrot", () -> new StickUmaFood(status -> {},
                     FoodInfo.builder().amountAndCalories(4, 0.75F)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.SHORT_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.SHORT_DURATION, 0), 1.0F)
                             .build()));
 
     public static final Supplier<Item> CHOCOLATE_STICK_CARROT =
             registerWithTab("chocolate_stick_carrot", () -> new StickUmaFood(status -> {},
                     FoodInfo.builder().amountAndCalories(5, 0.6F)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.MEDIUM_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
                             .build()));
 
     public static final Supplier<Item> CARROT_BURGER =
@@ -228,7 +231,7 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_CARROT_BURGER);
             },
                     FoodInfo.builder().amountAndCalories(11, 0.8F)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, FoodValues.SHORT_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.SHORT_DURATION, 0), 1.0F)
                             .build()));
 
     public static final Supplier<Item> CARROT_JUICE =
@@ -269,7 +272,7 @@ public class ItemRegistration {
     public static final Supplier<Item> TOAST_STRAWBERRY_JAM =
             registerWithTab("toast_strawberry_jam", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(7, 0.75F)
-                    .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.MEDIUM_DURATION, 0), 1.0F)
+                    .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
                     .build()));
 
     public static final Supplier<Item> STRAWBERRY_JAM =
@@ -287,25 +290,25 @@ public class ItemRegistration {
     public static final Supplier<Item> CARROT_HAMBURG =
             registerWithTab("carrot_hamburg", () -> new BowlUmaFood(status -> {},
                     FoodInfo.builder().amountAndCalories(10, 0.4F)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, FoodValues.MEDIUM_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
                             .build()));
 
     public static final Supplier<Item> CARROT_HAMBURG_DELUXE =
             registerWithTab("carrot_hamburg_deluxe", () -> new BowlUmaFood(status -> {},
                     FoodInfo.builder().amountAndCalories(18, 0.5F).alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .build()));
 
     public static final Supplier<Item> VEGETABLE_SANDWICH =
             registerWithTab("vegetable_sandwich", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(7, 0.75F)
-                    .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.MEDIUM_DURATION, 0), 1.0F)
+                    .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
                     .build()));
 
     public static final Supplier<Item> STRAWBERRY_SANDWICH =
             registerWithTab("strawberry_sandwich", () -> new ItemFoodBase(basicItem(),FoodInfo.builder()
                     .amountAndCalories(7, 0.75F)
-                    .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.MEDIUM_DURATION, 0), 1.0F)
+                    .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.MEDIUM_DURATION, 0), 1.0F)
                     .build()));
 
     public static final Supplier<Item> CARROT_POTATO_POTAUFEU =
@@ -313,7 +316,7 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_POTAUFEU);
             },
                     FoodInfo.builder().amountAndCalories(9, 0.6F).alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.SHORT_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.SHORT_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, FoodValues.SHORT_DURATION, 0), 1.0F)
                             .build()));
 
@@ -322,7 +325,7 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_POTAUFEU_RARE);
             },
                     FoodInfo.builder().amountAndCalories(17, 0.65F).alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, FoodValues.LONG_DURATION, 3), 1.0F)
                             .build()));
 
@@ -331,7 +334,7 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_RAMEN);
             },
                     FoodInfo.builder().amountAndCalories(9, 0.6F).alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.SHORT_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.SHORT_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.ABSORPTION, FoodValues.SHORT_DURATION, 1), 1.0F)
                             .build()));
 
@@ -340,7 +343,7 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_RAMEN_RARE);
             },
                     FoodInfo.builder().amountAndCalories(17, 0.65F).alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, FoodValues.LONG_DURATION, 1), 1.0F)
                             .build()));
 
@@ -349,7 +352,7 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_PIZZASLICE);
             },
                     FoodInfo.builder().amountAndCalories(2, 0.6F).alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 200, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 200, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 0), 1.0F)
                             .build()));
 
@@ -358,7 +361,7 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_PIZZASLICE_RARE);
             },
                     FoodInfo.builder().amountAndCalories(4, 0.65F).alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 1500, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 1500, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1000, 2), 1.0F)
                             .build()));
 
@@ -367,7 +370,7 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_MAPO);
             },
                     FoodInfo.builder().amountAndCalories(8, 0.6F).alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, FoodValues.SHORT_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.SHORT_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, FoodValues.SHORT_DURATION, 0), 1.0F)
                             .build()));
 
@@ -376,7 +379,7 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_MAPO_RARE);
             },
                     FoodInfo.builder().amountAndCalories(16, 0.65F).alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, FoodValues.LONG_DURATION, 1), 1.0F)
                             .build()));
 
@@ -385,7 +388,7 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_ICECREAM);
             },
                     FoodInfo.builder().amountAndCalories(6, 0.25F).alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.SHORT_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.SHORT_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.HEAL, 0, 0), 1.0F)
                             .build()));
 
@@ -394,7 +397,7 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_ICECREAM_RARE);
             },
                     FoodInfo.builder().amountAndCalories(10, 0.35F).alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.HEAL, 0, 1), 1.0F)
                             .build()));
 
@@ -404,8 +407,8 @@ public class ItemRegistration {
             },
                     FoodInfo.builder().amountAndCalories(50, 0.5F).alwaysEat()
                             .eatTime(120)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.LONG_DURATION, 0), 1.0F)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, FoodValues.LONG_DURATION, 4), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, FoodValues.LONG_DURATION, 2), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, FoodValues.LONG_DURATION, 3), 1.0F)
@@ -420,8 +423,8 @@ public class ItemRegistration {
                 APRecover(status, CONFIG.AP_RECOVER_COFFEE);
             },
                     FoodInfo.builder().alwaysEat()
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.LONG_DURATION, 0), 1.0F)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.NIGHT_VISION, FoodValues.LONG_DURATION, 0), 1.0F)
                             .build()));
 
@@ -431,8 +434,8 @@ public class ItemRegistration {
             },
                     FoodInfo.builder().alwaysEat()
                             .amountAndCalories(6, 1.4F)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.LONG_DURATION, 0), 1.0F)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.REGENERATION, FoodValues.LONG_DURATION, 0), 1.0F)
                             .build()));
 
@@ -442,8 +445,8 @@ public class ItemRegistration {
             },
                     FoodInfo.builder().alwaysEat()
                             .amountAndCalories(12, 0.75F)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT, FoodValues.LONG_DURATION, 0), 1.0F)
-                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
+                            .addEffect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), FoodValues.LONG_DURATION, 0), 1.0F)
                             .addEffect(() -> new MobEffectInstance(MobEffects.JUMP, FoodValues.LONG_DURATION, 0), 1.0F)
                             .build()));
 
@@ -462,10 +465,10 @@ public class ItemRegistration {
                     .addEffect(() -> new MobEffectInstance(MobEffects.POISON, FoodValues.LONG_DURATION, 1), 0.05F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.CONFUSION, FoodValues.BRIEF_DURATION, 0), 0.05F)
                     .addEffect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, FoodValues.LONG_DURATION, 3), 0.05F)
-                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.PANICKING.getHolder(), FoodValues.LONG_DURATION, 0), 0.05F)
-                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.NIGHT_OWL.getHolder(), FoodValues.LONG_DURATION, 0), 0.05F)
-                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.SLOW_METABOLISM.getHolder(), FoodValues.LONG_DURATION, 0), 0.05F)
-                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.MOOD_BONUS.getHolder(), FoodValues.LONG_DURATION, 9), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.PANICKING.get(), FoodValues.LONG_DURATION, 0), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.NIGHT_OWL.get(), FoodValues.LONG_DURATION, 0), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.SLOW_METABOLISM.get(), FoodValues.LONG_DURATION, 0), 0.05F)
+                    .addEffect(() -> new MobEffectInstance(MobEffectRegistry.MOOD_BONUS.get(), FoodValues.LONG_DURATION, 9), 0.05F)
 
 
                     .build()));
@@ -491,8 +494,5 @@ public class ItemRegistration {
 
     public static final Supplier<Item> CARROT_PIE = registerWithTab("carrot_pie",
             () -> new PlaceableItem(BlockRegistration.CARROT_PIE.get(), basicItem()));
-
-    public static void register() {
-    }
 
 }

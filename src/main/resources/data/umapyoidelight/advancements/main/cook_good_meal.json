@@ -1,0 +1,103 @@
+{
+  "parent": "umapyoidelight:main/cook_normal_meal",
+  "criteria": {
+    "carrot_hamburg_deluxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:carrot_hamburg_deluxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "carrot_potato_potaufeu_rare": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:carrot_potato_potaufeu_rare"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "carrot_strawberry_icecream_rare": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:carrot_strawberry_icecream_rare"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "garlic_ramen_rare": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:garlic_ramen_rare"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "mapo_carrot_potato_rare": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:mapo_carrot_potato_rare"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "potato_garlic_pizza_rare": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "umapyoidelight:potato_garlic_pizza_rare"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "umapyoidelight.advancement.cook_good_meal.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "umapyoidelight:carrot_hamburg_deluxe"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "umapyoidelight.advancement.cook_good_meal"
+    }
+  },
+  "requirements": [
+    [
+      "carrot_hamburg_deluxe",
+      "carrot_potato_potaufeu_rare",
+      "garlic_ramen_rare",
+      "potato_garlic_pizza_rare",
+      "mapo_carrot_potato_rare",
+      "carrot_strawberry_icecream_rare"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

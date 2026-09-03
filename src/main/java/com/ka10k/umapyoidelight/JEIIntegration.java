@@ -13,7 +13,7 @@ import java.util.List;
 
 @JeiPlugin
 public class JEIIntegration implements IModPlugin {
-    private static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(Umapyoidelight.MOD_ID, "jei_plugin");
+    private static final ResourceLocation ID = new ResourceLocation(Umapyoidelight.MOD_ID, "jei_plugin");
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {

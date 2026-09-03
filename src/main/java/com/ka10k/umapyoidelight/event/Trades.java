@@ -9,7 +9,6 @@ import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.ItemLike;
 import net.tracen.umapyoi.item.ItemRegistry;
@@ -23,19 +22,19 @@ import java.util.function.Supplier;
 public class Trades {
 
     public static VillagerTrades.ItemListing Item2Emerald(Supplier<? extends ItemLike> item, int count, int maxTrades, int xp, Supplier<Boolean> predicate) {
-        return new UDItemListing(() -> new MerchantOffer(new ItemCost(item.get().asItem(), count), new ItemStack(Items.EMERALD, 1), maxTrades, xp, 0.05F), predicate);
+        return new UDItemListing(() -> new MerchantOffer(new ItemStack(item.get().asItem(), count), new ItemStack(Items.EMERALD, 1), maxTrades, xp, 0.05F), predicate);
     }
 
     public static VillagerTrades.ItemListing Item2Jewel(Supplier<? extends ItemLike> item, int count, int maxTrades, int xp, Supplier<Boolean> predicate) {
-        return new UDItemListing(() -> new MerchantOffer(new ItemCost(item.get().asItem(), count), new ItemStack(ItemRegistry.JEWEL.get(), 1), maxTrades, xp, 0.05F), predicate);
+        return new UDItemListing(() -> new MerchantOffer(new ItemStack(item.get().asItem(), count), new ItemStack(ItemRegistry.JEWEL.get(), 1), maxTrades, xp, 0.05F), predicate);
     }
 
     public static VillagerTrades.ItemListing Emerald2Item(Supplier<? extends ItemLike> item, int maxTrades, int xp, Supplier<Boolean> predicate) {
-        return new UDItemListing(() -> new MerchantOffer(new ItemCost(Items.EMERALD, 1), new ItemStack(item.get()), maxTrades, xp, 0.05F), predicate);
+        return new UDItemListing(() -> new MerchantOffer(new ItemStack(Items.EMERALD, 1), new ItemStack(item.get()), maxTrades, xp, 0.05F), predicate);
     }
 
     public static VillagerTrades.ItemListing Jewel2Item(Supplier<? extends ItemLike> item, int count, int maxTrades, int xp, Supplier<Boolean> predicate) {
-        return new UDItemListing(() -> new MerchantOffer(new ItemCost(ItemRegistry.JEWEL.get(), 1), new ItemStack(item.get(), count), maxTrades, xp, 0.05F), predicate);
+        return new UDItemListing(() -> new MerchantOffer(new ItemStack(ItemRegistry.JEWEL.get(), 1), new ItemStack(item.get(), count), maxTrades, xp, 0.05F), predicate);
     }
 
     private record UDItemListing(
